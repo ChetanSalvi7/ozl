@@ -1,4 +1,5 @@
 import React,{useState, useEffect} from "react";
+import { NavLink } from "react-router-dom";
 import Logo from "../../backend/img/logo.svg";
 
 const Navbar = () => {
@@ -20,7 +21,7 @@ const Navbar = () => {
           <div className="container-fluid px-lg-5">
             <div className="row align-items-center">
               <div className="col-12 col-lg-3 d-flex">
-                <a className="navbar-brand" href="index.html">
+                <a className="navbar-brand" to="index.html">
                   <img src={Logo} alt="" className="logo" />
                 </a>
                 <button
@@ -55,10 +56,10 @@ const Navbar = () => {
                         </a>
                       </li>
                       <li className="nav-item dropdown py-1  py-lg-0">
-                        <a className="nav-link link-scroll" href="#">
-                          {" "}
-                          Our Services{" "}
-                        </a>
+                        <NavLink className="nav-link link-scroll" to="ourservicefullpage">
+                    
+                          Our Services
+                        </NavLink>
                       </li>
                       <li className="nav-item py-1 py-lg-0">
                                         <select className="form-select">

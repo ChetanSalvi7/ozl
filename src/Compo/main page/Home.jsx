@@ -8,6 +8,9 @@ import CompanyLogo2 from "../../backend/img/hero-banner-2.jpg";
 import CompanyLogo3 from "../../backend/img/hero-banner-3.jpg";
 import CompanyLogo4 from "../../backend/img/hero-banner-4.jpg";
 
+import OurServices from "../OurServices/OurServices";
+import BecomeCustomer from "../BecomeCustomer/BecomeCustomer";
+
 
 
 const Home = () => {
@@ -98,9 +101,8 @@ const Home = () => {
         </div>
       </section>
 
-      <button id="back-to-top" type="button" className="btn btn-primary text-light rounded-circle btn-lg back-to-top" title="Back on top">
-        <i className="fas fa-angle-up"></i>
-    </button>
+      <OurServices />
+      <BecomeCustomer />
 
       
   

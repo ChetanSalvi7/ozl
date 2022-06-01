@@ -1,4 +1,5 @@
 import React from 'react'
+import OurPartners from '../Partner/OurPartners'
 
 const Gtc = () => {
   return (
@@ -35,6 +36,7 @@ const Gtc = () => {
             </div>
         </div>
     </section>
+    <OurPartners />
     </>
   )
 }
