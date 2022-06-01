@@ -12,6 +12,8 @@ import CompanyLogo4 from "../../backend/img/hero-banner-4.jpg";
 
 const Home = () => {
 
+  
+
   const homeImage = [{text: '',image: '',style: 'd-none d-md-block'},
   {text: '',image: ''},
   {text: '',image: ''},
@@ -96,7 +98,9 @@ const Home = () => {
         </div>
       </section>
 
-      
+      <button id="back-to-top" type="button" class="btn btn-primary text-light rounded-circle btn-lg back-to-top" title="Back on top">
+        <i class="fas fa-angle-up"></i>
+    </button>
 
       
   

@@ -1,12 +1,21 @@
-import React from "react";
+import React,{useState, useEffect} from "react";
 import Logo from "../../backend/img/logo.svg";
 
 const Navbar = () => {
 
+  const [scroll, setScroll] = useState(false);
+ useEffect(() => {
+   window.addEventListener("scroll", () => {
+     setScroll(window.scrollY > 50);
+   });
+ }, []);
 
+
+
+  
   return (
     <>
-      <header className="sticky-top ">
+      <header className={` sticky-top  ${scroll ?  'sticky-top active'  :''}`}>
         <nav className="py-2 py-lg-1 navbar-expand-lg navbar-light">
           <div className="container-fluid px-lg-5">
             <div className="row align-items-center">
@@ -51,6 +60,27 @@ const Navbar = () => {
                           Our Services{" "}
                         </a>
                       </li>
+                      <li class="nav-item py-1 py-lg-0">
+                                        <select class="form-select" onchange="location = this.value;">
+                                            <option selected value="index.html">EN</option>
+                                            <option value="german.html">DE</option>
+                                        </select>
+                                        {/* <div class="lngg"> 
+                                            <select onChange="top.location.href=this.options[this.selectedIndex].value;" class="selectpicker" data-width="fit">
+                                            <a href="#cz">
+                                                <option value="http://putaksbocis.cz/" data-content='<span class="flag-icon flag-icon-cz"></span> Čeština'>Čeština</option>
+                                            </a>
+                                                <a href="#de">
+
+                                            <option value="http://putaksbocis.cz/de/"  data-content='<span class="flag-icon flag-icon-de"></span> Deutsch'>Deutsch</option>
+                                            </a>
+                                                <a href="#en">
+
+                                            <option value="http://putaksbocis.cz/en/"  data-content='<span class="flag-icon flag-icon-gb"></span> English'>English</option>
+                                            </a>
+                                            </select>
+                                        </div> */}
+                                    </li>
                     </ul>
                     <button
                       className="py-xl-2 btn btn-primary-light border-0 d-block text-center"
