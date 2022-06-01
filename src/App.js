@@ -8,6 +8,7 @@ import Navbar from './Compo/Navbar/Navbar';
 import OurServices from './Compo/OurServices/OurServices';
 import OurServicesFullPage from './Compo/OurServicesFullPage/OurServicesFullPage';
 import OurPartners from './Compo/Partner/OurPartners';
+import PreciousMetals from './Compo/Precious metals/PreciousMetals';
 
 
 
@@ -20,8 +21,9 @@ const App = () => {
     <BecomeCustomer />
     <OurPartners />
     <Footer />
-    <Logistics /> */}
-    <OurServicesFullPage />
+    <Logistics />
+    <OurServicesFullPage /> */}
+    <PreciousMetals />
     </>
   )
 }
