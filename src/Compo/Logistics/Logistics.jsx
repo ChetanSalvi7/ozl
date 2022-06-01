@@ -26,43 +26,43 @@ const Logistics = () => {
         {name:'Tailor-made special transports',Logo: `${TrailorMadeTransport}`}];
 
     const Data2 = [{dataname: 'Optimum solutions via renowned partners',images: `${LogisticsLogo1}`},
-        {dataname: 'Optimum solutions via renowned partners',images: `${LogisticsLogo2}`},
-        {dataname: 'Optimum solutions via renowned partners',images: `${LogisticsLogo3}`},
-        {dataname: 'Optimum solutions via renowned partners',images: `${LogisticsLogo4}`},
-        {dataname: 'Optimum solutions via renowned partners',images: `${LogisticsLogo5}`},
-        {dataname: 'Optimum solutions via renowned partners',images: `${LogisticsLogo6}`}];
+        {dataname: 'State-of-the-art professional logistics infrastructure/Security and efficiency',images: `${LogisticsLogo2}`},
+        {dataname: 'Global transportation of precious metals, art, and other valuables, including customs clearance',images: `${LogisticsLogo3}`},
+        {dataname: 'International logistics within transit zones/Own customs specialists',images: `${LogisticsLogo4}`},
+        {dataname: 'Global logistics and storage',images: `${LogisticsLogo5}`},
+        {dataname: 'Full logistics service, from collection to delivery / All from a single source',images: `${LogisticsLogo6}`}];
 
   return (
     <>
-    <section class="py-3 py-lg-5">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-7">
-                <div class="card mb-3 mb-lg-5">
-                    <div class="card-body border border-2 border-primary text-center">
-                        <h3 class="h2 text-center fw-bold mb-3">Update COVID-19</h3>
+    <section className="py-3 py-lg-5">
+    <div className="container">
+        <div className="row justify-content-center">
+            <div className="col-lg-7">
+                <div className="card mb-3 mb-lg-5">
+                    <div className="card-body border border-2 border-primary text-center">
+                        <h3 className="h2 text-center fw-bold mb-3">Update COVID-19</h3>
                         <p>The travel restriction due to the current COVID-19 situation does not apply to international security logistics. Worldwide security transports can be organized and carried out to and from Liechtenstein.</p>
                     </div>
                 </div>
 
-                <div class="card">
-                    <div class="card-body border border-2 border-primary text-center">
-                        <h3 class="h2 text-center fw-bold mb-3">Logistics</h3>
+                <div className="card">
+                    <div className="card-body border border-2 border-primary text-center">
+                        <h3 className="h2 text-center fw-bold mb-3">Logistics</h3>
                         <p>Our internal logistics specialists take care of the entire logistics process chain, from collection to customs clearance. From our customs warehouse, we can transport valuables to national or international destinations. Multiple locations worldwide enable you to achieve optimal diversification when it comes to storing your valuables. Working with renowned partners enables us to guarantee a professional service in terms of security, handling, insurance and time management during the transportation of valuables.</p>
                         <p>We offer regular routes from Triesen to Zurich, Frankfurt, London, Hong Kong, Singapore and New York, for example.</p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row mt-3 mt-lg-5">
+        <div className="row mt-3 mt-lg-5">
             {Data1.map((showData1)=>{
                 return(
                     <>
-                    <div class="col-6 col-md-3 mb-3 d-flex">
-                        <div class="card text-center flex-fill style-1">
-                            <div class="card-body">
-                                <img src={showData1.Logo} alt="logo" class="img-fluid mb-4"/>
-                                <h5 class="h5">{showData1.name}</h5>
+                    <div className="col-6 col-md-3 mb-3 d-flex">
+                        <div className="card text-center flex-fill style-1">
+                            <div className="card-body">
+                                <img src={showData1.Logo} alt="logo" className="img-fluid mb-4"/>
+                                <h5 className="h5">{showData1.name}</h5>
                             </div>
                         </div>
                     </div>
@@ -71,14 +71,14 @@ const Logistics = () => {
             })}
         </div>
 
-        <div class="img-grid mt-3 mt-lg-5">
+        <div className="img-grid mt-3 mt-lg-5">
             {Data2.map((showData2)=>{
                 return(
                     <>
-                        <div class="img-box">
-                            <img src={showData2.images} alt="logo" class="img-fluid"/>
-                            <div class="img-detail">
-                                <h5 class="h4">{showData2.dataname}</h5>
+                        <div className="img-box">
+                            <img src={showData2.images} alt="logo" className="img-fluid"/>
+                            <div className="img-detail">
+                                <h5 className="h4">{showData2.dataname}</h5>
                             </div>
                         </div>
                     </>

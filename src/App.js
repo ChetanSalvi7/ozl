@@ -18,18 +18,18 @@ import SafeDepositBox from './Compo/Safe box/SafeDepositBox';
 const App = () => {
   return (
     <>
-    {/* <Navbar />
+    <Navbar />
     <Home />
     <OurServices />
     <BecomeCustomer />
     <OurPartners />
-    <Footer />
     <Logistics />
     <OurServicesFullPage />
     <PreciousMetals />
     <SafeDepositBox />
-    <ContactUs /> */}
     <Gtc />
+    <ContactUs />
+    <Footer />
     </>
   )
 }

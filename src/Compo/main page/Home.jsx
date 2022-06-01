@@ -98,8 +98,8 @@ const Home = () => {
         </div>
       </section>
 
-      <button id="back-to-top" type="button" class="btn btn-primary text-light rounded-circle btn-lg back-to-top" title="Back on top">
-        <i class="fas fa-angle-up"></i>
+      <button id="back-to-top" type="button" className="btn btn-primary text-light rounded-circle btn-lg back-to-top" title="Back on top">
+        <i className="fas fa-angle-up"></i>
     </button>
 
       

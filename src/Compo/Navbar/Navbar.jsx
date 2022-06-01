@@ -60,23 +60,23 @@ const Navbar = () => {
                           Our Services{" "}
                         </a>
                       </li>
-                      <li class="nav-item py-1 py-lg-0">
-                                        <select class="form-select" onchange="location = this.value;">
-                                            <option selected value="index.html">EN</option>
+                      <li className="nav-item py-1 py-lg-0">
+                                        <select className="form-select">
+                                            <option defaultValue value="index.html">EN</option>
                                             <option value="german.html">DE</option>
                                         </select>
-                                        {/* <div class="lngg"> 
-                                            <select onChange="top.location.href=this.options[this.selectedIndex].value;" class="selectpicker" data-width="fit">
+                                        {/* <div className="lngg"> 
+                                            <select onChange="top.location.href=this.options[this.selectedIndex].value;" className="selectpicker" data-width="fit">
                                             <a href="#cz">
-                                                <option value="http://putaksbocis.cz/" data-content='<span class="flag-icon flag-icon-cz"></span> Čeština'>Čeština</option>
+                                                <option value="http://putaksbocis.cz/" data-content='<span className="flag-icon flag-icon-cz"></span> Čeština'>Čeština</option>
                                             </a>
                                                 <a href="#de">
 
-                                            <option value="http://putaksbocis.cz/de/"  data-content='<span class="flag-icon flag-icon-de"></span> Deutsch'>Deutsch</option>
+                                            <option value="http://putaksbocis.cz/de/"  data-content='<span className="flag-icon flag-icon-de"></span> Deutsch'>Deutsch</option>
                                             </a>
                                                 <a href="#en">
 
-                                            <option value="http://putaksbocis.cz/en/"  data-content='<span class="flag-icon flag-icon-gb"></span> English'>English</option>
+                                            <option value="http://putaksbocis.cz/en/"  data-content='<span className="flag-icon flag-icon-gb"></span> English'>English</option>
                                             </a>
                                             </select>
                                         </div> */}
@@ -92,46 +92,46 @@ const Navbar = () => {
                       <i className="fa-solid fa-bars"></i>
                     </button>
                     <div
-                      class="offcanvas offcanvas-end"
-                      tabindex="-1"
+                      className="offcanvas offcanvas-end"
+                      tabIndex="-1"
                       id="side-menu"
                       aria-labelledby="side-menu-label"
                     >
                       {/* Off Canvas  */}
-                      <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="side-menu-label">
+                      <div className="offcanvas-header">
+                        <h5 className="offcanvas-title" id="side-menu-label">
                           Menu
                         </h5>
                         <button
                           type="button"
-                          class="btn-close"
+                          className="btn-close"
                           data-bs-dismiss="offcanvas"
                           aria-label="Close"
                         ></button>
                       </div>
-                      <div class="offcanvas-body">
-                        <ul class="nav flex-column">
-                          <li class="nav-item">
+                      <div className="offcanvas-body">
+                        <ul className="nav flex-column">
+                          <li className="nav-item">
                             <a
-                              class="nav-link active"
+                              className="nav-link active"
                               aria-current="page"
                               href="#"
                             >
                               Active
                             </a>
                           </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="#">
+                          <li className="nav-item">
+                            <a className="nav-link" href="#">
                               Link
                             </a>
                           </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="#">
+                          <li className="nav-item">
+                            <a className="nav-link" href="#">
                               Link
                             </a>
                           </li>
-                          <li class="nav-item">
-                            <a class="nav-link disabled">Disabled</a>
+                          <li className="nav-item">
+                            <a className="nav-link disabled">Disabled</a>
                           </li>
                         </ul>
                       </div>

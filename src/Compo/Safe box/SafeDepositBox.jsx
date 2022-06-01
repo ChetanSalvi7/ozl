@@ -7,7 +7,7 @@ const SafeDepositBox = () => {
     const BoxsData = [{name1:'Safe',name2:'deposit box',weight:'20 kg',dimensions:'4.5 x 27 x 39 cm (4.7 litres)',link: 'https://www.onboarding.li/en/identification/?aes=yes&language=en&client=ozl-offenes-zolllager-in-liechtenstein-f4kf9enyfh4jsf6',offerText1:'Starting From',offerprice:'CHF 750.55',offerText2:'per year'},
     {name1:'VAULT',name2:'SMALL',weight:'100 kg',dimensions:'25.6 x 35.6 x 29.5 cm (27 litres)',link: 'https://www.onboarding.li/en/identification/?aes=yes&language=en&client=ozl-offenes-zolllager-in-liechtenstein-f4kf9enyfh4jsf6',offerText1:'Starting From',offerprice:"CHF 1'650.00",offerText2:'per year'},
     {name1:'VAULT',name2:'MEDIUM',weight:'250 kg',dimensions:'47 x 46 x 36 cm (78 litres)',link: 'https://www.onboarding.li/en/identification/?aes=yes&language=en&client=ozl-offenes-zolllager-in-liechtenstein-f4kf9enyfh4jsf6',offerText1:'',offerprice:'ON REQUEST',offerText2:''},
-    {name1:'Safe',name2:'deposit box',weight:'20 kg',dimensions:'4.5 x 27 x 39 cm (4.7 litres)',link: 'https://www.onboarding.li/en/identification/?aes=yes&language=en&client=ozl-offenes-zolllager-in-liechtenstein-f4kf9enyfh4jsf6',offerText1:'Starting From',offerprice:'CHF 750.55',offerText2:'per year'}]
+    {name1:'Vault',name2:'large',weight:'1500 kg',dimensions:'167 x 56 x 37 cm(336 litres)',link: 'https://www.onboarding.li/en/identification/?aes=yes&language=en&client=ozl-offenes-zolllager-in-liechtenstein-f4kf9enyfh4jsf6',offerText1:'',offerprice:'ON REQUEST',offerText2:''}]
 
   return (
     <>
