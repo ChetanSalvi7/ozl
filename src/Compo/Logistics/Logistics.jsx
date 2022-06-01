@@ -25,12 +25,12 @@ const Logistics = () => {
         {name:'Multiple high security locations',Logo: `${SecurityLocations}`},
         {name:'Tailor-made special transports',Logo: `${TrailorMadeTransport}`}];
 
-    const Data2 = [{name: 'Optimum solutions via renowned partners',image: `${LogisticsLogo1}`},
-        {name: 'Optimum solutions via renowned partners',image: `${LogisticsLogo2}`},
-        {name: 'Optimum solutions via renowned partners',image: `${LogisticsLogo3}`},
-        {name: 'Optimum solutions via renowned partners',image: `${LogisticsLogo4}`},
-        {name: 'Optimum solutions via renowned partners',image: `${LogisticsLogo5}`},
-        {name: 'Optimum solutions via renowned partners',image: `${LogisticsLogo6}`}];
+    const Data2 = [{dataname: 'Optimum solutions via renowned partners',images: `${LogisticsLogo1}`},
+        {dataname: 'Optimum solutions via renowned partners',images: `${LogisticsLogo2}`},
+        {dataname: 'Optimum solutions via renowned partners',images: `${LogisticsLogo3}`},
+        {dataname: 'Optimum solutions via renowned partners',images: `${LogisticsLogo4}`},
+        {dataname: 'Optimum solutions via renowned partners',images: `${LogisticsLogo5}`},
+        {dataname: 'Optimum solutions via renowned partners',images: `${LogisticsLogo6}`}];
 
   return (
     <>
@@ -76,9 +76,9 @@ const Logistics = () => {
                 return(
                     <>
                         <div class="img-box">
-                            <img src={showData2.image} alt="logo" class="img-fluid"/>
+                            <img src={showData2.images} alt="logo" class="img-fluid"/>
                             <div class="img-detail">
-                                <h5 class="h4">{showData2.name}</h5>
+                                <h5 class="h4">{showData2.dataname}</h5>
                             </div>
                         </div>
                     </>

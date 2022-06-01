@@ -6,6 +6,7 @@ import Logistics from './Compo/Logistics/Logistics';
 import Home from './Compo/main page/Home.jsx';
 import Navbar from './Compo/Navbar/Navbar';
 import OurServices from './Compo/OurServices/OurServices';
+import OurServicesFullPage from './Compo/OurServicesFullPage/OurServicesFullPage';
 import OurPartners from './Compo/Partner/OurPartners';
 
 
@@ -18,8 +19,9 @@ const App = () => {
     <OurServices />
     <BecomeCustomer />
     <OurPartners />
-    <Footer /> */}
-    <Logistics />
+    <Footer />
+    <Logistics /> */}
+    <OurServicesFullPage />
     </>
   )
 }
