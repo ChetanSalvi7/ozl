@@ -8,7 +8,7 @@ import CompanyLogo2 from "../../backend/img/hero-banner-2.jpg";
 import CompanyLogo3 from "../../backend/img/hero-banner-3.jpg";
 import CompanyLogo4 from "../../backend/img/hero-banner-4.jpg";
 
-import OurServices from "../OurServices/OurServices";
+import Services from "../Services/Services";
 import BecomeCustomer from "../BecomeCustomer/BecomeCustomer";
 
 
@@ -101,7 +101,7 @@ const Home = () => {
         </div>
       </section>
 
-      <OurServices />
+      <Services />
       <BecomeCustomer />
 
       

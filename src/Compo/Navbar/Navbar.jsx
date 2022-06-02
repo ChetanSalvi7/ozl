@@ -11,6 +11,35 @@ const Navbar = () => {
    });
  }, []);
 
+ const navSlide = () => {
+	const burger = document.querySelector('.side-burger');
+	const burgerClose = document.querySelector('.offcanvas-header .btn-close');
+	const nav = document.querySelector('.offcanvas-body .nav');
+	const navLink = document.querySelectorAll('.offcanvas-body .nav .nav-item')
+
+	burger.addEventListener('click', () => {
+		nav.classList.add('nav-active');
+		
+		navLink.forEach((link, index) => {
+			if (link.style.animation) {
+				link.style.animation = ''
+			} else {
+				link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.2}s`;
+			}
+		});
+
+		//burger.classList.toggle('toggle');
+	});
+	burgerClose.addEventListener('click', () => {
+		nav.classList.remove('nav-active');
+		navLink.forEach((link, index) => {
+			if (link.style.animation) {
+				link.style.animation = ''
+			}
+		});
+	});
+}
+
 
 
   
@@ -21,9 +50,9 @@ const Navbar = () => {
           <div className="container-fluid px-lg-5">
             <div className="row align-items-center">
               <div className="col-12 col-lg-3 d-flex">
-                <a className="navbar-brand" to="index.html">
+                <NavLink className="navbar-brand" to="/#">
                   <img src={Logo} alt="" className="logo" />
-                </a>
+                </NavLink>
                 <button
                   className="navbar-toggler ms-auto align-self-center"
                   type="button"
@@ -56,7 +85,7 @@ const Navbar = () => {
                         </a>
                       </li>
                       <li className="nav-item dropdown py-1  py-lg-0">
-                        <NavLink className="nav-link link-scroll" to="ourservicefullpage">
+                        <NavLink className="nav-link link-scroll" to="ourservices">
                     
                           Our Services
                         </NavLink>
@@ -131,9 +160,7 @@ const Navbar = () => {
                               Link
                             </a>
                           </li>
-                          <li className="nav-item">
-                            <a className="nav-link disabled">Disabled</a>
-                          </li>
+                         
                         </ul>
                       </div>
                     </div>

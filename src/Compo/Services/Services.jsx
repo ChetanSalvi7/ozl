@@ -1,6 +1,6 @@
 import React from 'react'
 
-const OurServices = () => {
+const Services = () => {
   return (
     <>
     <section className="py-3 py-lg-5">
@@ -71,4 +71,4 @@ const OurServices = () => {
   )
 }
 
-export default OurServices
+export default Services

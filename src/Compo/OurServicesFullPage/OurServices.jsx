@@ -1,6 +1,6 @@
 import React from 'react'
 
-const OurServicesFullPage = () => {
+const OurServices = () => {
 
     const RentalData = [{Pname: 'Determination and verification of the contracting party (client)',className1: 'bi bi-check-circle-fill fs-5 text-success',className2: 'bi bi-check-circle-fill fs-5 text-success'},
     {Pname: 'Determination of the beneficial owner',className1: 'bi bi-check-circle-fill fs-5 text-success',className2: 'bi bi-check-circle-fill fs-5 text-success'},
@@ -140,4 +140,4 @@ const OurServicesFullPage = () => {
   )
 }
 
-export default OurServicesFullPage;
+export default OurServices;
