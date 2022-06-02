@@ -1,9 +1,11 @@
 import React,{useState} from 'react'
-
+import 'swiper/css';
+import "swiper/core";
+import "swiper/bundle";
 import { Swiper , SwiperSlide } from 'swiper/react';
 import { Controller } from 'swiper';
 import 'swiper/css';
-import 'swiper/css/controller';
+
 import PartnerLogo1 from '../../backend/img/partner/01.png';
 import PartnerLogo2 from '../../backend/img/partner/02.png';
 import PartnerLogo3 from '../../backend/img/partner/03.png';
@@ -12,7 +14,8 @@ import PartnerLogo5 from '../../backend/img/partner/05.jpg';
 import PartnerLogo6 from '../../backend/img/partner/06.jpg';
 
 const OurPartners = () => {
-    const [controlledSwiper, setControlledSwiper] = useState(null);
+    const [firstSwiper, setFirstSwiper] = useState(null);
+  const [secondSwiper, setSecondSwiper] = useState(null);
     const PartnerData = [
     {name:'Allianz Suisse',image:`${PartnerLogo1}`},
     {name:'Basler',image:`${PartnerLogo2}`},
@@ -27,7 +30,15 @@ const OurPartners = () => {
                 <div className="col-lg-4 position-relative">
                     <div className="bg-primary p-3 h-100">
                         <h3 className="h2 fw-bold text-white mb-3 mb-lg-5">Our Partners</h3>
-                        <Swiper className='mySwiper' modules={[Controller]} controller={{ control: controlledSwiper }}>
+                        <Swiper className='mySwiper' 
+                        modules={[Controller]} onSwiper={setFirstSwiper}
+                        controller={{ control: secondSwiper }}
+                        loop={true}
+                        autoplay={true}
+                        pagination={{ clickable: true }}
+                        speed={2000}
+                        grabCursor={true}
+                        >
                         <div className="swiper partnerSwiperText">
                             <div className="swiper-wrapper">
                             <SwiperSlide>
@@ -54,7 +65,13 @@ const OurPartners = () => {
                     <div className="partnerSwiperText-pagination"></div>
                 </div>
                 <div className="col-lg-8">
-                    <Swiper className='mySwiper' modules={[Controller]} >
+                    <Swiper className='mySwiper'
+                    modules={[Controller]} 
+                    onSwiper={setSecondSwiper}
+                    controller={{ control: firstSwiper }}
+                    loop={true}
+                    grabCursor={true}
+                     >
                     <div thumbsSlider="" className="swiper partnerSwiperImage">
                         <div className="swiper-wrapper">
                         <SwiperSlide>

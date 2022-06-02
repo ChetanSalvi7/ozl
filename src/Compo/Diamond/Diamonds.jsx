@@ -24,8 +24,8 @@ const Diamonds = () => {
                 <img src={BannerLogo} alt="" className="w-100" style={{width: '100%'}}/>
                 <div className="banner-details">
                     <div>
-                        <h2 className="h2 fw-bold text-shadow">Our range of storage facilities - <br className="d-none d-md-block"/>individual and versatile.</h2>
-                        <p className="text-shadow">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
+                        <h2 className="h2 fw-bold text-shadow">Your diamonds in safe hands -<br className="d-none d-md-block"/>services ranging from collection to<br className="d-none d-md-block"/>customs clearance.</h2>
+                        <p className="text-shadow">There are many variations of passages of Lorem Ipsum available.</p>
                     </div>
                 </div>
             </div>

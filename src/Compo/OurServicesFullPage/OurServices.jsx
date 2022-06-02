@@ -1,4 +1,5 @@
 import React from 'react'
+import SliderImage from '../main page/SliderImage'
 
 const OurServices = () => {
 
@@ -11,6 +12,7 @@ const OurServices = () => {
 
   return (
     <>
+    <SliderImage />
         <section className="py-3 py-lg-5" id="ourServicenav">
     <div className="container px-lg-5">
         <h3 className="h2 text-center fw-bold mb-3 mb-lg-5">Our Services</h3>

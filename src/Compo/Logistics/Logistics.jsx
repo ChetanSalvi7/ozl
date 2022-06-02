@@ -5,7 +5,7 @@ import LogisticsLogo3 from '../../backend/img/logistic/03.jpg'
 import LogisticsLogo4 from '../../backend/img/logistic/04.jpg'
 import LogisticsLogo5 from '../../backend/img/logistic/05.jpg'
 import LogisticsLogo6 from '../../backend/img/logistic/06.jpg'
-
+import BannerLogo from '../../backend/img/hero-banner-3.jpg';
 import InternationSecurity from '../../backend/img/logistic/Internation-Security.svg'
 import WorldwideCustomCreation from '../../backend/img/logistic/Worldwide_custom_creation.svg'
 import Insurance from '../../backend/img/logistic/Insurance.svg'
@@ -34,6 +34,24 @@ const Logistics = () => {
 
   return (
     <>
+    {/* Banner--start*/}
+    <section className="hero-section container-fluid px-lg-5">
+    <div className="swiper heroSwiper">
+        <div className="swiper-wrapper">
+            <div className="swiper-slide">
+                <img src={BannerLogo} alt="" className="w-100" style={{width: '100%'}}/>
+                <div className="banner-details">
+                    <div>
+                        <h2 className="h2 fw-bold text-shadow">Our range of storage facilities - <br className="d-none d-md-block"/>individual and versatile.</h2>
+                        <p className="text-shadow">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div className="heroSwiper-pagination"></div>
+    </div>
+</section>
+    {/* Banner--end */}
     <section className="py-3 py-lg-5">
     <div className="container">
         <div className="row justify-content-center">
@@ -48,8 +66,8 @@ const Logistics = () => {
                 <div className="card">
                     <div className="card-body border border-2 border-primary text-center">
                         <h3 className="h2 text-center fw-bold mb-3">Logistics</h3>
-                        <p>Our internal logistics specialists take care of the entire logistics process chain, from collection to customs clearance. From our customs warehouse, we can transport valuables to national or international destinations. Multiple locations worldwide enable you to achieve optimal diversification when it comes to storing your valuables. Working with renowned partners enables us to guarantee a professional service in terms of security, handling, insurance and time management during the transportation of valuables.</p>
-                        <p>We offer regular routes from Triesen to Zurich, Frankfurt, London, Hong Kong, Singapore and New York, for example.</p>
+                        <p>Our internal logistics specialists take care of the entire logistics process chain, from collection to customs clearance. From our customs warehouse, we can transport valuables to national or international destinations. Multiple locations worldwide enable you to achieve optimal diversification when it comes to storing your valuables. </p>
+                        
                     </div>
                 </div>
             </div>
