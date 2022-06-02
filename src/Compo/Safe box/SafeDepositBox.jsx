@@ -1,6 +1,7 @@
 import React from 'react'
 import WeightLogo from '../../backend/img/Weight.svg';
 import DimensionsLogo from '../../backend/img/Dimensions.svg';
+import BannerLogo from '../../backend/img/hero-banner-2.jpg';
 
 const SafeDepositBox = () => {
 
@@ -11,6 +12,25 @@ const SafeDepositBox = () => {
 
   return (
     <>
+    {/* Banner--start*/}
+    <section className="hero-section container-fluid px-lg-5">
+    <div className="swiper heroSwiper">
+        <div className="swiper-wrapper">
+            <div className="swiper-slide">
+                <img src={BannerLogo} alt="" className="w-100" style={{width: '100%'}}/>
+                <div className="banner-details">
+                    <div>
+                        <h2 className="h2 fw-bold text-shadow">Our range of storage facilities - <br className="d-none d-md-block"/>individual and versatile.</h2>
+                        <p className="text-shadow">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div className="heroSwiper-pagination"></div>
+    </div>
+</section>
+    {/* Banner--end */}
+
     <section className="py-3 py-lg-5">
     <div className="container-xxl">
         <h3 className="h2 text-center fw-bold mb-3 mb-lg-5">Your solution - Our services</h3>

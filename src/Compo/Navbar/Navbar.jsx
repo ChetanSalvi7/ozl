@@ -11,34 +11,34 @@ const Navbar = () => {
    });
  }, []);
 
- const navSlide = () => {
-	const burger = document.querySelector('.side-burger');
-	const burgerClose = document.querySelector('.offcanvas-header .btn-close');
-	const nav = document.querySelector('.offcanvas-body .nav');
-	const navLink = document.querySelectorAll('.offcanvas-body .nav .nav-item')
+//  const navSlide = () => {
+// 	const burger = document.querySelector('.side-burger');
+// 	const burgerClose = document.querySelector('.offcanvas-header .btn-close');
+// 	const nav = document.querySelector('.offcanvas-body .nav');
+// 	const navLink = document.querySelectorAll('.offcanvas-body .nav .nav-item')
 
-	burger.addEventListener('click', () => {
-		nav.classList.add('nav-active');
+// 	burger.addEventListener('click', () => {
+// 		nav.classList.add('nav-active');
 		
-		navLink.forEach((link, index) => {
-			if (link.style.animation) {
-				link.style.animation = ''
-			} else {
-				link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.2}s`;
-			}
-		});
+// 		navLink.forEach((link, index) => {
+// 			if (link.style.animation) {
+// 				link.style.animation = ''
+// 			} else {
+// 				link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.2}s`;
+// 			}
+// 		});
 
-		//burger.classList.toggle('toggle');
-	});
-	burgerClose.addEventListener('click', () => {
-		nav.classList.remove('nav-active');
-		navLink.forEach((link, index) => {
-			if (link.style.animation) {
-				link.style.animation = ''
-			}
-		});
-	});
-}
+// 		//burger.classList.toggle('toggle');
+// 	});
+// 	burgerClose.addEventListener('click', () => {
+// 		nav.classList.remove('nav-active');
+// 		navLink.forEach((link, index) => {
+// 			if (link.style.animation) {
+// 				link.style.animation = ''
+// 			}
+// 		});
+// 	});
+// }
 
 
 
@@ -74,15 +74,13 @@ const Navbar = () => {
                     <ul className="navbar-nav me-lg-3 ms-auto mb-2 mb-lg-0 ">
                       <li className="nav-item dropdown py-1  py-lg-0">
                         <a className="nav-link link-scroll" href="#">
-                          {" "}
-                          Customs warehouse{" "}
+                          Customs warehouse
                         </a>
                       </li>
                       <li className="nav-item dropdown py-1  py-lg-0">
-                        <a className="nav-link link-scroll" href="#">
-                          {" "}
-                          Precious metals trading{" "}
-                        </a>
+                        <NavLink className="nav-link link-scroll" to="preciousmetals">
+                          Precious metals trading
+                        </NavLink>
                       </li>
                       <li className="nav-item dropdown py-1  py-lg-0">
                         <NavLink className="nav-link link-scroll" to="ourservices">

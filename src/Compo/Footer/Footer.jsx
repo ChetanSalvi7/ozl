@@ -1,5 +1,6 @@
 import React from 'react'
 import Logo from '../../backend/img/logo.svg';
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
     const getYear = new Date().getFullYear();
@@ -9,37 +10,37 @@ const Footer = () => {
         <div className="container-fluid px-lg-5">
             <div className="row">
                 <div className="col-lg-3">
-                    <a href="#">
+                    <NavLink to="/">
                         <img src={Logo} alt="" className="img-fluid mb-2" style={{maxHeight: "76px"}}/>
-                    </a>
+                    </NavLink>
                     <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
                 </div>
                 <div className="col-lg-5">
                     <div className="row">
                         <div className="row row-cols-md-2 fw-bold">
                             <div className="col mb-2">
-                                <a href="http://">CUSTOMS WAREHOUSE</a>
+                                <NavLink to="/">CUSTOMS WAREHOUSE</NavLink>
                             </div>
                             <div className="col mb-2">
-                                <a href="http://">PRECIOUS METALS TRADING</a>
+                                <NavLink to="preciousmetals">PRECIOUS METALS TRADING</NavLink>
                             </div>
                             <div className="col mb-2">
-                                <a href="http://">SAFE DEPOSIT BOXES & VAULTS</a>
+                                <NavLink to="safedepositbox">SAFE DEPOSIT BOXES & VAULTS</NavLink>
                             </div>
                             <div className="col mb-2">
-                                <a href="http://">LOGISTICS</a>
+                                <NavLink to="logistics">LOGISTICS</NavLink>
                             </div>
                             <div className="col mb-2">
-                                <a href="http://">DIAMONDS</a>
+                                <NavLink to="diamonds">DIAMONDS</NavLink>
                             </div>
                             <div className="col mb-2">
-                                <a href="http://">ART</a>
+                                <NavLink to="art">ART</NavLink>
                             </div>
                             <div className="col mb-2">
-                                <a href="http://">Regulation / FMA</a>
+                                <NavLink to="">Regulation / FMA</NavLink>
                             </div>
                             <div className="col mb-2">
-                                <a href="http://">Impressions</a>
+                                <NavLink to="">Impressions</NavLink>
                             </div>
                         </div>
                     </div>

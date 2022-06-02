@@ -1,8 +1,10 @@
 import React from 'react'
 import { Route, Routes } from "react-router-dom";
 import './App.css'
+import Art from './Compo/Art/Art';
 import BackToTop from './Compo/Back to top/BackToTop';
 import ContactUs from './Compo/Contact/ContactUs';
+import Diamonds from './Compo/Diamond/Diamonds';
 import Footer from './Compo/Footer/Footer';
 import Gtc from './Compo/GTC/Gtc';
 import Logistics from './Compo/Logistics/Logistics';
@@ -25,8 +27,11 @@ const App = () => {
         <Route path="/contactus" element={<ContactUs />} />
         <Route path="/logistics" element={<Logistics />} />
         <Route path="/gtc" element={<Gtc />} />
+        <Route path="/art" element={<Art />} />
         <Route path="/safedepositbox" element={<SafeDepositBox />} />
         <Route path="/preciousmetals" element={<PreciousMetals />} />
+        <Route path="/diamonds" element={<Diamonds />} />
+
     </Routes>
     <OurPartners />
     <BackToTop />
