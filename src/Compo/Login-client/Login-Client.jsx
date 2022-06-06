@@ -2,8 +2,8 @@ import React from 'react'
 import Clogo from '../../backend/img/logo.svg'
 
 const LoginClient = () => {
-    const Username = 'Enter Your Username';
-    const YourEmail = 'Enter Your Username';
+    const Username = 'Login';
+   
     const SignUpName = 'Sign In';
   return (
     <>
@@ -25,7 +25,7 @@ const LoginClient = () => {
                         <input type="text" className="form-control"/>
                     </div>
                     <div className="pt-3">
-                        <label for="name" className="pb-2">{YourEmail}</label>
+                        <label for="name" className="pb-2"></label>
                         <input type="email" className="form-control"/>
                     </div>
                     <div className="pt-3 text-end">

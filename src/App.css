@@ -1061,6 +1061,7 @@ a:hover {
   transition: all 0.3s ease-in-out;
   transform: translateY(-50%);
   left: 0;
+  z-index: 100;
 }
 .sticky-contact-bar a {
   height: 44px;
