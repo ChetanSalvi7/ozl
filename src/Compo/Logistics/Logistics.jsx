@@ -1,29 +1,32 @@
 import React from 'react'
-import LogisticsLogo1 from '../../backend/img/logistic/01.jpg'
-import LogisticsLogo2 from '../../backend/img/logistic/02.jpg'
-import LogisticsLogo3 from '../../backend/img/logistic/03.jpg'
-import LogisticsLogo4 from '../../backend/img/logistic/04.jpg'
-import LogisticsLogo5 from '../../backend/img/logistic/05.jpg'
-import LogisticsLogo6 from '../../backend/img/logistic/06.jpg'
+import LogisticsLogo1 from '../storage/logistics/1654147318.jpg'
+import LogisticsLogo2 from '../storage/logistics/1654147375.jpg'
+import LogisticsLogo3 from '../storage/logistics/1654147408.jpg'
+import LogisticsLogo4 from '../storage/logistics/1654147475.jpg'
+import LogisticsLogo5 from '../storage/logistics/1654147506.jpg'
+import LogisticsLogo6 from '../storage/logistics/1654147539.jpg'
+
 import BannerLogo from '../../backend/img/hero-banner-3.jpg';
-import InternationSecurity from '../../backend/img/logistic/Internation-Security.svg'
-import WorldwideCustomCreation from '../../backend/img/logistic/Worldwide_custom_creation.svg'
-import Insurance from '../../backend/img/logistic/Insurance.svg'
-import SecurityLocations from '../../backend/img/logistic/Security-Locations.svg'
-import Logistics1 from '../../backend/img/logistic/Logistics.svg'
-import Partners from '../../backend/img/logistic/Partners.svg'
-import TrailorMadeTransport from '../../backend/img/logistic/Trailor-made_Transport.svg'
+
+import InternationSecurity from '../storage/logistics/1654166350.svg'
+import WorldwideCustomCreation from '../storage/logistics/1654166392.svg'
+import Insurance from '../storage/logistics/1654166436.svg'
+import SecurityLocations from '../storage/logistics/1654166490.svg'
+import Logistics1 from '../storage/logistics/1654166535.svg'
+import Partners from '../storage/logistics/1654166573.svg'
+import TrailorMadeTransport from '../storage/logistics/1654166609.svg'
+import GlobalPro from '../storage/logistics/1654166640.svg'
 
 const Logistics = () => {
 
     const Data1 =[{name:'International security transportats',Logo: `${InternationSecurity}`},
         {name:'Worldwide customs clearance',Logo: `${WorldwideCustomCreation}`},
         {name:'Door to Door insurance coverage',Logo: `${Insurance}`},
-        {name:'High Security Standards',Logo: `${SecurityLocations}`},
-        {name:'Global professional logistics',Logo: `${Logistics1}`},
-        {name:'Handling by renowned partners',Logo: `${Partners}`},
-        {name:'Multiple high security locations',Logo: `${SecurityLocations}`},
-        {name:'Tailor-made special transports',Logo: `${TrailorMadeTransport}`}];
+        {name:'Museum standard storage',Logo: `${SecurityLocations}`},
+        {name:'Allocated vaults/ studios available',Logo: `${Logistics1}`},
+        {name:'Domestic & customs warehousing',Logo: `${Partners}`},
+        {name:'High Security Standards',Logo: `${TrailorMadeTransport}`},
+        {name:'Global professional logistics',Logo: `${GlobalPro}`}];
 
     const Data2 = [{dataname: 'Optimum solutions via renowned partners',images: `${LogisticsLogo1}`},
         {dataname: 'State-of-the-art professional logistics infrastructure/Security and efficiency',images: `${LogisticsLogo2}`},
@@ -43,7 +46,7 @@ const Logistics = () => {
                 <div className="banner-details">
                     <div>
                         <h2 className="h2 fw-bold text-shadow">Our range of storage facilities - <br className="d-none d-md-block"/>individual and versatile.</h2>
-                        <p className="text-shadow">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
+                        
                     </div>
                 </div>
             </div>
@@ -52,6 +55,7 @@ const Logistics = () => {
     </div>
 </section>
     {/* Banner--end */}
+
     <section className="py-3 py-lg-5">
     <div className="container">
         <div className="row justify-content-center">
@@ -66,7 +70,11 @@ const Logistics = () => {
                 <div className="card">
                     <div className="card-body border border-2 border-primary text-center">
                         <h3 className="h2 text-center fw-bold mb-3">Logistics</h3>
-                        <p>Our internal logistics specialists take care of the entire logistics process chain, from collection to customs clearance. From our customs warehouse, we can transport valuables to national or international destinations. Multiple locations worldwide enable you to achieve optimal diversification when it comes to storing your valuables. </p>
+                        <p>Our internal logistics specialists take care of the entire logistics process chain, from collection to customs clearance. 
+                            From our customs warehouse, we can transport valuables to national or international destinations. Multiple locations worldwide enable you to achieve 
+                            optimal diversification when it comes to storing your valuables. Working with renowned partners enables us to 
+                            guarantee a professional service in terms of security, handling, insurance and time management during the transportation of valuables.</p>
+                            <p>We offer regular routes from Triesen to Zurich, Frankfurt, London, Hong Kong, Singapore and New York, for example.</p>
                         
                     </div>
                 </div>

@@ -1,6 +1,6 @@
 import React from 'react'
-import Rheingold from '../../backend/img/precious-metal/rheingold-logo.png'
-import Banner from '../../backend/img/precious-metal/banner.jpg'
+import Rheingold from '../storage/our-partner-content/1654165340.png'
+import Banner from '../storage/banner/1654153989.jpg'
 import ManufacturersMatels from './Manufacturers/ManufacturersMatels'
 import OnlineMetals from './Online metals/OnlineMetals'
 
@@ -14,8 +14,8 @@ const PreciousMetals = () => {
                 <img src={Banner} alt="" className="w-100" style={{width: '100%'}}/>
                 <div className="banner-details">
                     <div>
-                        <h2 className="h2 fw-bold text-shadow">Buy and sell precious metals <br className="d-none d-md-block"/>very easily - directly at our domicile.</h2>
-                        <p className="text-shadow">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
+                        <h2 className="h2 fw-bold text-shadow">Buy and sell precious metals very easily -<br className="d-none d-md-block"/> directly at our domicile.</h2>
+                        
                     </div>
                 </div>
             </div>

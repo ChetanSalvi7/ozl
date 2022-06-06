@@ -11,37 +11,6 @@ const Navbar = () => {
     });
   }, []);
 
-  // const navSlide = () => {
-  //   const burger = document.querySelector('.side-burger');
-  //   const burgerClose = document.querySelector('.offcanvas-header .btn-close');
-  //   const nav = document.querySelector('.offcanvas-body .nav');
-  //   const navLink = document.querySelectorAll('.offcanvas-body .nav .nav-item')
-
-  //   burger.addEventListener('click', () => {
-  //     nav.classList.add('nav-active');
-
-  //     navLink.forEach((link, index) => {
-  //       if (link.style.animation) {
-  //         link.style.animation = ''
-  //       } else {
-  //         link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.2}s`;
-  //       }
-  //     });
-
-  //     //burger.classList.toggle('toggle');
-  //   });
-  //   burgerClose.addEventListener('click', () => {
-  //     nav.classList.remove('nav-active');
-  //     navLink.forEach((link, index) => {
-  //       if (link.style.animation) {
-  //         link.style.animation = ''
-  //       }
-  //     });
-  //   });
-  // }
-
-
-
 
   return (
     <>
@@ -73,9 +42,9 @@ const Navbar = () => {
                   >
                     <ul className="navbar-nav me-lg-3 ms-auto mb-2 mb-lg-0 ">
                       <li className="nav-item dropdown py-1  py-lg-0">
-                        <a className="nav-link link-scroll" href="#">
-                          Customs warehouse
-                        </a>
+                        <NavLink className="nav-link link-scroll" to="ourservices">
+                          CUSTOMS WAREHOUSE
+                        </NavLink>
                       </li>
                       <li className="nav-item dropdown py-1  py-lg-0">
                         <NavLink className="nav-link link-scroll" to="preciousmetals">
@@ -83,20 +52,20 @@ const Navbar = () => {
                         </NavLink>
                       </li>
                       <li className="nav-item dropdown py-1  py-lg-0">
-                        <NavLink className="nav-link link-scroll" to="ourservices">
+                        <NavLink className="nav-link link-scroll" to="safedepositbox">
 
-                          Our Services
+                          SAFE DEPOSIT BOXES & VAULTS
                         </NavLink>
                       </li>
                       <li className="nav-item py-1 py-lg-0">
-                        <select className="form-select">
+                        <select className="selectpicker selectlanaguePicker" data-width="fit" name="language_id">
                           <option defaultValue value="index.html">EN</option>
                           <option value="german.html">DE</option>
                         </select>
                       </li>
                     </ul>
                     <button
-                      className="py-xl-2 btn btn-primary-light border-0 d-block text-center"
+                      className="py-xl-2 btn btn-primary border-0 d-block text-center"
                       type="button"
                       data-bs-toggle="offcanvas"
                       data-bs-target="#side-menu"
@@ -111,40 +80,37 @@ const Navbar = () => {
                       aria-labelledby="side-menu-label"
                     >
                       {/* Off Canvas  */}
-                      <div className="offcanvas offcanvas-end" tabIndex="-1" id="side-menu" aria-labelledby="side-menu-label">
+                      <div className="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
                         <div className="offcanvas-header">
-                          <h5 className="offcanvas-title" id="side-menu-label">
-                            Menu
-                          </h5>
-                          <button
-                            type="button"
-                            className="btn-close"
-                            data-bs-dismiss="offcanvas"
-                            aria-label="Close"
-                          ></button>
+                          <h5 className="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+                          
                         </div>
                         <div className="offcanvas-body">
                           <ul className="nav flex-column">
                             <li className="nav-item">
-                              <a
-                                className="nav-link active"
-                                aria-current="page"
-                                href="#"
-                              >
-                                Active
-                              </a>
+                              <NavLink className="nav-link " aria-current="page" to="logistics">LOGISTICS</NavLink>
                             </li>
                             <li className="nav-item">
-                              <a className="nav-link" href="#">
-                                Link
-                              </a>
+                              <NavLink className="nav-link " to="diamonds">DIAMONDS</NavLink>
+                            </li>
+                            <li className="nav-item ">
+                              <NavLink className="nav-link" to="art">ART</NavLink>
+                            </li>
+                            <li className="nav-item ">
+                              <NavLink className="nav-link" to="art">Hello</NavLink>
                             </li>
                             <li className="nav-item">
-                              <a className="nav-link" href="#">
-                                Link
-                              </a>
+                              <a className="nav-link" target="_blank" href="https://www.rheingold-edelmetall.com/en/portfolio/index/">LOGIN PORTFOLIO</a>
                             </li>
-
+                            <li className="nav-item">
+                              <NavLink className="nav-link " to="art">BECOME A CUSTOMER</NavLink>
+                            </li>
+                            <li className="nav-item">
+                              <NavLink className="nav-link " to="art">REGULATION / FMA</NavLink>
+                            </li>
+                            <li className="nav-item ">
+                              <NavLink className="nav-link" to="art">IMPRESIONS</NavLink>
+                            </li>
                           </ul>
                         </div>
                       </div>

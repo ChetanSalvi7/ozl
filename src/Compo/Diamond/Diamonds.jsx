@@ -1,11 +1,11 @@
 import React from 'react'
-import LogisticsLogo1 from '../../backend/img/logistic/01.jpg'
-import LogisticsLogo2 from '../../backend/img/logistic/02.jpg'
-import LogisticsLogo3 from '../../backend/img/logistic/03.jpg'
-import LogisticsLogo4 from '../../backend/img/logistic/04.jpg'
-import LogisticsLogo5 from '../../backend/img/logistic/05.jpg'
-import LogisticsLogo6 from '../../backend/img/logistic/06.jpg'
-import BannerLogo from '../../backend/img/hero-banner-1.jpg'
+import LogisticsLogo1 from '../storage/diamonds/1654146542.jpg'
+import LogisticsLogo2 from '../storage/diamonds/1654146586.jpg'
+import LogisticsLogo3 from '../storage/diamonds/1654146621.jpg'
+import LogisticsLogo4 from '../storage/diamonds/1654147113.jpg'
+import LogisticsLogo5 from '../storage/diamonds/1654147143.jpg'
+import LogisticsLogo6 from '../storage/diamonds/1654147168.jpg'
+import BannerLogo from '../storage/banner/1654152384.jpg'
 
 const Diamonds = () => {
     const Data2 = [{dataname: 'Optimum solutions via renowned partners',images: `${LogisticsLogo1}`},
@@ -24,8 +24,8 @@ const Diamonds = () => {
                 <img src={BannerLogo} alt="" className="w-100" style={{width: '100%'}}/>
                 <div className="banner-details">
                     <div>
-                        <h2 className="h2 fw-bold text-shadow">Your diamonds in safe hands -<br className="d-none d-md-block"/>services ranging from collection to<br className="d-none d-md-block"/>customs clearance.</h2>
-                        <p className="text-shadow">There are many variations of passages of Lorem Ipsum available.</p>
+                        <h2 className="h2 fw-bold text-shadow">Your diamonds in safe hands -<br className="d-none d-md-block"/>services ranging from collection to customs clearance.</h2>
+                       
                     </div>
                 </div>
             </div>
@@ -40,8 +40,8 @@ const Diamonds = () => {
             <div className="col-lg-7">
                 <div className="card mb-3 mb-lg-5">
                     <div className="card-body border border-2 border-primary text-center">
-                        <h3 className="h2 text-center fw-bold mb-3">Update COVID-19</h3>
-                        <p>The travel restriction due to the current COVID-19 situation does not apply to international security logistics. Worldwide security transports can be organized and carried out to and from Liechtenstein.</p>
+                        <h3 className="h2 text-center fw-bold mb-3">Why will your diamonds be in safe<br className="d-none d-md-block"/>hands with us?</h3>
+                        <p>Storing your diamonds with OZL Offenes Zolllager in Liechtenstein AG not only brings benefits such as security, flexibility, maximum transparency in stock accounting and an attractive fee structure but also gives you the additional opportunity to use our own customs warehouse in Liechtenstein, so you can keep your diamonds in your name and separate from other customers (individual safe custody) in our Open Customs Warehouse. You can access your assets at any time and thus avoid having to pay VAT when buying or selling diamonds. Our specialists will be pleased to assist you with any further queries that you may have.</p>
                     </div>
                 </div>
             </div>

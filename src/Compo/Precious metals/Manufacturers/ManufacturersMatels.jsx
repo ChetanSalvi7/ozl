@@ -1,8 +1,8 @@
 import React from 'react'
-import ManufactureLogo1 from '../../../backend/img/precious-metal/manufacture-1.jpg';
-import ManufactureLogo2 from '../../../backend/img/precious-metal/manufacture-2.jpg';
-import ManufactureLogo3 from '../../../backend/img/precious-metal/manufacture-3.jpg';
-import ManufactureLogo4 from '../../../backend/img/precious-metal/manufacture-4.jpg';
+import ManufactureLogo1 from '../../storage/precious-metal-tradings/1654172249.jpg';
+import ManufactureLogo2 from '../../storage/precious-metal-tradings/1654172264.jpg';
+import ManufactureLogo3 from '../../storage/precious-metal-tradings/1654172278.jpg';
+import ManufactureLogo4 from '../../storage/precious-metal-tradings/1654172288.jpg';
 
 const ManufacturersMatels = () => {
 

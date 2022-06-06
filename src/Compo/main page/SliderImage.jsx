@@ -13,10 +13,10 @@ import CompanyLogo4 from "../../backend/img/hero-banner-4.jpg";
 
 const SliderImage = () => {
 
-  const homeImage = [{ text: '', image: '', style: 'd-none d-md-block' },
-  { text: '', image: '' },
-  { text: '', image: '' },
-  { text: '', image: '' }];
+  const homeImage = [{ text1: 'OZL -',text2:'Custody at the highest level' , image: `${CompanyLogo1}`},
+  { text1: 'Trisuna Lagerhaus AG  and the Principality of Liechtenstein -',text2:'independent, secure and stable.' , image: `${CompanyLogo2}` },
+  { text1: 'We can transport your valuables -',text2:' securely, reliably and inexpensively.' , image: `${CompanyLogo3}` },
+  { text1: 'Precious Metals | Art | Diamonds -',text2:'we take care of your assets.' , image: `${CompanyLogo4}` }];
 
   return (
     <>
@@ -35,78 +35,33 @@ const SliderImage = () => {
               effect={"auto"}
               
             >
-              <SwiperSlide>
-                <div className="swiper-slide">
-                  <picture>
-                    {/* <!-- <source media="(min-width:650px)" srcset="img_pink_flowers.jpg"> --> */}
-                    <img src={CompanyLogo1} alt="image" className="w-100" style={{ width: '100%' }} />
-                  </picture>
-                  <div className="banner-details">
-                    <div>
-                      <h2 className="h2 fw-bold text-shadow">
-                        OZL <br className="d-none d-md-block" />
-                        Custody at the highest level
-                      </h2>
-                      <p className="text-shadow">
-                        There are many variations of passages of Lorem Ipsum
-                        available, but the majority have suffered alteration in
-                        some form, by injected humour
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="swiper-slide">
-                  <img src={CompanyLogo2} alt="image" className="w-100" style={{ width: '100%' }} />
-                  <div className="banner-details">
-                    <div>
-                      <h2 className="h2 fw-bold text-shadow">
-                        Trisuna Lagerhaus AG  and <br className="d-none d-md-block" />the Principality of Liechtenstein -<br className="d-none d-md-block" />
-                        independent, secure, stable.
-                      </h2>
-
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="swiper-slide">
-                  <img src={CompanyLogo3} alt="image" className="w-100" style={{ width: '100%' }} />
-                  <div className="banner-details">
-                    <div>
-                      <h2 className="h2 fw-bold text-shadow">
-                        We transport your valuables -<br className="d-none d-md-block" />
-                        safely, reliably and inexpensively.
-                      </h2>
-
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="swiper-slide">
-                  <img src={CompanyLogo4} alt="image" className="w-100" style={{ width: '100%' }} />
-                  <div className="banner-details">
-                    <div>
-                      <h2 className="h2 fw-bold text-shadow">
-                        precious metal | art | Diamonds -<br className="d-none d-md-block" />
-                        we take care of your investments.
-                      </h2>
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
+              {homeImage.map((showImage)=>{
+                return(
+                  <>
+                        <SwiperSlide>
+                        <div className="swiper-slide">
+                          <picture>
+                            <img src={showImage.image} alt="image" className="w-100" style={{ width: '100%' }} />
+                          </picture>
+                          <div className="banner-details">
+                            <div>
+                              <h2 className="h2 fw-bold text-shadow">
+                               {showImage.text1} <br className="d-none d-md-block" />
+                                {showImage.text2}
+                              </h2>
+                            </div>
+                          </div>
+                        </div>
+                      </SwiperSlide>  
+                  </>
+                )
+              })}
+              
             </Swiper>
           </div>
           <div className="heroSwiper-pagination"></div>
         </div>
       </section>
-
-
-
-
-
     </>
   );
 };

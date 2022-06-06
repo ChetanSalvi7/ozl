@@ -1,35 +1,44 @@
 import React from 'react'
-import LogisticsLogo1 from '../../backend/img/logistic/01.jpg'
-import LogisticsLogo2 from '../../backend/img/logistic/02.jpg'
-import LogisticsLogo3 from '../../backend/img/logistic/03.jpg'
-import LogisticsLogo4 from '../../backend/img/logistic/04.jpg'
-import LogisticsLogo5 from '../../backend/img/logistic/05.jpg'
-import LogisticsLogo6 from '../../backend/img/logistic/06.jpg'
+import logo1 from '../storage/art/1654146106.jpg'
+import logo2 from '../storage/art/1654146130.jpg'
+import logo3 from '../storage/art/1654146176.jpg'
+import logo4 from '../storage/art/1654146210.jpg'
+import logo5 from '../storage/art/1654146249.jpg'
+import logo6 from '../storage/art/1654146277.jpg'
+import logo7 from '../storage/art/1654146321.jpeg'
+import logo8 from '../storage/art/1654146350.jpeg'
+import logo9 from '../storage/art/1654146373.jpg'
+
 import BannerLogo from '../../backend/img/hero-banner-4.jpg';
-import InternationSecurity from '../../backend/img/logistic/Internation-Security.svg'
-import WorldwideCustomCreation from '../../backend/img/logistic/Worldwide_custom_creation.svg'
-import Insurance from '../../backend/img/logistic/Insurance.svg'
-import SecurityLocations from '../../backend/img/logistic/Security-Locations.svg'
-import Logistics1 from '../../backend/img/logistic/Logistics.svg'
-import Partners from '../../backend/img/logistic/Partners.svg'
-import TrailorMadeTransport from '../../backend/img/logistic/Trailor-made_Transport.svg'
+
+import PngLogo1 from '../storage/art/1654166717.svg'
+import PngLogo2 from '../storage/art/1654166763.svg'
+import PngLogo3 from '../storage/art/1654166794.svg'
+import PngLogo4 from '../storage/art/1654166837.svg'
+import PngLogo5 from '../storage/art/1654166871.svg'
+import PngLogo6 from '../storage/art/1654166898.svg'
+import PngLogo7 from '../storage/art/1654166926.svg'
+import PngLogo8 from '../storage/art/1654166982.png'
 
 const Art = () => {
-    const Data1 =[{name:'International security transportats',Logo: `${InternationSecurity}`},
-        {name:'Worldwide customs clearance',Logo: `${WorldwideCustomCreation}`},
-        {name:'Door to Door insurance coverage',Logo: `${Insurance}`},
-        {name:'High Security Standards',Logo: `${SecurityLocations}`},
-        {name:'Global professional logistics',Logo: `${Logistics1}`},
-        {name:'Handling by renowned partners',Logo: `${Partners}`},
-        {name:'Multiple high security locations',Logo: `${SecurityLocations}`},
-        {name:'Tailor-made special transports',Logo: `${TrailorMadeTransport}`}];
+    const Data1 =[{name:'Museum standard storage',Logo: `${PngLogo1}`},
+        {name:'Allocated vaults/ studios available',Logo: `${PngLogo2}`},
+        {name:'Domestic & customs warehousing',Logo: `${PngLogo3}`},
+        {name:'High Security Standards',Logo: `${PngLogo4}`},
+        {name:'Global professional logistics',Logo: `${PngLogo5}`},
+        {name:'Handling by renowned partners',Logo: `${PngLogo6}`},
+        {name:'Multiple locations in Liechtenstein',Logo: `${PngLogo7}`},
+        {name:'GRASP-certified storage',Logo: `${PngLogo8}`}];
 
-    const Data2 = [{dataname: 'Optimum solutions via renowned partners',images: `${LogisticsLogo1}`},
-        {dataname: 'State-of-the-art professional logistics infrastructure/Security and efficiency',images: `${LogisticsLogo2}`},
-        {dataname: 'Global transportation of precious metals, art, and other valuables, including customs clearance',images: `${LogisticsLogo3}`},
-        {dataname: 'International logistics within transit zones/Own customs specialists',images: `${LogisticsLogo4}`},
-        {dataname: 'Global logistics and storage',images: `${LogisticsLogo5}`},
-        {dataname: 'Full logistics service, from collection to delivery / All from a single source',images: `${LogisticsLogo6}`}];
+    const Data2 = [{dataname: 'Optimum solutions via renowned partners',images: `${logo1}`},
+        {dataname: 'State-of-the-art professional logistics infrastructure/Security and efficiency',images: `${logo2}`},
+        {dataname: 'Global transportation of precious metals, art, and other valuables, including customs clearance',images: `${logo3}`},
+        {dataname: 'International logistics within transit zones/Own customs specialists',images: `${logo4}`},
+        {dataname: 'Global logistics and storage',images: `${logo5}`},
+        {dataname: 'Full logistics service, from collection to delivery / All from a single source',images: `${logo6}`},
+        {dataname: 'International security transportats',images: `${logo7}`},
+        {dataname: 'Worldwide customs clearance',images: `${logo8}`},
+        {dataname: 'Door to Door insurance coverage',images: `${logo9}`}];
     return (
         <>
         {/* Banner--start*/}
@@ -40,9 +49,9 @@ const Art = () => {
                 <img src={BannerLogo} alt="" className="w-100" style={{width: '100%'}}/>
                 <div className="banner-details">
                     <div>
-                        <h2 className="h2 fw-bold text-shadow">Your art in the hands of the<br className="d-none d-md-block"/>professionals -<br className="d-none d-md-block"/>
-                        we will take care of it for you.</h2>
-                        <p className="text-shadow">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
+                        <h2 className="h2 fw-bold text-shadow">Your art in the hands of the professionals -<br className="d-none d-md-block"/>
+                        we will take care of it for you</h2>
+                        
                     </div>
                 </div>
             </div>
@@ -57,9 +66,11 @@ const Art = () => {
                         <div className="col-lg-7">
                             <div className="card">
                                 <div className="card-body border border-2 border-primary text-center">
-                                    <h3 className="h2 text-center fw-bold mb-3">Logistics</h3>
-                                    <p>Our internal logistics specialists take care of the entire logistics process chain, from collection to customs clearance. From our customs warehouse, we can transport valuables to national or international destinations. Multiple locations worldwide enable you to achieve optimal diversification when it comes to storing your valuables. Working with renowned partners enables us to guarantee a professional service in terms of security, handling, insurance and time management during the transportation of valuables.</p>
-                                    <p>We offer regular routes from Triesen to Zurich, Frankfurt, London, Hong Kong, Singapore and New York, for example.</p>
+                                    <h3 className="h2 text-center fw-bold mb-3">Why your art will be in good hands.</h3>
+                                    <p>Our team of specialists will be pleased to provide you with an individual quotation. No matter whether you are looking for customs warehousing, 
+                                        domestic warehousing or your own allocated vault/ studio or you want to use your safe deposit box. With multiple GRASP-certified locations in Liechtenstein,
+                                         we guarantee to provide the optimum solution for your paintings, sculptures or other works of art.</p>
+                                    
                                 </div>
                             </div>
                         </div>

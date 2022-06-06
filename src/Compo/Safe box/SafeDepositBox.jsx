@@ -21,7 +21,7 @@ const SafeDepositBox = () => {
                 <div className="banner-details">
                     <div>
                         <h2 className="h2 fw-bold text-shadow">Our range of storage facilities - <br className="d-none d-md-block"/>individual and versatile.</h2>
-                        <p className="text-shadow">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
+                        
                     </div>
                 </div>
             </div>
