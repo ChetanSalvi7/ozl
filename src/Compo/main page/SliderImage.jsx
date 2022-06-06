@@ -6,10 +6,10 @@ import "swiper/bundle";
 
 
 
-import CompanyLogo1 from "../../backend/img/hero-banner-1.jpg";
-import CompanyLogo2 from "../../backend/img/hero-banner-2.jpg";
-import CompanyLogo3 from "../../backend/img/hero-banner-3.jpg";
-import CompanyLogo4 from "../../backend/img/hero-banner-4.jpg";
+import CompanyLogo1 from '../storage/banner/1654151559.jpg';
+import CompanyLogo2 from '../storage/banner/1654151603.jpg';
+import CompanyLogo3 from '../storage/banner/1654151655.jpg';
+import CompanyLogo4 from '../storage/banner/1654151738.jpg';
 
 const SliderImage = () => {
 
@@ -25,7 +25,7 @@ const SliderImage = () => {
         <div className="swiper heroSwiper">
           <div className="swiper-wrapper">
             <Swiper
-              spaceBetween={100}
+              spaceBetween={20}
               slidesPerView={1}
               loop={true}
               autoplay={true}

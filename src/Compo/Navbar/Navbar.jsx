@@ -22,17 +22,9 @@ const Navbar = () => {
                 <NavLink className="navbar-brand" to="/#">
                   <img src={Logo} alt="" className="logo" />
                 </NavLink>
-                <button
-                  className="navbar-toggler ms-auto align-self-center"
-                  type="button"
-                  data-bs-toggle="offcanvas"
-                  data-bs-target="#side-menu"
-                  aria-controls="navbarSupportedContent"
-                  aria-expanded="false"
-                  aria-label="Toggle navigation"
-                >
-                  <span className="navbar-toggler-icon"></span>
-                </button>
+                <button className="navbar-toggler ms-auto align-self-center" type="button" data-bs-toggle="offcanvas" data-bs-target="#side-menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                 </button>
               </div>
               <div className="col-12 col-lg-9">
                 <div className="navigation py-lg-2 mt-2 mt-lg-0 d-flex flex-fill">
@@ -64,26 +56,16 @@ const Navbar = () => {
                         </select>
                       </li>
                     </ul>
-                    <button
-                      className="py-xl-2 btn btn-primary border-0 d-block text-center"
-                      type="button"
-                      data-bs-toggle="offcanvas"
-                      data-bs-target="#side-menu"
-                      aria-controls="side-menu"
-                    >
+                    <button  className="py-xl-2 btn btn-primary border-0 d-block text-center side-burger"  
+                    type="button"  data-bs-toggle="offcanvas"  data-bs-target="#side-menu"  aria-controls="side-menu"  >
                       <i className="fa-solid fa-bars"></i>
                     </button>
-                    <div
-                      className="offcanvas offcanvas-end"
-                      tabIndex="-1"
-                      id="side-menu"
-                      aria-labelledby="side-menu-label"
-                    >
+                    
                       {/* Off Canvas  */}
-                      <div className="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                      <div className="offcanvas offcanvas-end" tabindex="-1" id="side-menu" aria-labelledby="side-menu-label">
                         <div className="offcanvas-header">
-                          <h5 className="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
-                          
+                          <h5 className="offcanvas-title" id="side-menu-label">Menu</h5>
+                          <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                         </div>
                         <div className="offcanvas-body">
                           <ul className="nav flex-column">
@@ -97,7 +79,7 @@ const Navbar = () => {
                               <NavLink className="nav-link" to="art">ART</NavLink>
                             </li>
                             <li className="nav-item ">
-                              <NavLink className="nav-link" to="art">Hello</NavLink>
+                              <NavLink className="nav-link" to="loginclient">LOGIN CLIENT DEPOSIT</NavLink>
                             </li>
                             <li className="nav-item">
                               <a className="nav-link" target="_blank" href="https://www.rheingold-edelmetall.com/en/portfolio/index/">LOGIN PORTFOLIO</a>
@@ -114,7 +96,7 @@ const Navbar = () => {
                           </ul>
                         </div>
                       </div>
-                    </div>
+                   
                     {/* Off canvas  */}
                   </div>
                 </div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import CustomerLogo from "../../backend/img/become-customer.png";
+import CustomerLogo from "../storage/become-customer.png";
 
 const BecomeCustomer = () => {
   return (

@@ -21,7 +21,7 @@ const OurPartners = () => {
     const PartnerInfo = [
         { name1: 'Allianz Suisse', image1: `${PartnerLogo1}` },
         { name1: 'Basler', image1: `${PartnerLogo2}` },
-        { name1: 'Marsh', image1: `${PartnerLogo3}`,image2:`${PartnerLogo1}`,image3:`${PartnerLogo3}`,image4:`${PartnerLogo4}` },
+        { name1: 'Marsh', image1: `${PartnerLogo3}`, image2: `${PartnerLogo1}`, image3: `${PartnerLogo3}`, image4: `${PartnerLogo4}` },
         { name1: 'AXA', image1: `${PartnerLogo4}` },
         { name1: 'AXA', image1: `${PartnerLogo2}` },
         { name1: 'AXA', image1: `${PartnerLogo3}` },]
@@ -39,13 +39,13 @@ const OurPartners = () => {
                                     controller={{ control: secondSwiper }}
                                     loop={true}
                                     autoplay={true}
-                                    pagination={{ clickable: true }}
+                                    pagination={{ clickable: false }}
                                     speed={2000}
                                     grabCursor={true}
                                 >
                                     <div className="swiper partnerSwiperText">
                                         <div className="swiper-wrapper">
-                                            {PartnerName.map((showName,key) => {
+                                            {PartnerName.map((showName, key) => {
                                                 return (
                                                     <>
                                                         <SwiperSlide>
@@ -67,7 +67,7 @@ const OurPartners = () => {
                         </div>
                         <div className="col-lg-8">
                             <Swiper className='mySwiper'
-                            spaceBetween={50}
+                                spaceBetween={50}
                                 modules={[Controller]}
                                 onSwiper={setSecondSwiper}
                                 controller={{ control: firstSwiper }}
