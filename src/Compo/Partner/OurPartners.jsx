@@ -48,7 +48,7 @@ const OurPartners = () => {
                                 <Swiper className='mySwiper'
                                     modules={[Controller]} onSwiper={setFirstSwiper}
                                     controller={{ control: secondSwiper }}
-                                    loop={true}
+                                   
                                     autoplay={true}
                                     pagination={{ clickable: false }}
                                     speed={2000}
@@ -82,7 +82,7 @@ const OurPartners = () => {
                                 modules={[Controller]}
                                 onSwiper={setSecondSwiper}
                                 controller={{ control: firstSwiper }}
-                                loop={true}
+                               
                                 grabCursor={true}
                             >
                                 <div thumbsSlider="" className="swiper partnerSwiperImage">

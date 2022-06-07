@@ -11,12 +11,22 @@ const Navbar = () => {
     });
   }, []);
 
+  let timeout;
+
+function ScrollToServiceTime() {
+  timeout = setTimeout(scrollToService, 300);
+}
+
   const scrollToService = () =>{
     window.scrollTo({
       top: 880, 
       behavior: 'smooth'
     });
   };
+  
+  function ScrollToCustomerTime() {
+    timeout = setTimeout(scrollToBecome, 300);
+  }
 
   const scrollToBecome = () =>{
     window.scrollTo({
@@ -48,7 +58,7 @@ const Navbar = () => {
                   >
                     <ul className="navbar-nav me-lg-3 ms-auto mb-2 mb-lg-0 ">
                       <li className="nav-item dropdown py-1  py-lg-0">
-                        <NavLink className="nav-link link-scroll" to="ourservices" onClick={scrollToService}>
+                        <NavLink className="nav-link link-scroll" to="ourservices" onClick={ScrollToServiceTime}>
                           CUSTOMS WAREHOUSE
                         </NavLink>
                       </li>
@@ -99,7 +109,7 @@ const Navbar = () => {
                               <a className="nav-link" target="_blank" href="https://www.rheingold-edelmetall.com/en/portfolio/index/">LOGIN PORTFOLIO</a>
                             </li>
                             <li className="nav-item">
-                              <NavLink className="nav-link " to="/" onClick={scrollToBecome}>BECOME A CUSTOMER</NavLink>
+                              <NavLink className="nav-link " to="/" onClick={ScrollToCustomerTime}>BECOME A CUSTOMER</NavLink>
                             </li>
                             <li className="nav-item">
                               <NavLink className="nav-link " to="art">REGULATION / FMA</NavLink>
