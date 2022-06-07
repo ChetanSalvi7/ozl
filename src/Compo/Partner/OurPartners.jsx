@@ -6,12 +6,23 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Controller } from 'swiper';
 import 'swiper/css';
 
-import PartnerLogo1 from '../../backend/img/partner/01.png';
-import PartnerLogo2 from '../../backend/img/partner/02.png';
-import PartnerLogo3 from '../../backend/img/partner/03.png';
-import PartnerLogo4 from '../../backend/img/partner/04.png';
-import PartnerLogo5 from '../../backend/img/partner/05.jpg';
-import PartnerLogo6 from '../../backend/img/partner/06.jpg';
+import PartnerLogo1 from '../storage/our-partner-content/1654164826.png';
+import PartnerLogo2 from '../storage/our-partner-content/1654165127.png';
+import PartnerLogo3 from '../storage/our-partner-content/1654165155.jpg';
+import PartnerLogo4 from '../storage/our-partner-content/1654165174.jpg';
+import PartnerLogo5 from '../storage/our-partner-content/1654165198.jpg';
+import PartnerLogo6 from '../storage/our-partner-content/1654165211.jpg';
+import PartnerLogo7 from '../storage/our-partner-content/1654165233.jpg';
+import PartnerLogo8 from '../storage/our-partner-content/1654165245.png';
+import PartnerLogo9 from '../storage/our-partner-content/1654165276.jpg';
+import PartnerLogo10 from '../storage/our-partner-content/1654165310.jpg';
+import PartnerLogo11 from '../storage/our-partner-content/1654165340.png';
+import PartnerLogo12 from '../storage/our-partner-content/1654165359.png';
+import PartnerLogo13 from '../storage/our-partner-content/1654165388.jpg';
+import PartnerLogo14 from '../storage/our-partner-content/1654165410.jpg';
+import PartnerLogo15 from '../storage/our-partner-content/1654165455.png';
+
+
 
 const OurPartners = () => {
     const [firstSwiper, setFirstSwiper] = useState(null);
@@ -23,8 +34,8 @@ const OurPartners = () => {
         { name1: 'Basler', image1: `${PartnerLogo2}` },
         { name1: 'Marsh', image1: `${PartnerLogo3}`, image2: `${PartnerLogo1}`, image3: `${PartnerLogo3}`, image4: `${PartnerLogo4}` },
         { name1: 'AXA', image1: `${PartnerLogo4}` },
-        { name1: 'AXA', image1: `${PartnerLogo2}` },
-        { name1: 'AXA', image1: `${PartnerLogo3}` },]
+        { name1: 'AXA', image1: `${PartnerLogo5}` },
+        { name1: 'AXA', image1: `${PartnerLogo6}` },]
 
     return (
         <>
