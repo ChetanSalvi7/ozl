@@ -9,15 +9,15 @@ const Footer = () => {
     <footer className="border-top pt-4">
         <div className="container-fluid px-lg-5">
             <div className="row">
-                <div className="col-lg-3">
+                <div className="col-lg-3 text-center text-sm-start">
                     <NavLink to="/">
                         <img src={Logo} alt="" className="img-fluid mb-2" style={{maxHeight: "76px"}}/>
                     </NavLink>
                     <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
                 </div>
-                <div className="col-lg-5">
-                    <div className="row">
-                        <div className="row row-cols-md-2 fw-bold">
+                <div className="col-lg-5 col-6">
+                    <div className=" row row-cols-1 row-cols-md-2 fw-bold">
+                        
                             <div className="col mb-2">
                                 <NavLink to="/">CUSTOMS WAREHOUSE</NavLink>
                             </div>
@@ -42,12 +42,12 @@ const Footer = () => {
                             <div className="col mb-2">
                                 <NavLink to="">Impressions</NavLink>
                             </div>
-                        </div>
+                       
                     </div>
                 </div>
-                <div className="col-lg-4">
-                    <div className="row">
-                        <div className="row row-cols-md-2 fw-bold">
+                <div className="col-lg-4 col-6">
+                    <div className="row row-cols-1 row-cols-md-2 fw-bold">
+                        
                             <div className="col mb-3">
                                 <div className="text-uppercase text-black-50">Address:</div>
                                 <div>Schliessa 16, 9495 Triesen, Liechtenstein</div>
@@ -64,7 +64,7 @@ const Footer = () => {
                                 <div className="text-uppercase text-black-50">e-mail:</div>
                                 <a href="mailto:info@ozl.li">info@ozl.li</a>
                             </div>
-                        </div>
+                        
                     </div>
                     <nav className="social-icon">
                         <a title="Facebook" href="#"><i className="fa-brands fa-facebook-f"></i></a>

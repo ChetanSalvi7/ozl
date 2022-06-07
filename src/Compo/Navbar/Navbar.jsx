@@ -23,7 +23,7 @@ const Navbar = () => {
                   <img src={Logo} alt="" className="logo" />
                 </NavLink>
                 <button className="navbar-toggler ms-auto align-self-center" type="button" data-bs-toggle="offcanvas" data-bs-target="#side-menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
+                            <span className="navbar-toggler-icon"></span>
                  </button>
               </div>
               <div className="col-12 col-lg-9">
@@ -62,7 +62,7 @@ const Navbar = () => {
                     </button>
                     
                       {/* Off Canvas  */}
-                      <div className="offcanvas offcanvas-end" tabindex="-1" id="side-menu" aria-labelledby="side-menu-label">
+                      <div className="offcanvas offcanvas-end" tabIndex="-1" id="side-menu" aria-labelledby="side-menu-label">
                         <div className="offcanvas-header">
                           <h5 className="offcanvas-title" id="side-menu-label">Menu</h5>
                           <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
