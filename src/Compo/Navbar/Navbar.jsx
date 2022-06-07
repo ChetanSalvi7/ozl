@@ -11,6 +11,20 @@ const Navbar = () => {
     });
   }, []);
 
+  const scrollToService = () =>{
+    window.scrollTo({
+      top: 880, 
+      behavior: 'smooth'
+    });
+  };
+
+  const scrollToBecome = () =>{
+    window.scrollTo({
+      top: 1430, 
+      behavior: 'smooth'
+    });
+  };
+
 
   return (
     <>
@@ -19,7 +33,7 @@ const Navbar = () => {
           <div className="container-fluid px-lg-5">
             <div className="row align-items-center">
               <div className="col-12 col-lg-3 d-flex">
-                <NavLink className="navbar-brand" to="/#">
+                <NavLink className="navbar-brand" to="/">
                   <img src={Logo} alt="" className="logo" />
                 </NavLink>
                 <button className="navbar-toggler ms-auto align-self-center" type="button" data-bs-toggle="offcanvas" data-bs-target="#side-menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,7 +48,7 @@ const Navbar = () => {
                   >
                     <ul className="navbar-nav me-lg-3 ms-auto mb-2 mb-lg-0 ">
                       <li className="nav-item dropdown py-1  py-lg-0">
-                        <NavLink className="nav-link link-scroll" to="ourservices">
+                        <NavLink className="nav-link link-scroll" to="ourservices" onClick={scrollToService}>
                           CUSTOMS WAREHOUSE
                         </NavLink>
                       </li>
@@ -85,7 +99,7 @@ const Navbar = () => {
                               <a className="nav-link" target="_blank" href="https://www.rheingold-edelmetall.com/en/portfolio/index/">LOGIN PORTFOLIO</a>
                             </li>
                             <li className="nav-item">
-                              <NavLink className="nav-link " to="art">BECOME A CUSTOMER</NavLink>
+                              <NavLink className="nav-link " to="/" onClick={scrollToBecome}>BECOME A CUSTOMER</NavLink>
                             </li>
                             <li className="nav-item">
                               <NavLink className="nav-link " to="art">REGULATION / FMA</NavLink>

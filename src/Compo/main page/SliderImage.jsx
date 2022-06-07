@@ -13,10 +13,10 @@ import CompanyLogo4 from '../storage/banner/1654151738.jpg';
 
 const SliderImage = () => {
 
-  const homeImage = [{ text1: 'OZL -',text2:'Custody at the highest level' , image: `${CompanyLogo1}`},
-  { text1: 'Trisuna Lagerhaus AG  and the Principality of Liechtenstein -',text2:'independent, secure and stable.' , image: `${CompanyLogo2}` },
-  { text1: 'We can transport your valuables -',text2:' securely, reliably and inexpensively.' , image: `${CompanyLogo3}` },
-  { text1: 'Precious Metals | Art | Diamonds -',text2:'we take care of your assets.' , image: `${CompanyLogo4}` }];
+  const homeImage = [{ text1: 'OZL -{<br className="d-none d-md-block" />} Custody at the highest level' , image: `${CompanyLogo1}`},
+  { text1: 'Trisuna Lagerhaus AG  and the Principality of Liechtenstein -<br className="d-none d-md-block" />independent, secure and stable.' , image: `${CompanyLogo2}` },
+  { text1: 'We can transport your valuables -<br className="d-none d-md-block" /> securely, reliably and inexpensively.' , image: `${CompanyLogo3}` },
+  { text1: 'Precious Metals | Art | Diamonds -<br className="d-none d-md-block" />we take care of your assets.' , image: `${CompanyLogo4}` }];
 
   return (
     <>
@@ -46,8 +46,7 @@ const SliderImage = () => {
                           <div className="banner-details">
                             <div>
                               <h2 className="h2 fw-bold text-shadow">
-                               {showImage.text1} <br className="d-none d-md-block" />
-                                {showImage.text2}
+                               {showImage.text1} 
                               </h2>
                             </div>
                           </div>
