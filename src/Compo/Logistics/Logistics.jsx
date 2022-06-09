@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import LogisticsLogo1 from '../storage/logistics/1654147318.jpg'
 import LogisticsLogo2 from '../storage/logistics/1654147375.jpg'
 import LogisticsLogo3 from '../storage/logistics/1654147408.jpg'
@@ -17,7 +17,13 @@ import Partners from '../storage/logistics/1654166573.svg'
 import TrailorMadeTransport from '../storage/logistics/1654166609.svg'
 import GlobalPro from '../storage/logistics/1654166640.svg'
 
+
+import { SiteData } from '../../App'
+
 const Logistics = () => {
+    const ImageUrl = 'https://ozl.v-protect.eu/ozl/storage/'
+
+    const SiteDataInfo = useContext(SiteData);
 
     const Data1 =[{name:'International security transportats',Logo: `${InternationSecurity}`},
         {name:'Worldwide customs clearance',Logo: `${WorldwideCustomCreation}`},
@@ -42,7 +48,7 @@ const Logistics = () => {
     <div className="swiper heroSwiper">
         <div className="swiper-wrapper">
             <div className="swiper-slide">
-                <img src={BannerLogo} alt="" className="w-100" style={{width: '100%'}}/>
+                <img src={ImageUrl+SiteDataInfo.bannner[2].image} alt="" className="w-100" style={{width: '100%'}}/>
                 <div className="banner-details">
                     <div>
                         <h2 className="h2 fw-bold text-shadow">Our range of storage facilities - <br className="d-none d-md-block"/>individual and versatile.</h2>
@@ -86,9 +92,9 @@ const Logistics = () => {
                     <>
                     <div className="col-6 col-md-3 mb-3 d-flex">
                         <div className="card text-center flex-fill style-1">
-                            <div className="card-body">
+                            <div className="card-body" key={showData1.toString()}>
                                 <img src={showData1.Logo} alt="logo" className="img-fluid mb-4"/>
-                                <h5 className="h5">{showData1.name}</h5>
+                                <h5 className="h5" key={showData1.name.toString()}>{showData1.name}</h5>
                             </div>
                         </div>
                     </div>
@@ -101,10 +107,10 @@ const Logistics = () => {
             {Data2.map((showData2)=>{
                 return(
                     <>
-                        <div className="img-box">
+                        <div className="img-box" key={showData2.toString()}>
                             <img src={showData2.images} alt="logo" className="img-fluid"/>
                             <div className="img-detail">
-                                <h5 className="h4">{showData2.dataname}</h5>
+                                <h5 className="h4" key={showData2.dataname.toString()}>{showData2.dataname}</h5>
                             </div>
                         </div>
                     </>

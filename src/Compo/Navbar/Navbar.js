@@ -1,8 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,useContext } from "react";
 import { NavLink } from "react-router-dom";
 import Logo from "../../backend/img/logo.svg";
+import { SiteData } from "../../App";
+
 
 const Navbar = () => {
+  const SiteDataInfo = useContext(SiteData);
+
+
 
   const [scroll, setScroll] = useState(false);
   useEffect(() => {
@@ -59,18 +64,18 @@ function ScrollToServiceTime() {
                     <ul className="navbar-nav me-lg-3 ms-auto mb-2 mb-lg-0 ">
                       <li className="nav-item dropdown py-1  py-lg-0">
                         <NavLink className="nav-link link-scroll" to="ourservices" onClick={ScrollToServiceTime}>
-                          CUSTOMS WAREHOUSE
+                        {SiteDataInfo.outPutArray.header_menu_1}
                         </NavLink>
                       </li>
                       <li className="nav-item dropdown py-1  py-lg-0">
                         <NavLink className="nav-link link-scroll" to="preciousmetals">
-                          Precious metals trading
+                        {SiteDataInfo.outPutArray.header_menu_2}
                         </NavLink>
                       </li>
                       <li className="nav-item dropdown py-1  py-lg-0">
                         <NavLink className="nav-link link-scroll" to="safedepositbox">
 
-                          SAFE DEPOSIT BOXES & VAULTS
+                        {SiteDataInfo.outPutArray.header_menu_3}
                         </NavLink>
                       </li>
                       <li className="nav-item py-1 py-lg-0">
@@ -94,28 +99,31 @@ function ScrollToServiceTime() {
                         <div className="offcanvas-body">
                           <ul className="nav flex-column">
                             <li className="nav-item">
-                              <NavLink className="nav-link " aria-current="page" to="logistics">LOGISTICS</NavLink>
+                              <NavLink className="nav-link " aria-current="page" to="logistics">{SiteDataInfo.outPutArray.header_menu_4}</NavLink>
                             </li>
                             <li className="nav-item">
-                              <NavLink className="nav-link " to="diamonds">DIAMONDS</NavLink>
+                              <NavLink className="nav-link " to="diamonds">{SiteDataInfo.outPutArray.header_menu_5}</NavLink>
                             </li>
                             <li className="nav-item ">
-                              <NavLink className="nav-link" to="art">ART</NavLink>
+                              <NavLink className="nav-link" to="art">{SiteDataInfo.outPutArray.header_menu_6}</NavLink>
                             </li>
                             <li className="nav-item ">
-                              <NavLink className="nav-link" to="loginclient">LOGIN CLIENT DEPOSIT</NavLink>
+                              <NavLink className="nav-link" to="loginclient">{SiteDataInfo.outPutArray.header_menu_7}</NavLink>
                             </li>
                             <li className="nav-item">
-                              <a className="nav-link" target="_blank" href="https://www.rheingold-edelmetall.com/en/portfolio/index/">LOGIN PORTFOLIO</a>
+                              <a className="nav-link" target="_blank" href="https://www.rheingold-edelmetall.com/en/portfolio/index/">{SiteDataInfo.outPutArray.header_menu_8}</a>
                             </li>
                             <li className="nav-item">
-                              <NavLink className="nav-link " to="/" onClick={ScrollToCustomerTime}>BECOME A CUSTOMER</NavLink>
+                              <NavLink className="nav-link " to="/" onClick={ScrollToCustomerTime}>{SiteDataInfo.outPutArray.header_menu_9}</NavLink>
                             </li>
                             <li className="nav-item">
-                              <NavLink className="nav-link " to="art">REGULATION / FMA</NavLink>
+                              <NavLink className="nav-link " to="/">{SiteDataInfo.outPutArray.header_menu_10}</NavLink>
                             </li>
                             <li className="nav-item ">
-                              <NavLink className="nav-link" to="art">IMPRESIONS</NavLink>
+                              <NavLink className="nav-link" to="/">{SiteDataInfo.outPutArray.header_menu_11}</NavLink>
+                            </li>
+                            <li className="nav-item ">
+                              <NavLink className="nav-link" to="/gtc">{SiteDataInfo.outPutArray.header_menu_12}</NavLink>
                             </li>
                           </ul>
                         </div>

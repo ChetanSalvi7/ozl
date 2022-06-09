@@ -25,9 +25,9 @@ const ManufacturersMatels = () => {
             {Manufacture.map((showData)=>{
                 return(
                     <>
-                        <div className="col-md-3 col-6">
+                        <div className="col-md-3 col-6" key={showData.toString()}>
                             <div className="partner-box">
-                                <div className="partner-box-item">
+                                <div className="partner-box-item"  key={showData.logodata.toString()}>
                                     <img src={showData.logodata} alt="logo"
                                         className=""/>
                                 </div>

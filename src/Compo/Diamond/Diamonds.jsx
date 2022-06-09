@@ -50,10 +50,10 @@ const Diamonds = () => {
             {Data2.map((showData2)=>{
                 return(
                     <>
-                        <div className="img-box">
+                        <div className="img-box" key={showData2.toString()}>
                             <img src={showData2.images} alt="logo" className="img-fluid"/>
                             <div className="img-detail">
-                                <h5 className="h4">{showData2.dataname}</h5>
+                                <h5 className="h4" key={showData2.dataname.toString()}>{showData2.dataname}</h5>
                             </div>
                         </div>
                     </>

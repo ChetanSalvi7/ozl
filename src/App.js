@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect,useState,createContext } from 'react'
 import { Route, Routes } from "react-router-dom";
 import './App.css'
 import Art from './Compo/Art/Art';
@@ -19,11 +19,40 @@ import SafeDepositBox from './Compo/Safe box/SafeDepositBox';
 import SideMenu from './Compo/Social side menu/SideMenu';
 
 
+const SiteData = createContext();
 
 const App = () => {
+  const [data, setData] =useState('');
+ 
+  useEffect(()=>{
+    fetch('https://ozl.v-protect.eu/ozl/',{
+      mode:'cors',
+      headers: {
+        'Accept': 'application/json'
+      }
+    })
+    .then(
+    function(response) {
+        if (response.status !== 200) {
+        console.log('Looks like there was a problem. Status Code: ' +
+            response.status);
+        return;
+        }
+
+        // Examine the text in the response
+        response.json().then(function(data) {
+          var aa1 = JSON.stringify(data);
+        var aa2 = aa1.replace(/-/gi,'_');
+        var aa3 = JSON.parse(aa2);
+        console.log(aa3);
+        setData(aa3);
+        });
+    }
+    )
+  },[])
   return (
     <>
-    
+    {data &&<SiteData.Provider value={data}>
     <Navbar />
     <AutoScrollToTop>
     <Routes>
@@ -43,8 +72,10 @@ const App = () => {
     <SideMenu />
     <BackToTop />
     <Footer />
+    </SiteData.Provider>}
     </>
   )
 }
 
 export default App;
+export {SiteData}

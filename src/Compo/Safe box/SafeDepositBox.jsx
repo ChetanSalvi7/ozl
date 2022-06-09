@@ -1,9 +1,12 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import WeightLogo from '../../backend/img/Weight.svg';
 import DimensionsLogo from '../../backend/img/Dimensions.svg';
 import BannerLogo from '../../backend/img/hero-banner-2.jpg';
+import { SiteData } from '../../App';
 
 const SafeDepositBox = () => {
+    const ImageUrl = 'https://ozl.v-protect.eu/ozl/storage/'
+    const SiteDataInfo = useContext(SiteData);
 
     const BoxsData = [{name1:'Safe',name2:'deposit box',weight:'20 kg',dimensions:'4.5 x 27 x 39 cm (4.7 litres)',link: 'https://www.onboarding.li/en/identification/?aes=yes&language=en&client=ozl-offenes-zolllager-in-liechtenstein-f4kf9enyfh4jsf6',offerText1:'Starting From',offerprice:'CHF 750.55',offerText2:'per year'},
     {name1:'VAULT',name2:'SMALL',weight:'100 kg',dimensions:'25.6 x 35.6 x 29.5 cm (27 litres)',link: 'https://www.onboarding.li/en/identification/?aes=yes&language=en&client=ozl-offenes-zolllager-in-liechtenstein-f4kf9enyfh4jsf6',offerText1:'Starting From',offerprice:"CHF 1'650.00",offerText2:'per year'},
@@ -17,7 +20,7 @@ const SafeDepositBox = () => {
     <div className="swiper heroSwiper">
         <div className="swiper-wrapper">
             <div className="swiper-slide">
-                <img src={BannerLogo} alt="" className="w-100" style={{width: '100%'}}/>
+                <img src={ImageUrl+SiteDataInfo.bannner[1].image} alt="" className="w-100" style={{width: '100%'}}/>
                 <div className="banner-details">
                     <div>
                         <h2 className="h2 fw-bold text-shadow">Our range of storage facilities - <br className="d-none d-md-block"/>individual and versatile.</h2>
@@ -40,28 +43,28 @@ const SafeDepositBox = () => {
             {BoxsData.map((showData)=>{
                 return(
                     <>
-                    <div className="col-md-6 col-lg-3 d-flex mb-4">
+                    <div className="col-md-6 col-lg-3 d-flex mb-4" key={showData.toString()}>
                         <div className="pricing bg-primary-extra-light p-3">
-                            <h4 className="h4 fw-bold text-uppercase mb-5">{showData.name1} <br className="d-n0ne d-lg-block"/>{showData.name2}</h4>
+                            <h4 className="h4 fw-bold text-uppercase mb-5" key={showData.name1.toString()}>{showData.name1} <br className="d-n0ne d-lg-block"  key={showData.name2.toString()}/>{showData.name2}</h4>
                             <ul className="list-unstyled p-0 mt-3">
                                 <li className="mb-3 d-flex">
                                     <span className="avatar align-middle me-2">
                                         <img src={WeightLogo} alt="" className="img-fluid"/>
                                     </span>
-                                    <span>max. storage weight: <b>{showData.weight}</b></span>
+                                    <span>max. storage weight: <b  key={showData.weight.toString()}>{showData.weight}</b></span>
                                 </li>
                                 <li className="d-flex">
-                                    <span className="avatar align-middle me-2">
+                                    <span className="avatar align-middle me-2" >
                                         <img src={DimensionsLogo} alt="" className="img-fluid"/>
                                     </span>
-                                    <span>Dimensions:<br/><b>{showData.dimensions}</b></span>
+                                    <span>Dimensions:<br/><b key={showData.dimensions.toString()}>{showData.dimensions}</b></span>
                                 </li>
                             </ul>
                             <a href={showData.link} className="btn btn-primary btn-lg mt-auto w-100" target="_blank">Enquire now</a>
                             <div className="offer-price">
-                                <div className="text-white small">{showData.offerText1}</div>
-                                <div className="h4 fw-bold mb-0">{showData.offerprice}</div>
-                                <div className="text-white small">{showData.offerText2}</div>
+                                <div className="text-white small" key={showData.offerText1.toString()}>{showData.offerText1}</div>
+                                <div className="h4 fw-bold mb-0" key={showData.offerprice.toString()}>{showData.offerprice}</div>
+                                <div className="text-white small" key={showData.offerText2.toString()}>{showData.offerText2}</div>
                             </div>
                         </div>
                     </div>

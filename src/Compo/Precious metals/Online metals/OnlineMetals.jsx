@@ -28,14 +28,14 @@ const OnlineMetals = () => {
             {OnlineData1.map((showData)=>{
                 return(
                     <>
-                        <div className="col-md-3 py-2 col-6">
+                        <div className="col-md-3 py-2 col-6" key={showData.toString()}>
                           <a href="">
                             <div className="metal-coin-box">
-                                <div className="avatar p-lg-3 bg-primary-light">
+                                <div className="avatar p-lg-3 bg-primary-light" key={showData.metallogo.toString()}>
                                     <img src={showData.metallogo} className="img-fluid" alt="..."/>
                                 </div>
                             </div>
-                            <p className="fw-bold pt-3 text-center">{showData.textname}</p>
+                            <p className="fw-bold pt-3 text-center" key={showData.textname.toString()}>{showData.textname}</p>
                             </a>
                          </div>
                     </>

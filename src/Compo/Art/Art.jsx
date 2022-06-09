@@ -1,4 +1,5 @@
-import React from 'react'
+import React,{useContext} from 'react'
+import { SiteData } from '../../App'
 import logo1 from '../storage/art/1654146106.jpg'
 import logo2 from '../storage/art/1654146130.jpg'
 import logo3 from '../storage/art/1654146176.jpg'
@@ -21,24 +22,29 @@ import PngLogo7 from '../storage/art/1654166926.svg'
 import PngLogo8 from '../storage/art/1654166982.png'
 
 const Art = () => {
-    const Data1 =[{name:'Museum standard storage',Logo: `${PngLogo1}`},
-        {name:'Allocated vaults/ studios available',Logo: `${PngLogo2}`},
-        {name:'Domestic & customs warehousing',Logo: `${PngLogo3}`},
-        {name:'High Security Standards',Logo: `${PngLogo4}`},
-        {name:'Global professional logistics',Logo: `${PngLogo5}`},
-        {name:'Handling by renowned partners',Logo: `${PngLogo6}`},
-        {name:'Multiple locations in Liechtenstein',Logo: `${PngLogo7}`},
-        {name:'GRASP-certified storage',Logo: `${PngLogo8}`}];
 
-    const Data2 = [{dataname: 'Optimum solutions via renowned partners',images: `${logo1}`},
-        {dataname: 'State-of-the-art professional logistics infrastructure/Security and efficiency',images: `${logo2}`},
-        {dataname: 'Global transportation of precious metals, art, and other valuables, including customs clearance',images: `${logo3}`},
-        {dataname: 'International logistics within transit zones/Own customs specialists',images: `${logo4}`},
-        {dataname: 'Global logistics and storage',images: `${logo5}`},
-        {dataname: 'Full logistics service, from collection to delivery / All from a single source',images: `${logo6}`},
-        {dataname: 'International security transportats',images: `${logo7}`},
-        {dataname: 'Worldwide customs clearance',images: `${logo8}`},
-        {dataname: 'Door to Door insurance coverage',images: `${logo9}`}];
+    const ImageUrl = 'http://localhost/ozl/storage/'
+
+    const SiteDataInfo = useContext(SiteData);
+
+    const Data1 =[{key:2,name:'Museum standard storage',Logo: `${PngLogo1}`},
+        {key:3,name:'Allocated vaults/ studios available',Logo: `${PngLogo2}`},
+        {key:4,name:'Domestic & customs warehousing',Logo: `${PngLogo3}`},
+        {key:5,name:'High Security Standards',Logo: `${PngLogo4}`},
+        {key:6,name:'Global professional logistics',Logo: `${PngLogo5}`},
+        {key:7,name:'Handling by renowned partners',Logo: `${PngLogo6}`},
+        {key:8,name:'Multiple locations in Liechtenstein',Logo: `${PngLogo7}`},
+        {key:9,name:'GRASP-certified storage',Logo: `${PngLogo8}`}];
+
+    const Data2 = [{key:12,dataname: 'Optimum solutions via renowned partners',images: `${logo1}`},
+        {key:13,dataname: 'State-of-the-art professional logistics infrastructure/Security and efficiency',images: `${logo2}`},
+        {key:14,dataname: 'Global transportation of precious metals, art, and other valuables, including customs clearance',images: `${logo3}`},
+        {key:15,dataname: 'International logistics within transit zones/Own customs specialists',images: `${logo4}`},
+        {key:16,dataname: 'Global logistics and storage',images: `${logo5}`},
+        {key:17,dataname: 'Full logistics service, from collection to delivery / All from a single source',images: `${logo6}`},
+        {key:18,dataname: 'International security transportats',images: `${logo7}`},
+        {key:19,dataname: 'Worldwide customs clearance',images: `${logo8}`},
+        {key:20,dataname: 'Door to Door insurance coverage',images: `${logo9}`}];
     return (
         <>
         {/* Banner--start*/}
@@ -46,7 +52,7 @@ const Art = () => {
     <div className="swiper heroSwiper">
         <div className="swiper-wrapper">
             <div className="swiper-slide">
-                <img src={BannerLogo} alt="" className="w-100" style={{width: '100%'}}/>
+                <img src={ImageUrl+SiteDataInfo.bannner[3].image} alt="" className="w-100" style={{width: '100%'}}/>
                 <div className="banner-details">
                     <div>
                         <h2 className="h2 fw-bold text-shadow">Your art in the hands of the professionals -<br className="d-none d-md-block"/>
@@ -79,11 +85,11 @@ const Art = () => {
                         {Data1.map((showData1) => {
                             return (
                                 <>
-                                    <div className="col-6 col-md-3 mb-3 d-flex">
+                                    <div className="col-6 col-md-3 mb-3 d-flex" key={showData1.toString()} >
                                         <div className="card text-center flex-fill style-1">
-                                            <div className="card-body">
-                                                <img src={showData1.Logo} alt="logo" className="img-fluid mb-4" />
-                                                <h5 className="h5">{showData1.name}</h5>
+                                            <div className="card-body" >
+                                                <img  src={showData1.Logo} alt="logo" className="img-fluid mb-4" />
+                                                <h5 className="h5" >{showData1.name}</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -96,10 +102,10 @@ const Art = () => {
                         {Data2.map((showData2) => {
                             return (
                                 <>
-                                    <div className="img-box">
-                                        <img src={showData2.images} alt="logo" className="img-fluid" />
+                                    <div className="img-box" key={showData2.toString()} >
+                                        <img  src={showData2.images} alt="logo" className="img-fluid" />
                                         <div className="img-detail">
-                                            <h5 className="h4">{showData2.dataname}</h5>
+                                            <h5 className="h4" >{showData2.dataname}</h5>
                                         </div>
                                     </div>
                                 </>

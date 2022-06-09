@@ -393,7 +393,8 @@ a:hover {
 .offcanvas .nav .nav-item a::before {
   content: "";
   position: absolute;
-  left: 0;
+  left: 5px;
+  transition: all .3s ease-in-out;
   top: 50%;
   background-color: #A5BBD4;
   opacity: 0.5;
@@ -407,6 +408,7 @@ a:hover {
 .offcanvas .nav .nav-item a:is(.active, :hover, :focus, :active)::before {
   opacity: 1;
   visibility: visible;
+  width: calc(100% -10px);
 }
 
 .navbar-brand img {

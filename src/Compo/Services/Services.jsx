@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { SiteData } from "../../App";
 
 const Services = () => {
+  const SiteDataInfo = useContext(SiteData);
+
   return (
     <>
     <section className="py-3 py-lg-5">
@@ -9,7 +12,7 @@ const Services = () => {
           <div className="service-grid">
             <a href="" className="service service-grid-1">
               <h4 className="h4 fw-bold mb-lg-3">
-                Custody in a fully regulated environment
+                {SiteDataInfo.our_service[0].our_service_title_single.value}
               </h4>
               <p>
                 The full regulation guarantees that the assets can be returned

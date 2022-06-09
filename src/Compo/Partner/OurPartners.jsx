@@ -28,14 +28,15 @@ const OurPartners = () => {
     const [firstSwiper, setFirstSwiper] = useState(null);
     const [secondSwiper, setSecondSwiper] = useState(null);
 
-    const PartnerName = [{ name: 'Storage' }, { name: 'Security' }, { name: 'Insurance' }, { name: 'Security Logistics' }, { name: 'Precious metals trading' }, { name: 'Art logistics' }];
+    const PartnerName = [{name: 'Storage' }, 
+    {name: 'Security' }, {name: 'Insurance' }, {name: 'Security Logistics' }, {name: 'Precious metals trading' }, {name: 'Art logistics' }];
     const PartnerInfo = [
-        { name1: 'Allianz Suisse', image1: `${PartnerLogo1}` },
-        { name1: 'Basler', image1: `${PartnerLogo2}` },
-        { name1: 'Marsh', image1: `${PartnerLogo3}`, image2: `${PartnerLogo1}`, image3: `${PartnerLogo3}`, image4: `${PartnerLogo4}` },
-        { name1: 'AXA', image1: `${PartnerLogo4}` },
-        { name1: 'AXA', image1: `${PartnerLogo5}` },
-        { name1: 'AXA', image1: `${PartnerLogo6}` },]
+        {name1: 'Allianz Suisse', image1: `${PartnerLogo1}` },
+        {name1: 'Basler', image1: `${PartnerLogo2}` },
+        {name1: 'Marsh', image1: `${PartnerLogo3}`, image2: `${PartnerLogo1}`, image3: `${PartnerLogo3}`, image4: `${PartnerLogo4}` },
+        {name1: 'AXA', image1: `${PartnerLogo4}` },
+        {name1: 'AXA', image1: `${PartnerLogo5}` },
+        {name1: 'AXA', image1: `${PartnerLogo6}` },]
 
     return (
         <>
@@ -48,21 +49,21 @@ const OurPartners = () => {
                                 <Swiper className='mySwiper'
                                     modules={[Controller]} onSwiper={setFirstSwiper}
                                     controller={{ control: secondSwiper }}
-                                   
+                                    effect={"fade"}
                                     autoplay={true}
-                                    pagination={{ clickable: false }}
+                                    // pagination={{ clickable: false }}
                                     speed={2000}
                                     grabCursor={true}
                                 >
                                     <div className="swiper partnerSwiperText">
                                         <div className="swiper-wrapper">
-                                            {PartnerName.map((showName, key) => {
+                                            {PartnerName.map((showName, index) => {
                                                 return (
                                                     <>
-                                                        <SwiperSlide>
+                                                        <SwiperSlide key={index}>
                                                             <div className="swiper-slide">
                                                                 <div className="bg-primary d-flex flex-column h-100 text-white">
-                                                                    <h4 className="h3 fw-bold">{showName.name}</h4>
+                                                                    <h4 className="h3 fw-bold" >{showName.name}</h4>
                                                                 </div>
                                                             </div>
                                                         </SwiperSlide>
@@ -87,10 +88,10 @@ const OurPartners = () => {
                             >
                                 <div thumbsSlider="" className="swiper partnerSwiperImage">
                                     <div className="swiper-wrapper">
-                                        {PartnerInfo.map((showinfo) => {
+                                        {PartnerInfo.map((showinfo,index) => {
                                             return (
                                                 <>
-                                                    <SwiperSlide>
+                                                    <SwiperSlide key={index}>
                                                         <div className="swiper-slide">
                                                             <div className="row">
                                                                 <div className="col-6 col-sm-3 mb-3 mb-sm-0">
@@ -98,7 +99,7 @@ const OurPartners = () => {
                                                                         <div className="partner-box-item">
                                                                             <img src={showinfo.image1} alt=""
                                                                                 className="mt-lg-5" />
-                                                                            <div>{showinfo.name1}</div>
+                                                                            <div >{showinfo.name1}</div>
                                                                         </div>
                                                                     </div>
                                                                 </div>

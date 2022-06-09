@@ -48,10 +48,10 @@ const OurServices = () => {
                                     <>
                                         <tr>
                                             <td>
-                                                <p>{dataShow.Pname}</p>
+                                                <p  key={dataShow.Pname.toString()}>{dataShow.Pname}</p>
                                             </td>
-                                            <td className="text-center"><i className={dataShow.className1}></i></td>
-                                            <td className="text-center"><i className={dataShow.className2}></i></td>
+                                            <td className="text-center" key={dataShow.className1.toString()}><i className={dataShow.className1}></i></td>
+                                            <td className="text-center"  key={dataShow.className2.toString()}><i className={dataShow.className2}></i></td>
                                         </tr>
                                     </>
                                 )

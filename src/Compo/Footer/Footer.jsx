@@ -1,9 +1,12 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import Logo from '../../backend/img/logo.svg';
 import { NavLink } from "react-router-dom";
+import { SiteData } from "../../App";
 
 const Footer = () => {
     const getYear = new Date().getFullYear();
+
+    const SiteDataInfo = useContext(SiteData);
   return (
     <>
     <footer className="border-top pt-4">
@@ -19,22 +22,22 @@ const Footer = () => {
                     <div className=" row row-cols-1 row-cols-md-2 fw-bold">
                         
                             <div className="col mb-2">
-                                <NavLink to="/">CUSTOMS WAREHOUSE</NavLink>
+                                <NavLink to="/">{SiteDataInfo.outPutArray.header_menu_1}</NavLink>
                             </div>
                             <div className="col mb-2">
-                                <NavLink to="preciousmetals">PRECIOUS METALS TRADING</NavLink>
+                                <NavLink to="preciousmetals">{SiteDataInfo.outPutArray.header_menu_2}</NavLink>
                             </div>
                             <div className="col mb-2">
-                                <NavLink to="safedepositbox">SAFE DEPOSIT BOXES & VAULTS</NavLink>
+                                <NavLink to="safedepositbox">{SiteDataInfo.outPutArray.header_menu_3}</NavLink>
                             </div>
                             <div className="col mb-2">
-                                <NavLink to="logistics">LOGISTICS</NavLink>
+                                <NavLink to="logistics">{SiteDataInfo.outPutArray.header_menu_4}</NavLink>
                             </div>
                             <div className="col mb-2">
-                                <NavLink to="diamonds">DIAMONDS</NavLink>
+                                <NavLink to="diamonds">{SiteDataInfo.outPutArray.header_menu_5}</NavLink>
                             </div>
                             <div className="col mb-2">
-                                <NavLink to="art">ART</NavLink>
+                                <NavLink to="art">{SiteDataInfo.outPutArray.header_menu_6}</NavLink>
                             </div>
                             <div className="col mb-2">
                                 <NavLink to="">Regulation / FMA</NavLink>
@@ -49,20 +52,20 @@ const Footer = () => {
                     <div className="row row-cols-1 row-cols-md-2 fw-bold">
                         
                             <div className="col mb-3">
-                                <div className="text-uppercase text-black-50">Address:</div>
-                                <div>Schliessa 16, 9495 Triesen, Liechtenstein</div>
+                                <div className="text-uppercase text-black-50">{SiteDataInfo.outPutArray.contact_address}:</div>
+                                <div>{SiteDataInfo.outPutArray.footer_address}</div>
                             </div>
                             <div className="col mb-3">
                                 <div className="text-uppercase text-black-50">telephone:</div>
-                                <a href="tel:+4233926101">+423 392 61 01</a>
+                                <a href="tel:+4233926101">{SiteDataInfo.outPutArray.footer_tel}</a>
                             </div>
                             <div className="col mb-3">
                                 <div className="text-uppercase text-black-50">fax:</div>
-                                <a href="fax:+4233926101">+423 392 61 03</a>
+                                <a href="fax:+4233926101">{SiteDataInfo.outPutArray.footer_fax}</a>
                             </div>
                             <div className="col">
-                                <div className="text-uppercase text-black-50">e-mail:</div>
-                                <a href="mailto:info@ozl.li">info@ozl.li</a>
+                                <div className="text-uppercase text-black-50">Email</div>
+                                <a href="mailto:info@ozl.li">{SiteDataInfo.outPutArray.footer_mail}</a>
                             </div>
                         
                     </div>
