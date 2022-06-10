@@ -117,10 +117,10 @@ function ScrollToServiceTime() {
                               <NavLink className="nav-link " to="/" onClick={ScrollToCustomerTime}>{SiteDataInfo.outPutArray.header_menu_9}</NavLink>
                             </li>
                             <li className="nav-item">
-                              <NavLink className="nav-link " to="/">{SiteDataInfo.outPutArray.header_menu_10}</NavLink>
+                              <NavLink className="nav-link " to="/gtc">{SiteDataInfo.outPutArray.header_menu_10}</NavLink>
                             </li>
                             <li className="nav-item ">
-                              <NavLink className="nav-link" to="/">{SiteDataInfo.outPutArray.header_menu_11}</NavLink>
+                              <NavLink className="nav-link" to="/gtc">{SiteDataInfo.outPutArray.header_menu_11}</NavLink>
                             </li>
                             <li className="nav-item ">
                               <NavLink className="nav-link" to="/gtc">{SiteDataInfo.outPutArray.header_menu_12}</NavLink>

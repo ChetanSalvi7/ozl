@@ -1,7 +1,10 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import SliderImage from '../main page/SliderImage'
+import { SiteData } from "../../App";
 
 const OurServices = () => {
+    const SiteDataInfo = useContext(SiteData);
+
 
     const RentalData = [{Pname: 'Determination and verification of the contracting party (client)',className1: 'bi bi-check-circle-fill fs-5 text-success',className2: 'bi bi-check-circle-fill fs-5 text-success'},
     {Pname: 'Determination of the beneficial owner',className1: 'bi bi-check-circle-fill fs-5 text-success',className2: 'bi bi-check-circle-fill fs-5 text-success'},
@@ -18,13 +21,13 @@ const OurServices = () => {
         <h3 className="h2 text-center fw-bold mb-3 mb-lg-5">Our Services</h3>
         <div className="row align-items-start">
             <div className="col-md-2 nav flex-sm-column nav-pills pe-0 mb-4 mb-sm-0" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                <button className="nav-link active" data-bs-toggle="pill" data-bs-target="#custody" type="button" role="tab" aria-controls="custody" aria-selected="true">Custody in a fully regulated environment</button>
-                <button className="nav-link" data-bs-toggle="pill" data-bs-target="#allrisk" type="button" role="tab" aria-controls="allrisk" aria-selected="false">All risk insurance</button>
-                <button className="nav-link" data-bs-toggle="pill" data-bs-target="#bankable" type="button" role="tab" aria-controls="bankable" aria-selected="false">Bankable reconciliation</button>
-                <button className="nav-link" data-bs-toggle="pill" data-bs-target="#segregated" type="button" role="tab" aria-controls="segregated" aria-selected="false">Segregated storage & customs bond vault</button>
-                <button className="nav-link" data-bs-toggle="pill" data-bs-target="#assetprotection" type="button" role="tab" aria-controls="assetprotection" aria-selected="false">Asset protection</button>
-                <button className="nav-link" data-bs-toggle="pill" data-bs-target="#fees" type="button" role="tab" aria-controls="fees" aria-selected="false">Fees</button>
-                <button className="nav-link" data-bs-toggle="pill" data-bs-target="#conratats" type="button" role="tab" aria-controls="contracts" aria-selected="false">Contracts</button>
+                <button className="nav-link active" data-bs-toggle="pill" data-bs-target="#custody" type="button" role="tab" aria-controls="custody" aria-selected="true">{SiteDataInfo.our_service[0].our_service_title_single.value}</button>
+                <button className="nav-link" data-bs-toggle="pill" data-bs-target="#allrisk" type="button" role="tab" aria-controls="allrisk" aria-selected="false">{SiteDataInfo.our_service[1].our_service_title_single.value}</button>
+                <button className="nav-link" data-bs-toggle="pill" data-bs-target="#bankable" type="button" role="tab" aria-controls="bankable" aria-selected="false">{SiteDataInfo.our_service[2].our_service_title_single.value}</button>
+                <button className="nav-link" data-bs-toggle="pill" data-bs-target="#segregated" type="button" role="tab" aria-controls="segregated" aria-selected="false">{SiteDataInfo.our_service[3].our_service_title_single.value}</button>
+                <button className="nav-link" data-bs-toggle="pill" data-bs-target="#assetprotection" type="button" role="tab" aria-controls="assetprotection" aria-selected="false">{SiteDataInfo.our_service[4].our_service_title_single.value}</button>
+                <button className="nav-link" data-bs-toggle="pill" data-bs-target="#fees" type="button" role="tab" aria-controls="fees" aria-selected="false">{SiteDataInfo.our_service[5].our_service_title_single.value}</button>
+                <button className="nav-link" data-bs-toggle="pill" data-bs-target="#conratats" type="button" role="tab" aria-controls="contracts" aria-selected="false">{SiteDataInfo.our_service[6].our_service_title_single.value}</button>
             </div>
             <div className="col-md-10 tab-content" id="v-pills-tabContent">
                 <div className="tab-pane fade show active ps-md-5 py-md-4 py-3" id="custody" role="tabpanel">

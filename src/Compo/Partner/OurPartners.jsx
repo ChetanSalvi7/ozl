@@ -28,14 +28,19 @@ const OurPartners = () => {
     const [firstSwiper, setFirstSwiper] = useState(null);
     const [secondSwiper, setSecondSwiper] = useState(null);
 
-    const PartnerName = [{name: 'Storage' }, 
-    {name: 'Security' }, {name: 'Insurance' }, {name: 'Security Logistics' }, {name: 'Precious metals trading' }, {name: 'Art logistics' }];
+    const PartnerName = [{id:'4',name: 'Storage' }, 
+    {id:'5',name: 'Security' },
+    {id:'6', name: 'Insurance' },
+    {id:'7', name: 'Security Logistics' },
+    {id:'8', name: 'Precious metals trading' },
+    {id:'9',name: 'Art logistics' }];
+
     const PartnerInfo = [
-        {name1: 'Allianz Suisse', image1: `${PartnerLogo1}` },
-        {name1: 'Basler', image1: `${PartnerLogo2}` },
+        {name1:'Schweiz AG', image1: `${PartnerLogo1}` },
+        { name1: ' ARGUS',image1: `${PartnerLogo2}` },
         {name1: 'Marsh', image1: `${PartnerLogo3}`, image2: `${PartnerLogo1}`, image3: `${PartnerLogo3}`, image4: `${PartnerLogo4}` },
-        {name1: 'AXA', image1: `${PartnerLogo4}` },
-        {name1: 'AXA', image1: `${PartnerLogo5}` },
+        // {name1: 'OWD', image1: `${PartnerLogo4}` },
+        // {name1:'AG', image1: `${PartnerLogo5}` },
         {name1: 'AXA', image1: `${PartnerLogo6}` },]
 
     return (
@@ -88,48 +93,27 @@ const OurPartners = () => {
                             >
                                 <div thumbsSlider="" className="swiper partnerSwiperImage">
                                     <div className="swiper-wrapper">
-                                        {PartnerInfo.map((showinfo,index) => {
+                                        {PartnerName.map((index) => {
                                             return (
                                                 <>
                                                     <SwiperSlide key={index}>
                                                         <div className="swiper-slide">
                                                             <div className="row">
-                                                                <div className="col-6 col-sm-3 mb-3 mb-sm-0">
-                                                                    <div className="partner-box">
-                                                                        <div className="partner-box-item">
-                                                                            <img src={showinfo.image1} alt=""
-                                                                                className="mt-lg-5" />
-                                                                            <div >{showinfo.name1}</div>
+                                                            {PartnerInfo.map((showInfo)=>{
+                                                                return(
+                                                                    <>
+                                                                    <div className="col-6 col-sm-3 mb-3 mb-sm-0" key={showInfo.name1.toString()}>
+                                                                        <div className="partner-box">
+                                                                            <div className="partner-box-item">
+                                                                                <img src={showInfo.image1} alt=""
+                                                                                    className="mt-lg-5" />
+                                                                                <div >{showInfo.name1}</div>
+                                                                            </div>
                                                                         </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div className="col-6 col-sm-3 mb-3 mb-sm-0">
-                                                                    <div className="partner-box">
-                                                                        <div className="partner-box-item">
-                                                                            <img src={showinfo.image2} alt=""
-                                                                                className="mt-lg-5" />
-                                                                            <div>{showinfo.name2}</div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div className="col-6 col-sm-3 mb-3 mb-sm-0">
-                                                                    <div className="partner-box">
-                                                                        <div className="partner-box-item">
-                                                                            <img src={showinfo.image3} alt=""
-                                                                                className="mt-lg-5" />
-                                                                            <div>{showinfo.name3}</div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div className="col-6 col-sm-3 mb-3 mb-sm-0">
-                                                                    <div className="partner-box">
-                                                                        <div className="partner-box-item">
-                                                                            <img src={showinfo.image4} alt=""
-                                                                                className="mt-lg-5" />
-                                                                            <div>{showinfo.name4}</div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
+                                                                     </div>
+                                                                    </>
+                                                                )
+                                                            })}
                                                             </div>
                                                         </div>
                                                     </SwiperSlide>

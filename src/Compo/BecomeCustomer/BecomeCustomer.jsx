@@ -5,7 +5,7 @@ import { SiteData } from "../../App";
 const BecomeCustomer = () => {
 
   const SiteDataInfo = useContext(SiteData);
-  console.log(SiteDataInfo)
+
   return (
     <>
     <section className="container-fluid px-lg-5 text-white">
