@@ -6,12 +6,12 @@ const OurServices = () => {
     const SiteDataInfo = useContext(SiteData);
 
 
-    const RentalData = [{Pname: 'Determination and verification of the contracting party (client)',className1: 'bi bi-check-circle-fill fs-5 text-success',className2: 'bi bi-check-circle-fill fs-5 text-success'},
-    {Pname: 'Determination of the beneficial owner',className1: 'bi bi-check-circle-fill fs-5 text-success',className2: 'bi bi-check-circle-fill fs-5 text-success'},
-    {Pname: 'Logging access',className1: 'bi bi-check-circle-fill fs-5 text-success',className2: 'bi bi-x-circle-fill fs-5 text-danger'},
-    {Pname: 'Suspicion report according to Art. 17 SPG',className1: 'bi bi-check-circle-fill fs-5 text-success',className2: 'bi bi-check-circle-fill fs-5 text-success'},
-    {Pname: 'Preparation of business profile (Source of funds & background of assets)',className1: 'bi bi-x-circle-fill fs-5 text-danger',className2: 'bi bi-check-circle-fill fs-5 text-success'},
-    {Pname: 'Keeping and updating of inventory list.',className1: 'bi bi-x-circle-fill fs-5 text-danger',className2: 'bi bi-check-circle-fill fs-5 text-success'}]
+    const RentalData = [{id:2, Pname: 'Determination and verification of the contracting party (client)',className1: 'bi bi-check-circle-fill fs-5 text-success',className2: 'bi bi-check-circle-fill fs-5 text-success'},
+    {id:3,Pname: 'Determination of the beneficial owner',className1: 'bi bi-check-circle-fill fs-5 text-success',className2: 'bi bi-check-circle-fill fs-5 text-success'},
+    {id:4,Pname: 'Logging access',className1: 'bi bi-check-circle-fill fs-5 text-success',className2: 'bi bi-x-circle-fill fs-5 text-danger'},
+    {id:5,Pname: 'Suspicion report according to Art. 17 SPG',className1: 'bi bi-check-circle-fill fs-5 text-success',className2: 'bi bi-check-circle-fill fs-5 text-success'},
+    {id:6,Pname: 'Preparation of business profile (Source of funds & background of assets)',className1: 'bi bi-x-circle-fill fs-5 text-danger',className2: 'bi bi-check-circle-fill fs-5 text-success'},
+    {id:7,Pname: 'Keeping and updating of inventory list.',className1: 'bi bi-x-circle-fill fs-5 text-danger',className2: 'bi bi-check-circle-fill fs-5 text-success'}]
 
   return (
     <>
@@ -46,19 +46,19 @@ const OurServices = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            {RentalData.map((dataShow)=>{
+                            {React.Children.toArray( RentalData.map((dataShow)=>{
                                 return(
                                     <>
                                         <tr>
                                             <td>
-                                                <p  key={dataShow.Pname.toString()}>{dataShow.Pname}</p>
+                                                <p key={dataShow.id} >{dataShow.Pname}</p>
                                             </td>
-                                            <td className="text-center" key={dataShow.className1.toString()}><i className={dataShow.className1}></i></td>
-                                            <td className="text-center"  key={dataShow.className2.toString()}><i className={dataShow.className2}></i></td>
+                                            <td className="text-center" ><i className={dataShow.className1}></i></td>
+                                            <td className="text-center" ><i className={dataShow.className2}></i></td>
                                         </tr>
                                     </>
                                 )
-                            })}
+                            }))}
                             
                         </tbody>
                     </table>

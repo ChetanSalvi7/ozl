@@ -9,13 +9,13 @@ import NumisCoin from '../../storage/precious-metal-tradings/1654171912.png';
 
 const OnlineMetals = () => {
     
-    const OnlineData1 =[{textname: 'Gold bars',metallogo: `${GoldBar}`},
-    {textname: 'Gold Coins',metallogo: `${GoldCoin}`},
-    {textname: 'Silver bars',metallogo: `${SilverBar}`},
-    {textname: 'Silver Coins',metallogo: `${SilverCoin}`},
-    {textname: 'Platinum bars',metallogo: `${PlatinBar}`},
-    {textname: 'Palladium bars',metallogo: `${PalladiumBar}`},
-    {textname: 'Numismatic coins',metallogo: `${NumisCoin}`}]
+    const OnlineData1 =[{id:2, textname: 'Gold bars',metallogo: `${GoldBar}`},
+    {id:3,textname: 'Gold Coins',metallogo: `${GoldCoin}`},
+    {id:4,textname: 'Silver bars',metallogo: `${SilverBar}`},
+    {id:5,textname: 'Silver Coins',metallogo: `${SilverCoin}`},
+    {id:6,textname: 'Platinum bars',metallogo: `${PlatinBar}`},
+    {id:7,textname: 'Palladium bars',metallogo: `${PalladiumBar}`},
+    {id:8,textname: 'Numismatic coins',metallogo: `${NumisCoin}`}]
 
    
 
@@ -25,22 +25,22 @@ const OnlineMetals = () => {
     <div className="container px-lg-5">
         <h3 className="h2 text-center fw-bold mb-3 mb-lg-5">Buying precious metals online</h3>
         <div className="row ">
-            {OnlineData1.map((showData)=>{
+            {React.Children.toArray( OnlineData1.map((showData)=>{
                 return(
                     <>
-                        <div className="col-md-3 py-2 col-6" key={showData.toString()}>
+                        <div className="col-md-3 py-2 col-6" key={showData.id}>
                           <a href="">
                             <div className="metal-coin-box">
-                                <div className="avatar p-lg-3 bg-primary-light" key={showData.metallogo.toString()}>
+                                <div className="avatar p-lg-3 bg-primary-light" >
                                     <img src={showData.metallogo} className="img-fluid" alt="..."/>
                                 </div>
                             </div>
-                            <p className="fw-bold pt-3 text-center" key={showData.textname.toString()}>{showData.textname}</p>
+                            <p className="fw-bold pt-3 text-center">{showData.textname}</p>
                             </a>
                          </div>
                     </>
                 )
-            })}
+            }))}
             
         </div>
     </div>

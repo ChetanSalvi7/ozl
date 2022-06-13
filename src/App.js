@@ -43,10 +43,9 @@ const App = () => {
         response.json().then(function(data) {
           var aa1 = JSON.stringify(data);
         var aa2 = aa1.replace(/-/gi,'_');
-        var aa3 = aa2.replace(/<p>/gi,'');
-        var aa4 = JSON.parse(aa3);
-        console.log(aa4);
-        setData(aa4);
+        var aa3 = JSON.parse(aa2);
+        console.log(aa3);
+        setData(aa3);
         });
     }
     )

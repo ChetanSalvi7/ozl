@@ -36,12 +36,21 @@ const OurPartners = () => {
     {id:'9',name: 'Art logistics' }];
 
     const PartnerInfo = [
-        {name1:'Schweiz AG', image1: `${PartnerLogo1}` },
-        { name1: ' ARGUS',image1: `${PartnerLogo2}` },
-        {name1: 'Marsh', image1: `${PartnerLogo3}`, image2: `${PartnerLogo1}`, image3: `${PartnerLogo3}`, image4: `${PartnerLogo4}` },
-        // {name1: 'OWD', image1: `${PartnerLogo4}` },
-        // {name1:'AG', image1: `${PartnerLogo5}` },
-        {name1: 'AXA', image1: `${PartnerLogo6}` },]
+        {id:2,name1:'Schweiz AG', image1: `${PartnerLogo1}`,PartnerName_id:4 },
+        {id:3,name1: ' ARGUS',image1: `${PartnerLogo2}`,PartnerName_id:4 },
+        {id:4,name1: 'Marsh', image1: `${PartnerLogo3}`,PartnerName_id:5 },
+        {id:5,name1: 'OWD', image1: `${PartnerLogo4}`,PartnerName_id:5 },
+        {id:6,name1:'Allianz Suisse', image1: `${PartnerLogo5}`,PartnerName_id:6 },
+        {id:7,name1:'Basler', image1: `${PartnerLogo6}`,PartnerName_id:6 },
+        {id:8,name1:'Marsh', image1: `${PartnerLogo7}`,PartnerName_id:6 },
+        {id:9,name1:'AXA', image1: `${PartnerLogo8}`,PartnerName_id:6 },
+        {id:10,name1:'Loomis', image1: `${PartnerLogo9}`,PartnerName_id:7 },
+        {id:11,name1:'Prosegur', image1: `${PartnerLogo10}`,PartnerName_id:7 },
+        {id:12,name1:'Rheingold Edelmetall', image1: `${PartnerLogo11}`,PartnerName_id:8 },
+        {id:13,name1:'Edelmetallhandel ', image1: `${PartnerLogo12}`,PartnerName_id:8 },
+        {id:14,name1:'Crozier', image1: `${PartnerLogo13}`,PartnerName_id:9 },
+        {id:15,name1:'Kunsttrans', image1: `${PartnerLogo14}`,PartnerName_id:9 },
+        {id:16,name1: 'HAAS', image1: `${PartnerLogo15}`,PartnerName_id:9 },]
 
     return (
         <>
@@ -62,10 +71,10 @@ const OurPartners = () => {
                                 >
                                     <div className="swiper partnerSwiperText">
                                         <div className="swiper-wrapper">
-                                            {PartnerName.map((showName, index) => {
+                                            {React.Children.toArray( PartnerName.map((showName) => {
                                                 return (
                                                     <>
-                                                        <SwiperSlide key={index}>
+                                                        <SwiperSlide key={showName.id}>
                                                             <div className="swiper-slide">
                                                                 <div className="bg-primary d-flex flex-column h-100 text-white">
                                                                     <h4 className="h3 fw-bold" >{showName.name}</h4>
@@ -74,7 +83,7 @@ const OurPartners = () => {
                                                         </SwiperSlide>
                                                     </>
                                                 )
-                                            })}
+                                            }))}
 
                                         </div>
                                     </div>
@@ -93,33 +102,42 @@ const OurPartners = () => {
                             >
                                 <div thumbsSlider="" className="swiper partnerSwiperImage">
                                     <div className="swiper-wrapper">
-                                        {PartnerName.map((index) => {
+                                        {/* partnername map for how many time swiper silde */}
+                                        { React.Children.toArray(PartnerName.map((index) => {
                                             return (
                                                 <>
-                                                    <SwiperSlide key={index}>
+                                                
+                                                    <SwiperSlide key={index.id}>
                                                         <div className="swiper-slide">
                                                             <div className="row">
-                                                            {PartnerInfo.map((showInfo)=>{
-                                                                return(
-                                                                    <>
-                                                                    <div className="col-6 col-sm-3 mb-3 mb-sm-0" key={showInfo.name1.toString()}>
-                                                                        <div className="partner-box">
-                                                                            <div className="partner-box-item">
-                                                                                <img src={showInfo.image1} alt=""
-                                                                                    className="mt-lg-5" />
-                                                                                <div >{showInfo.name1}</div>
+                                                                {/* Partnerinfo map function  */}
+                                                            {React.Children.toArray(PartnerInfo.map((showInfo)=>{
+                                                                {/* partnerinfo me vhi print ho jisme partnername ki id ho */}
+                                                                if (index.id == showInfo.PartnerName_id) {
+                                                                    return(
+                                                                        <>  
+                                                                        <div className="col-6 col-sm-3 mb-3 mb-sm-0" key={showInfo.name1.toString()}>
+                                                                            <div className="partner-box">
+                                                                                <div className="partner-box-item">
+                                                                                    <img src={showInfo.image1} alt=""
+                                                                                        className="mt-lg-5" />
+                                                                                    <div >{showInfo.name1}</div>
+                                                                                </div>
                                                                             </div>
-                                                                        </div>
-                                                                     </div>
-                                                                    </>
-                                                                )
-                                                            })}
+                                                                         </div>
+                                                                         
+                                                                        </>
+                                                                    ) 
+                                                                }
+                                                                
+                                                            }))}
                                                             </div>
                                                         </div>
                                                     </SwiperSlide>
+                                                    
                                                 </>
                                             )
-                                        })}
+                                        }))}
 
                                     </div>
                                 </div>
@@ -133,3 +151,10 @@ const OurPartners = () => {
 }
 
 export default OurPartners
+
+
+
+
+
+
+    

@@ -25,21 +25,21 @@ const Logistics = () => {
 
     const SiteDataInfo = useContext(SiteData);
 
-    const Data1 =[{name:'International security transportats',Logo: `${InternationSecurity}`},
-        {name:'Worldwide customs clearance',Logo: `${WorldwideCustomCreation}`},
-        {name:'Door to Door insurance coverage',Logo: `${Insurance}`},
-        {name:'Museum standard storage',Logo: `${SecurityLocations}`},
-        {name:'Allocated vaults/ studios available',Logo: `${Logistics1}`},
-        {name:'Domestic & customs warehousing',Logo: `${Partners}`},
-        {name:'High Security Standards',Logo: `${TrailorMadeTransport}`},
-        {name:'Global professional logistics',Logo: `${GlobalPro}`}];
+    const Data1 =[{id:2, name:'International security transportats',Logo: `${InternationSecurity}`},
+        {id:3,name:'Worldwide customs clearance',Logo: `${WorldwideCustomCreation}`},
+        {id:4,name:'Door to Door insurance coverage',Logo: `${Insurance}`},
+        {id:5,name:'Museum standard storage',Logo: `${SecurityLocations}`},
+        {id:6,name:'Allocated vaults/ studios available',Logo: `${Logistics1}`},
+        {id:7,name:'Domestic & customs warehousing',Logo: `${Partners}`},
+        {id:8,name:'High Security Standards',Logo: `${TrailorMadeTransport}`},
+        {id:9,name:'Global professional logistics',Logo: `${GlobalPro}`}];
 
-    const Data2 = [{dataname: 'Optimum solutions via renowned partners',images: `${LogisticsLogo1}`},
-        {dataname: 'State-of-the-art professional logistics infrastructure/Security and efficiency',images: `${LogisticsLogo2}`},
-        {dataname: 'Global transportation of precious metals, art, and other valuables, including customs clearance',images: `${LogisticsLogo3}`},
-        {dataname: 'International logistics within transit zones/Own customs specialists',images: `${LogisticsLogo4}`},
-        {dataname: 'Global logistics and storage',images: `${LogisticsLogo5}`},
-        {dataname: 'Full logistics service, from collection to delivery / All from a single source',images: `${LogisticsLogo6}`}];
+    const Data2 = [{id:2,dataname: 'Optimum solutions via renowned partners',images: `${LogisticsLogo1}`},
+        {id:3,dataname: 'State-of-the-art professional logistics infrastructure/Security and efficiency',images: `${LogisticsLogo2}`},
+        {id:4,dataname: 'Global transportation of precious metals, art, and other valuables, including customs clearance',images: `${LogisticsLogo3}`},
+        {id:5,dataname: 'International logistics within transit zones/Own customs specialists',images: `${LogisticsLogo4}`},
+        {id:6,dataname: 'Global logistics and storage',images: `${LogisticsLogo5}`},
+        {id:7,dataname: 'Full logistics service, from collection to delivery / All from a single source',images: `${LogisticsLogo6}`}];
 
   return (
     <>
@@ -87,35 +87,35 @@ const Logistics = () => {
             </div>
         </div>
         <div className="row mt-3 mt-lg-5">
-            {Data1.map((showData1)=>{
+            {React.Children.toArray( Data1.map((showData1)=>{
                 return(
                     <>
-                    <div className="col-6 col-md-3 mb-3 d-flex">
+                    <div className="col-6 col-md-3 mb-3 d-flex" key={showData1.id}>
                         <div className="card text-center flex-fill style-1">
-                            <div className="card-body" key={showData1.toString()}>
+                            <div className="card-body" >
                                 <img src={showData1.Logo} alt="logo" className="img-fluid mb-4"/>
-                                <h5 className="h5" key={showData1.name.toString()}>{showData1.name}</h5>
+                                <h5 className="h5" >{showData1.name}</h5>
                             </div>
                         </div>
                     </div>
                     </>
                 )
-            })}
+            }))}
         </div>
 
         <div className="img-grid mt-3 mt-lg-5">
-            {Data2.map((showData2)=>{
+            {React.Children.toArray( Data2.map((showData2)=>{
                 return(
                     <>
-                        <div className="img-box" key={showData2.toString()}>
+                        <div className="img-box" key={showData2.id} >
                             <img src={showData2.images} alt="logo" className="img-fluid"/>
                             <div className="img-detail">
-                                <h5 className="h4" key={showData2.dataname.toString()}>{showData2.dataname}</h5>
+                                <h5 className="h4">{showData2.dataname}</h5>
                             </div>
                         </div>
                     </>
                 )
-            })}
+            }))}
         </div>
     </div>
 </section>

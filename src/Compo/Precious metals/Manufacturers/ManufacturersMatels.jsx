@@ -6,10 +6,10 @@ import ManufactureLogo4 from '../../storage/precious-metal-tradings/1654172288.j
 
 const ManufacturersMatels = () => {
 
-    const Manufacture = [{logodata: `${ManufactureLogo1}`},
-    {logodata: `${ManufactureLogo2}`},
-    {logodata: `${ManufactureLogo3}`},
-    {logodata: `${ManufactureLogo4}`},];
+    const Manufacture = [{id:2, logodata: `${ManufactureLogo1}`},
+    {id:3,logodata: `${ManufactureLogo2}`},
+    {id:4,logodata: `${ManufactureLogo3}`},
+    {id:5,logodata: `${ManufactureLogo4}`},];
   return (
     <>
     <section  className="pb-3 pb-lg-5">
@@ -22,12 +22,12 @@ const ManufacturersMatels = () => {
             </div>
         </div>
         <div className="row our-partner my-md-5 my-3">
-            {Manufacture.map((showData)=>{
+            {React.Children.toArray( Manufacture.map((showData)=>{
                 return(
                     <>
-                        <div className="col-md-3 col-6" key={showData.toString()}>
+                        <div className="col-md-3 col-6" key={showData.id}>
                             <div className="partner-box">
-                                <div className="partner-box-item"  key={showData.logodata.toString()}>
+                                <div className="partner-box-item">
                                     <img src={showData.logodata} alt="logo"
                                         className=""/>
                                 </div>
@@ -35,7 +35,7 @@ const ManufacturersMatels = () => {
                         </div>
                     </>
                 )
-            })}
+            }))}
             
             
         </div>

@@ -35,18 +35,18 @@ const SliderImage = () => {
               effect={"auto"}
               
             >
-              {homeImage.map((showImage,index)=>{
+              { React.Children.toArray(homeImage.map((showImage)=>{
                 return(
                   <>
-                        <SwiperSlide key={index}>
+                        <SwiperSlide key={showImage.id}>
                         <div className="swiper-slide" >
-                          <picture key={showImage.toString()}>
-                            <img src={showImage.image} alt="image" className="w-100" style={{ width: '100%' }} />
+                          <picture >
+                            <img  src={showImage.image} alt="image" className="w-100" style={{ width: '100%' }} />
                           </picture>
                           <div className="banner-details">
                             <div>
-                              <h2 className="h2 fw-bold text-shadow" key={showImage.text1.toString()}>
-                               {showImage.text1} <br className="d-none d-md-block" key={showImage.text2.toString()} />
+                              <h2 className="h2 fw-bold text-shadow" >
+                               {showImage.text1} <br className="d-none d-md-block" />
                                 {showImage.text2}
                               </h2>
                             </div>
@@ -55,7 +55,7 @@ const SliderImage = () => {
                       </SwiperSlide>  
                   </>
                 )
-              })}
+              }))}
               
             </Swiper>
           </div>
