@@ -1,4 +1,5 @@
-import React, { useEffect,useState,createContext } from 'react'
+import axios from 'axios';
+import React, { useEffect, useState, createContext } from 'react'
 import { Route, Routes } from "react-router-dom";
 import './App.css'
 import Art from './Compo/Art/Art';
@@ -22,60 +23,55 @@ import SideMenu from './Compo/Social side menu/SideMenu';
 const SiteData = createContext();
 
 const App = () => {
-  const [data, setData] =useState('');
- 
-  useEffect(()=>{
-    fetch('https://ozl.v-protect.eu/ozl/',{
-      mode:'cors',
-      headers: {
-        'Accept': 'application/json'
-      }
-    })
-    .then(
-    function(response) {
-        if (response.status !== 200) {
-        console.log('Looks like there was a problem. Status Code: ' +
-            response.status);
-        return;
-        }
+  const [data, setData] = useState('');
 
-        // Examine the text in the response
-        response.json().then(function(data) {
-          var aa1 = JSON.stringify(data);
-        var aa2 = aa1.replace(/-/gi,'_');
-        var aa3 = JSON.parse(aa2);
-        console.log(aa3);
-        setData(aa3);
-        });
+  const UrlFatch = 'https://ozl.v-protect.eu/ozl/'
+
+
+  const getDataApi = async () => {
+    try {
+      const response = await axios.get(UrlFatch);
+      var aa1 = JSON.stringify(response.data).replace(/-/gi, '_');
+      var aa2 = JSON.parse(aa1);
+      console.log(aa2);
+      setData(aa2);
+    } catch (error) {
+      console.warn(error);
     }
-    )
-  },[])
+  }
+
+
+  useEffect(() => {
+    getDataApi();
+  }, []);
+
+
   return (
     <>
-    {data &&<SiteData.Provider value={data}>
-    <Navbar />
-    <AutoScrollToTop>
-    <Routes>
-    <Route path="" element={<Home />} />
-        <Route path="/ourservices" element={<OurServices />} />
-        <Route path="/contactus" element={<ContactUs />} />
-        <Route path="/logistics" element={<Logistics />} />
-        <Route path="/gtc" element={<Gtc />} />
-        <Route path="/art" element={<Art />} />
-        <Route path="/safedepositbox" element={<SafeDepositBox />} />
-        <Route path="/preciousmetals" element={<PreciousMetals />} />
-        <Route path="/diamonds" element={<Diamonds />} />
-        <Route path="/loginclient" element={<LoginClient />} />
-    </Routes>
-    </AutoScrollToTop>
-    <OurPartners />
-    <SideMenu />
-    <BackToTop />
-    <Footer />
-    </SiteData.Provider>}
+      {data && <SiteData.Provider value={data}>
+        <Navbar />
+        <AutoScrollToTop>
+          <Routes>
+            <Route path="" element={<Home />} />
+            <Route path="/ourservices" element={<OurServices />} />
+            <Route path="/contactus" element={<ContactUs />} />
+            <Route path="/logistics" element={<Logistics />} />
+            <Route path="/gtc" element={<Gtc />} />
+            <Route path="/art" element={<Art />} />
+            <Route path="/safedepositbox" element={<SafeDepositBox />} />
+            <Route path="/preciousmetals" element={<PreciousMetals />} />
+            <Route path="/diamonds" element={<Diamonds />} />
+            <Route path="/loginclient" element={<LoginClient />} />
+          </Routes>
+        </AutoScrollToTop>
+        <OurPartners />
+        <SideMenu />
+        <BackToTop />
+        <Footer />
+      </SiteData.Provider>}
     </>
   )
 }
 
 export default App;
-export {SiteData}
+export { SiteData }

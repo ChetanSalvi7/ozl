@@ -358,26 +358,28 @@ a:hover {
   font-weight: 700;
   color: #2E2E2E;
   transition: all 0.3s ease-in-out;
-  text-transform: uppercase;
   position: relative;
 }
 .navigation .nav-item .nav-link::before {
   content: "";
   position: absolute;
-  left: 0;
+  left: 5px;
   top: 50%;
   background-color: #A5BBD4;
   opacity: 0.5;
   height: 3px;
-  width: 100%;
+  width: 0;
   opacity: 0;
   z-index: -1;
+  transition: all 0.3s ease;
   transform: translateY(-50%);
   visibility: hidden;
 }
 .navigation .nav-item .nav-link:is(.active, :hover, :focus, :active)::before {
   opacity: 1;
   visibility: visible;
+  transform: translateY(-50%);
+  width: calc(100% - 10px);
 }
 .navigation .nav-item .nav-link p {
   margin: 0;
@@ -394,13 +396,13 @@ a:hover {
   content: "";
   position: absolute;
   left: 5px;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   top: 50%;
   background-color: #A5BBD4;
   opacity: 0.5;
   height: 3px;
-  width: 100%;
-  opacity: 1;
+  width: 0;
+  opacity: 0;
   z-index: -1;
   transform: translateY(-50%);
   visibility: hidden;
@@ -408,7 +410,7 @@ a:hover {
 .offcanvas .nav .nav-item a:is(.active, :hover, :focus, :active)::before {
   opacity: 1;
   visibility: visible;
-  width: calc(100% -10px);
+  width: calc(100% - 10px);
 }
 
 .navbar-brand img {
@@ -516,6 +518,11 @@ a:hover {
   padding: 2rem 4rem;
   display: inline-block;
   backdrop-filter: blur(5px);
+}
+@media screen and (max-width: 576px) {
+  .text-shadow {
+    padding: 1rem;
+  }
 }
 
 .dropdown-menu {
@@ -888,12 +895,13 @@ a:hover {
 #ourServicenav .nav .nav-link {
   padding: 1rem;
   border-radius: 0;
-  color: #ffffff;
+  color: #2E2E2E;
   background: #D3DCEA;
   text-align: left;
 }
 #ourServicenav .nav .nav-link.active {
   background: #A5BBD4;
+  color: #ffffff;
 }
 @media (max-width: 767px) {
   #ourServicenav .nav {
@@ -1189,6 +1197,34 @@ a:hover {
 
 input[type=radio]:checked {
   background-color: #A5BBD4;
+}
+
+#ourServicenav .tab-content .tab-pane a {
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #A5BBD4;
+  color: #ffffff;
+  padding: 0.6rem;
+  z-index: 1;
+  margin-bottom: 0.6rem;
+  position: relative;
+}
+#ourServicenav .tab-content .tab-pane a::before {
+  display: block;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 0px;
+  width: 100%;
+  z-index: -1;
+  content: "";
+  background: #000000;
+  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+}
+#ourServicenav .tab-content .tab-pane a:hover:before {
+  bottom: 0%;
+  top: auto;
+  height: 100%;
 }
 
 @media screen and (max-width: 991px) {

@@ -11,7 +11,7 @@ const BecomeCustomer = () => {
     <section className="container-fluid px-lg-5 text-white">
         <div
           className="p-3 p-lg-4 py-lg-5"
-          style={{backgroundImage: `url(${CustomerLogo})`,backgroundRepeat: 'no-repeat'}}
+          style={{background: `url(${CustomerLogo}) no-repeat center/cover`}}
         >
           <div className="row align-items-center">
             <div className="col-lg-4">
@@ -21,7 +21,7 @@ const BecomeCustomer = () => {
               <p>
               {SiteDataInfo.outPutArray.landing_become_customer_desc}
               </p>
-              <a href="#" className="btn btn-secondary">
+              <a href="fileadmin//user_upload/Verwahrvertrag_OZL_de_en.pdf"  className="btn btn-secondary">
                 <div className="small">Electronic Verification</div>
                 <div className="text-uppercase fw-bold">as a customer</div>
               </a>
@@ -30,7 +30,7 @@ const BecomeCustomer = () => {
               <p>
               {SiteDataInfo.outPutArray.landing_become_customer_desc_2}
               </p>
-              <a href="#" className="btn btn-secondary">
+              <a href="fileadmin//user_upload/Mietvertrag_OZL_de_en.pdf\" className="btn btn-secondary">
                 <div className="small">Electronic Verification</div>
                 <div className="text-uppercase fw-bold">as a signatory</div>
               </a>

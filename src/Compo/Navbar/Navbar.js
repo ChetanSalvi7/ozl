@@ -7,9 +7,8 @@ import { SiteData } from "../../App";
 const Navbar = () => {
   const SiteDataInfo = useContext(SiteData);
 
-
-
   const [scroll, setScroll] = useState(false);
+
   useEffect(() => {
     window.addEventListener("scroll", () => {
       setScroll(window.scrollY > 50);
@@ -19,7 +18,7 @@ const Navbar = () => {
   let timeout;
 
 function ScrollToServiceTime() {
-  timeout = setTimeout(scrollToService, 300);
+  timeout = setTimeout(scrollToService, 400);
 }
 
   const scrollToService = () =>{
@@ -30,7 +29,7 @@ function ScrollToServiceTime() {
   };
   
   function ScrollToCustomerTime() {
-    timeout = setTimeout(scrollToBecome, 300);
+    timeout = setTimeout(scrollToBecome, 400);
   }
 
   const scrollToBecome = () =>{
@@ -51,7 +50,8 @@ function ScrollToServiceTime() {
                 <NavLink className="navbar-brand" to="/">
                   <img src={Logo} alt="" className="logo" />
                 </NavLink>
-                <button className="navbar-toggler ms-auto align-self-center" type="button" data-bs-toggle="offcanvas" data-bs-target="#side-menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button className="navbar-toggler ms-auto align-self-center" type="button" 
+                 data-bs-toggle="offcanvas"  data-bs-target="#side-menu"  aria-controls="side-menu">
                             <span className="navbar-toggler-icon"></span>
                  </button>
               </div>
@@ -81,7 +81,7 @@ function ScrollToServiceTime() {
                       <li className="nav-item py-1 py-lg-0">
                         <select className="selectpicker selectlanaguePicker" data-width="fit" name="language_id">
                           <option defaultValue value="index.html">EN</option>
-                          <option value="german.html">DE</option>
+                          <option  value="german.html">DE</option>
                         </select>
                       </li>
                     </ul>

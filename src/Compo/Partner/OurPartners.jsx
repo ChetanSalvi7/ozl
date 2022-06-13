@@ -105,8 +105,7 @@ const OurPartners = () => {
                                         {/* partnername map for how many time swiper silde */}
                                         { React.Children.toArray(PartnerName.map((index) => {
                                             return (
-                                                <>
-                                                
+                                                <>                                               
                                                     <SwiperSlide key={index.id}>
                                                         <div className="swiper-slide">
                                                             <div className="row">
@@ -133,8 +132,7 @@ const OurPartners = () => {
                                                             }))}
                                                             </div>
                                                         </div>
-                                                    </SwiperSlide>
-                                                    
+                                                    </SwiperSlide>   
                                                 </>
                                             )
                                         }))}
