@@ -17,7 +17,12 @@ const Footer = () => {
     { id: '7', jumpTo: 'ourservices', title1: `${SiteDataInfo.outPutArray.header_menu_10}` },
     { id: '8', jumpTo: '', title1: `${SiteDataInfo.outPutArray.header_menu_14}` },
     { id: '9', jumpTo: 'gtc', title1: `${SiteDataInfo.outPutArray.header_menu_12}` },
-    { id: '10', jumpTo: 'contactus', title1: 'CONTACT US' }];
+    { id: '10', jumpTo: 'contactus', title1: `${SiteDataInfo.outPutArray.contact_title}` }];
+
+    const footerDetails = [{ id: '3', title2: `${SiteDataInfo.outPutArray.contact_address}`, desc2: `${SiteDataInfo.outPutArray.footer_address}` },
+    { id: '4', title2: `${SiteDataInfo.outPutArray.contact_phone}`, desc2: `${SiteDataInfo.outPutArray.footer_tel}`, link: "tel:+4233926101" },
+    { id: '5', title2: `${SiteDataInfo.outPutArray.contact_fax}`, desc2: `${SiteDataInfo.outPutArray.footer_fax}`, link: "fax:+4233926101" },
+    { id: '6', title2: `${SiteDataInfo.outPutArray.contact_email}`, desc2: `${SiteDataInfo.outPutArray.footer_mail}`, link: "mailto:info@ozl.li" }];
     return (
         <>
             <footer className="border-top pt-4">
@@ -34,7 +39,7 @@ const Footer = () => {
                                 {React.Children.toArray(LinkBox.map((dataShow) => {
                                     return (
                                         <>
-                                            <div className="col mb-2" key={dataShow.id}>
+                                            <div className="col mb-2 text-uppercase" key={dataShow.id}>
                                                 <NavLink to={dataShow.jumpTo}>{dataShow.title1}</NavLink>
                                             </div>
                                         </>
@@ -45,23 +50,17 @@ const Footer = () => {
                         </div>
                         <div className="col-lg-4 col-6">
                             <div className="row row-cols-1 row-cols-md-2 fw-bold">
-
-                                <div className="col mb-3">
-                                    <div className="text-uppercase text-black-50">{SiteDataInfo.outPutArray.contact_address}</div>
-                                    <div>{SiteDataInfo.outPutArray.footer_address}</div>
-                                </div>
-                                <div className="col mb-3">
-                                    <div className="text-uppercase text-black-50">telephone</div>
-                                    <a href="tel:+4233926101">{SiteDataInfo.outPutArray.footer_tel}</a>
-                                </div>
-                                <div className="col mb-3">
-                                    <div className="text-uppercase text-black-50">fax</div>
-                                    <a href="fax:+4233926101">{SiteDataInfo.outPutArray.footer_fax}</a>
-                                </div>
-                                <div className="col">
-                                    <div className="text-uppercase text-black-50">Email</div>
-                                    <a href="mailto:info@ozl.li">{SiteDataInfo.outPutArray.footer_mail}</a>
-                                </div>
+                                {React.Children.toArray(footerDetails.map((showData) => {
+                                    return (
+                                        <>
+                                            <div className="col mb-3" key={showData.id}>
+                                                <div className="text-uppercase text-black-50">{showData.title2}</div>
+                                                <a href={showData.link}>{showData.desc2}</a>
+                                            </div>
+                                        </>
+                                    )
+                                })
+                                )}
 
                             </div>
                             <nav className="social-icon">

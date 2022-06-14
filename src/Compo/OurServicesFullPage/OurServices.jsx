@@ -18,7 +18,7 @@ const OurServices = () => {
     <SliderImage />
         <section className="py-3 py-lg-5" id="ourServicenav">
     <div className="container px-lg-5">
-        <h3 className="h2 text-center fw-bold mb-3 mb-lg-5">Our Services</h3>
+        <h3 className="h2 text-center fw-bold mb-3 mb-lg-5">{SiteDataInfo.outPutArray.our_service_main_title}</h3>
         <div className="row align-items-start">
             <div className="col-md-2 nav flex-sm-column nav-pills pe-0 mb-4 mb-sm-0" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                 <button className="nav-link active" data-bs-toggle="pill" data-bs-target="#custody" type="button" role="tab" aria-controls="custody" aria-selected="true">{SiteDataInfo.our_service[0].our_service_title_single.value}</button>
