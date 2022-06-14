@@ -1,7 +1,6 @@
 import React,{useContext} from 'react'
 import WeightLogo from '../../backend/img/Weight.svg';
 import DimensionsLogo from '../../backend/img/Dimensions.svg';
-import BannerLogo from '../../backend/img/hero-banner-2.jpg';
 import { SiteData } from '../../App';
 
 const SafeDepositBox = () => {
