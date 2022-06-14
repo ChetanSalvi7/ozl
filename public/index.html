@@ -40,6 +40,7 @@
   <div id="root"></div>
 
   <script>
+   
     document.onreadystatechange = function () {
       if (document.readyState !== "complete") {
         document.querySelector("body").style.visibility = "hidden";
@@ -47,9 +48,10 @@
       } else {
         document.querySelector(".loader").style.display = "none";
         document.querySelector("body").style.visibility = "visible";
+        
       }
     };
-
+    
   </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
