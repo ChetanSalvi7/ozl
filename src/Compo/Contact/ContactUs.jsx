@@ -3,10 +3,12 @@ import MapLogo from '../../backend/img/contact/map.svg';
 import EuropeLogo from '../../backend/img/contact/map-europe.svg';
 import ContactForm from './ContactForm';
 import OurPartners from '../Partner/OurPartners';
+import SliderImage from '../main page/SliderImage';
 
 const ContactUs = () => {
     return (
         <>
+        <SliderImage/>
             <section className="pt-3 pt-lg-5" id="contactUs">
                 <div className="container-xxl px-lg-5">
 
@@ -16,10 +18,10 @@ const ContactUs = () => {
                         <div className="col-md-7">
                             <div className="row">
                                 <div className="col-md-6 col-6">
-                                    <img src={MapLogo} alt="" className="img-fluid" />
+                                    <img src={EuropeLogo} alt="" className="img-fluid" />
                                 </div>
                                 <div className="col-md-6 col-6">
-                                    <img src={EuropeLogo} alt="" className="img-fluid" />
+                                    <img src={MapLogo } alt="" className="img-fluid" />
                                 </div>
                             </div>
                         </div>

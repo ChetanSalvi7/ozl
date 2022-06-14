@@ -25,21 +25,21 @@ const ContactForm = () => {
                 <form className="row g-3 mt-lg-3" onSubmit={handleSubmit(SendData)}>
                     <div className="col-md-6">
                         <label htmlFor="name" className="form-label">Your name</label>
-                        <input type="text" className="form-control" placeholder="Your Name" name="name" {...register('name', registerOptions.name)} />
+                        <input type="text" className="form-control"  name="name" {...register('name', registerOptions.name)} />
                         <small className="text-danger">
                               {errors?.name && errors.name.message}
                          </small>
                     </div>
                     <div className="col-md-6">
                         <label htmlFor="email" className="form-label">Email</label>
-                        <input type="text" className="form-control" placeholder="Enter your Email" name="email" {...register('email', registerOptions.email)}/>
+                        <input type="text" className="form-control" name="email" {...register('email', registerOptions.email)}/>
                         <small className="text-danger">
                              {errors?.email && errors.email.message}
                          </small>
                     </div>
                     <div className="col-md-12">
                         <label htmlFor="email" className="form-label">Message</label>
-                        <textarea rows="4" className="form-control w-100" placeholder='Enter your message' name='textarea' {...register('textarea')}></textarea>
+                        <textarea rows="4" className="form-control w-100"  name='textarea' {...register('textarea')}></textarea>
                     </div>
                     <div className="col-12">
                         <button type="submit" className="btn btn-lg btn-primary px-5 py-2">Submit</button>

@@ -49,6 +49,9 @@ const Footer = () => {
                                 <div className="col mb-2">
                                     <NavLink to="gtc">{SiteDataInfo.outPutArray.header_menu_12}</NavLink>
                                 </div>
+                                <div className="col mb-2">
+                                    <NavLink to="contactus">CONTACT US</NavLink>
+                                </div>
 
                             </div>
                         </div>
