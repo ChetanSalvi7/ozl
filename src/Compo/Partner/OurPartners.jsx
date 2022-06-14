@@ -8,22 +8,9 @@ import 'swiper/css';
 
 const ImageUrl = 'https://ozl.v-protect.eu/ozl/storage/our-partner-content/'
 
-const ImageBox = [{
-    PartnerLogo1: '1654164826.png',
-    PartnerLogo2: '1654165127.png',
-    PartnerLogo3: '1654165155.jpg',
-    PartnerLogo4: '1654165174.jpg',
-    PartnerLogo5: '1654165198.jpg',
-    PartnerLogo6: '1654165211.jpg',
-    PartnerLogo7: '1654165233.jpg',
-    PartnerLogo8: '1654165245.png',
-    PartnerLogo9: '1654165276.jpg',
-    PartnerLogo10: '1654165310.jpg',
-    PartnerLogo11: '1654165340.png',
-    PartnerLogo12: '1654165359.png',
-    PartnerLogo13: '1654165388.jpg',
-    PartnerLogo14: '1654165410.jpg',
-    PartnerLogo15: '1654165455.png'
+const ImageBox = [{ PartnerLogo1: '1654164826.png',PartnerLogo2: '1654165127.png',PartnerLogo3: '1654165155.jpg', PartnerLogo4: '1654165174.jpg',PartnerLogo5: '1654165198.jpg',
+PartnerLogo6: '1654165211.jpg',PartnerLogo7: '1654165233.jpg',PartnerLogo8: '1654165245.png',PartnerLogo9: '1654165276.jpg',PartnerLogo10: '1654165310.jpg',
+PartnerLogo11: '1654165340.png',PartnerLogo12: '1654165359.png',PartnerLogo13: '1654165388.jpg',PartnerLogo14: '1654165410.jpg',PartnerLogo15: '1654165455.png'
 }]
 
 

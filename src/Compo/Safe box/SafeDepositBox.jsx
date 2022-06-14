@@ -88,7 +88,7 @@ const SafeDepositBox = () => {
                     <h4 className="h4">Select additional services</h4>
                     <p>You can arrange storage and request an audit or other services remotely.</p>
                 </div>
-                <div className="mb-3 mb-lg-0 col-md-6 col-lg-3">
+                <div className="mb-3 mb-lg-0 col-md-6 col-lg-3 ">
                     <div className="avatar avatar-sm bg-primary position-relative border border-1 border-white h3">3</div>
                     <h4 className="h4">Complete and return contract/documents</h4>
                     <p>Complete and sign documents and enclose additional information.</p>
