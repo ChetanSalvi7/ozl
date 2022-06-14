@@ -1,19 +1,28 @@
 import React from 'react'
-import LogisticsLogo1 from '../storage/diamonds/1654146542.jpg'
-import LogisticsLogo2 from '../storage/diamonds/1654146586.jpg'
-import LogisticsLogo3 from '../storage/diamonds/1654146621.jpg'
-import LogisticsLogo4 from '../storage/diamonds/1654147113.jpg'
-import LogisticsLogo5 from '../storage/diamonds/1654147143.jpg'
-import LogisticsLogo6 from '../storage/diamonds/1654147168.jpg'
-import BannerLogo from '../storage/banner/1654152384.jpg'
+
+
+
+const BannerLogo = 'https://ozl.v-protect.eu/ozl/storage/banner/1654152384.jpg'
+const ImageUrl = 'https://ozl.v-protect.eu/ozl/storage/diamonds/'
+
+
+
+const ImageBox = [{LogisticsLogo1 : '1654146542.jpg',
+ LogisticsLogo2 : '1654146586.jpg',
+ LogisticsLogo3 : '1654146621.jpg',
+ LogisticsLogo4 : '1654147113.jpg',
+ LogisticsLogo5 : '1654147143.jpg',
+ LogisticsLogo6 : '1654147168.jpg'}]
+
+
 
 const Diamonds = () => {
-    const Data2 = [{id:2, dataname: 'Optimum solutions via renowned partners',images: `${LogisticsLogo1}`},
-        {id:3,dataname: 'State-of-the-art professional logistics infrastructure/Security and efficiency',images: `${LogisticsLogo2}`},
-        {id:4,dataname: 'Global transportation of precious metals, art, and other valuables, including customs clearance',images: `${LogisticsLogo3}`},
-        {id:5,dataname: 'International logistics within transit zones/Own customs specialists',images: `${LogisticsLogo4}`},
-        {id:6,dataname: 'Global logistics and storage',images: `${LogisticsLogo5}`},
-        {id:7,dataname: 'Full logistics service, from collection to delivery / All from a single source',images: `${LogisticsLogo6}`}];
+    const Data2 = [{id:2, dataname: 'Optimum solutions via renowned partners',images: `${ImageUrl+ImageBox[0].LogisticsLogo1}`},
+        {id:3,dataname: 'State-of-the-art professional logistics infrastructure/Security and efficiency',images: `${ImageUrl+ImageBox[0].LogisticsLogo2}`},
+        {id:4,dataname: 'Global transportation of precious metals, art, and other valuables, including customs clearance',images: `${ImageUrl+ImageBox[0].LogisticsLogo3}`},
+        {id:5,dataname: 'International logistics within transit zones/Own customs specialists',images: `${ImageUrl+ImageBox[0].LogisticsLogo4}`},
+        {id:6,dataname: 'Global logistics and storage',images: `${ImageUrl+ImageBox[0].LogisticsLogo5}`},
+        {id:7,dataname: 'Full logistics service, from collection to delivery / All from a single source',images: `${ImageUrl+ImageBox[0].LogisticsLogo6}`}];
   return (
     <>
     {/* Banner--start*/}

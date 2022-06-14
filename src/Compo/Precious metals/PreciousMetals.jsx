@@ -1,8 +1,12 @@
 import React from 'react'
-import Rheingold from '../storage/our-partner-content/1654165340.png'
-import Banner from '../storage/banner/1654153989.jpg'
 import ManufacturersMatels from './Manufacturers/ManufacturersMatels'
 import OnlineMetals from './Online metals/OnlineMetals'
+import Rheingold from '../storage/our-partner-content/1654165340.png'
+
+
+const BannerImage = 'https://ozl.v-protect.eu/ozl/storage/banner/1654153989.jpg'
+
+
 
 const PreciousMetals = () => {
     return (
@@ -11,7 +15,7 @@ const PreciousMetals = () => {
     <div className="swiper heroSwiper">
         <div className="swiper-wrapper">
             <div className="swiper-slide">
-                <img src={Banner} alt="" className="w-100" style={{width: '100%'}}/>
+                <img src={BannerImage} alt="" className="w-100" style={{width: '100%'}}/>
                 <div className="banner-details">
                     <div>
                         <h2 className="h2 fw-bold text-shadow">Buy and sell precious metals very easily -<br className="d-none d-md-block"/> directly at our domicile.</h2>

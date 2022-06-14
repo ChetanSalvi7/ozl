@@ -21,7 +21,7 @@ const BecomeCustomer = () => {
               <p>
               {SiteDataInfo.outPutArray.landing_become_customer_desc}
               </p>
-              <a href="fileadmin//user_upload/Verwahrvertrag_OZL_de_en.pdf"  className="btn btn-secondary">
+              <a href="https://ozl.li/onboarding"  className="btn btn-secondary">
                 <div className="small">Electronic Verification</div>
                 <div className="text-uppercase fw-bold">as a customer</div>
               </a>
@@ -30,7 +30,7 @@ const BecomeCustomer = () => {
               <p>
               {SiteDataInfo.outPutArray.landing_become_customer_desc_2}
               </p>
-              <a href="fileadmin//user_upload/Mietvertrag_OZL_de_en.pdf\" className="btn btn-secondary">
+              <a href="https://ozl.li/onboarding" className="btn btn-secondary">
                 <div className="small">Electronic Verification</div>
                 <div className="text-uppercase fw-bold">as a signatory</div>
               </a>

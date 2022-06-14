@@ -23,7 +23,7 @@ function ScrollToServiceTime() {
 
   const scrollToService = () =>{
     window.scrollTo({
-      top: 880, 
+      top: 800, 
       behavior: 'smooth'
     });
   };
@@ -52,7 +52,7 @@ function ScrollToServiceTime() {
                 </NavLink>
                 <button className="navbar-toggler ms-auto align-self-center" type="button" 
                  data-bs-toggle="offcanvas"  data-bs-target="#side-menu"  aria-controls="side-menu">
-                            <span className="navbar-toggler-icon"></span>
+                            <i className="fa-solid fa-bars"></i>
                  </button>
               </div>
               <div className="col-12 col-lg-9">
@@ -74,16 +74,20 @@ function ScrollToServiceTime() {
                       </li>
                       <li className="nav-item dropdown py-1  py-lg-0">
                         <NavLink className="nav-link link-scroll" to="safedepositbox">
-
                         {SiteDataInfo.outPutArray.header_menu_3}
                         </NavLink>
                       </li>
-                      <li className="nav-item py-1 py-lg-0">
+                      <li className="nav-item dropdown py-1  py-lg-0">
+                        <a className="nav-link link-scroll" target="_blank" href="https://ozl.li/fileadmin//user_upload/OZL_Datenschutzerklaerung_Vertrag_EN.pdf">
+                        PRIVACY POLICY
+                        </a>
+                      </li>
+                      {/* <li className="nav-item py-1 py-lg-0">
                         <select className="selectpicker selectlanaguePicker" data-width="fit" name="language_id">
                           <option defaultValue value="index.html">EN</option>
                           <option  value="german.html">DE</option>
                         </select>
-                      </li>
+                      </li> */}
                     </ul>
                     <button  className="py-xl-2 btn btn-primary border-0 d-block text-center side-burger"  
                     type="button"  data-bs-toggle="offcanvas"  data-bs-target="#side-menu"  aria-controls="side-menu"  >
@@ -99,32 +103,27 @@ function ScrollToServiceTime() {
                         <div className="offcanvas-body">
                           <ul className="nav flex-column">
                             <li className="nav-item">
-                              <NavLink className="nav-link " aria-current="page" to="logistics">{SiteDataInfo.outPutArray.header_menu_4}</NavLink>
+                              <NavLink className="nav-link " aria-current="page" to="logistics" data-bs-dismiss="offcanvas" aria-label="Close">{SiteDataInfo.outPutArray.header_menu_4}</NavLink>
                             </li>
                             <li className="nav-item">
-                              <NavLink className="nav-link " to="diamonds">{SiteDataInfo.outPutArray.header_menu_5}</NavLink>
+                              <NavLink className="nav-link " to="diamonds" data-bs-dismiss="offcanvas" aria-label="Close">{SiteDataInfo.outPutArray.header_menu_5}</NavLink>
                             </li>
                             <li className="nav-item ">
-                              <NavLink className="nav-link" to="art">{SiteDataInfo.outPutArray.header_menu_6}</NavLink>
+                              <NavLink className="nav-link" to="art" data-bs-dismiss="offcanvas" aria-label="Close">{SiteDataInfo.outPutArray.header_menu_6}</NavLink>
                             </li>
                             <li className="nav-item ">
-                              <NavLink className="nav-link" to="loginclient">{SiteDataInfo.outPutArray.header_menu_7}</NavLink>
+                              <NavLink className="nav-link" to="loginclient" data-bs-dismiss="offcanvas" aria-label="Close">{SiteDataInfo.outPutArray.header_menu_7}</NavLink>
                             </li>
                             <li className="nav-item">
                               <a className="nav-link" target="_blank" href="https://www.rheingold-edelmetall.com/en/portfolio/index/">{SiteDataInfo.outPutArray.header_menu_8}</a>
                             </li>
                             <li className="nav-item">
-                              <NavLink className="nav-link " to="/" onClick={ScrollToCustomerTime}>{SiteDataInfo.outPutArray.header_menu_9}</NavLink>
+                              <NavLink className="nav-link " to="/" data-bs-dismiss="offcanvas" aria-label="Close" onClick={ScrollToCustomerTime}>{SiteDataInfo.outPutArray.header_menu_9}</NavLink>
                             </li>
                             <li className="nav-item">
-                              <NavLink className="nav-link " to="/gtc">{SiteDataInfo.outPutArray.header_menu_10}</NavLink>
+                              <NavLink className="nav-link " to="/gtc" data-bs-dismiss="offcanvas" aria-label="Close">{SiteDataInfo.outPutArray.header_menu_10}</NavLink>
                             </li>
-                            <li className="nav-item ">
-                              <NavLink className="nav-link" to="/gtc">{SiteDataInfo.outPutArray.header_menu_11}</NavLink>
-                            </li>
-                            <li className="nav-item ">
-                              <NavLink className="nav-link" to="/gtc">{SiteDataInfo.outPutArray.header_menu_12}</NavLink>
-                            </li>
+                            
                           </ul>
                         </div>
                       </div>

@@ -5,19 +5,19 @@ import { NavLink } from "react-router-dom";
 const Services = () => {
   const SiteDataInfo = useContext(SiteData);
   let timeout;
-  const ScrollToServiceSection = ()=>{
-    timeout =setTimeout(scrollToService,300);
+  const ScrollToServiceSection = () => {
+    timeout = setTimeout(scrollToService, 300);
   };
-  const scrollToService = () =>{
+  const scrollToService = () => {
     window.scrollTo({
-      top: 600,
-      behavior:'smooth'
+      top: 800,
+      behavior: 'smooth'
     });
   };
 
   return (
     <>
-    <section className="py-3 py-lg-5">
+      <section className="py-3 py-lg-5">
         <div className="container-xxl px-lg-5">
           <h3 className="h2 text-center fw-bold mb-3 mb-lg-5">Our Services</h3>
           <div className="service-grid">
@@ -43,7 +43,7 @@ const Services = () => {
             </NavLink>
             <NavLink to='/ourservices' className="service service-grid-4">
               <h4 className="h4 fw-bold mb-lg-3">
-              {SiteDataInfo.our_service[3].our_service_title_single.value}
+                {SiteDataInfo.our_service[3].our_service_title_single.value}
               </h4>
               <p>
                 OZL AG combines security, custody and logistics at the highest
@@ -69,12 +69,12 @@ const Services = () => {
 
           <div className="row mt-lg-5 mt-5 justify-content-center">
             <div className="col-12 col-sm-auto">
-              <a className="btn btn-lg btn-primary text-uppercase text-white">
+              <a href='https://ozl.li/fileadmin//user_upload/Verwahrvertrag_OZL_de_en.pdf' target='_blank' className="btn btn-lg btn-primary text-uppercase text-white">
                 custody agreement(pdf)
               </a>
             </div>
             <div className="col-12 col-sm-auto">
-              <a className="btn btn-lg btn-primary text-uppercase text-white">
+              <a href='https://ozl.li/fileadmin//user_upload/Mietvertrag_OZL_de_en.pdf' target='_blank' className="btn btn-lg btn-primary text-uppercase text-white">
                 rental agreement (pdf)
               </a>
             </div>
