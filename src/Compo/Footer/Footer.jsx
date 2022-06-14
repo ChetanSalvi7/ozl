@@ -7,6 +7,17 @@ const Footer = () => {
     const getYear = new Date().getFullYear();
 
     const SiteDataInfo = useContext(SiteData);
+
+    const LinkBox = [{ id: '1', jumpTo: 'ourservices', title1: `${SiteDataInfo.outPutArray.header_menu_1}` },
+    { id: '2', jumpTo: 'logistics', title1: `${SiteDataInfo.outPutArray.header_menu_4}` },
+    { id: '3', jumpTo: 'preciousmetals', title1: `${SiteDataInfo.outPutArray.header_menu_2}` },
+    { id: '4', jumpTo: 'art', title1: `${SiteDataInfo.outPutArray.header_menu_6}` },
+    { id: '5', jumpTo: 'safedepositbox', title1: `${SiteDataInfo.outPutArray.header_menu_3}` },
+    { id: '6', jumpTo: 'diamonds', title1: `${SiteDataInfo.outPutArray.header_menu_5}` },
+    { id: '7', jumpTo: 'ourservices', title1: `${SiteDataInfo.outPutArray.header_menu_10}` },
+    { id: '8', jumpTo: '', title1: `${SiteDataInfo.outPutArray.header_menu_14}` },
+    { id: '9', jumpTo: 'gtc', title1: `${SiteDataInfo.outPutArray.header_menu_12}` },
+    { id: '10', jumpTo: 'contactus', title1: 'CONTACT US' }];
     return (
         <>
             <footer className="border-top pt-4">
@@ -14,45 +25,22 @@ const Footer = () => {
                     <div className="row">
                         <div className="col-lg-3 text-center text-sm-start">
                             <NavLink to="/">
-                                <img src={Logo} alt="" className="img-fluid mb-2" style={{ maxHeight: "76px" }} />
+                                <img src={Logo} alt="logo" className="img-fluid mb-2" style={{ maxHeight: "76px" }} />
                             </NavLink>
                             <p>{SiteDataInfo.outPutArray.footer_text}</p>
                         </div>
                         <div className="col-lg-5 col-6">
                             <div className=" row row-cols-1 row-cols-md-2 fw-bold">
-
-                                <div className="col mb-2">
-                                    <NavLink to="ourservices">{SiteDataInfo.outPutArray.header_menu_1}</NavLink>
-                                </div>
-                                <div className="col mb-2">
-                                    <NavLink to="logistics">{SiteDataInfo.outPutArray.header_menu_4}</NavLink>
-
-                                </div>
-                                <div className="col mb-2">
-                                    <NavLink to="preciousmetals">{SiteDataInfo.outPutArray.header_menu_2}</NavLink>
-                                </div>
-                                <div className="col mb-2">
-                                    <NavLink to="art">{SiteDataInfo.outPutArray.header_menu_6}</NavLink>
-                                </div>
-                                <div className="col mb-2">
-                                    <NavLink to="safedepositbox">{SiteDataInfo.outPutArray.header_menu_3}</NavLink>
-                                </div>
-                                <div className="col mb-2">
-                                    <NavLink to="diamonds">{SiteDataInfo.outPutArray.header_menu_5}</NavLink>
-                                </div>
-                                <div className="col mb-2">
-                                    <NavLink to="ourservices">{SiteDataInfo.outPutArray.header_menu_10}</NavLink>
-                                </div>
-                                <div className="col mb-2 text-uppercase">
-                                    <NavLink to="">{SiteDataInfo.outPutArray.header_menu_14}</NavLink>
-                                </div>
-                                <div className="col mb-2">
-                                    <NavLink to="gtc">{SiteDataInfo.outPutArray.header_menu_12}</NavLink>
-                                </div>
-                                <div className="col mb-2">
-                                    <NavLink to="contactus">CONTACT US</NavLink>
-                                </div>
-
+                                {React.Children.toArray(LinkBox.map((dataShow) => {
+                                    return (
+                                        <>
+                                            <div className="col mb-2" key={dataShow.id}>
+                                                <NavLink to={dataShow.jumpTo}>{dataShow.title1}</NavLink>
+                                            </div>
+                                        </>
+                                    )
+                                })
+                                )}
                             </div>
                         </div>
                         <div className="col-lg-4 col-6">

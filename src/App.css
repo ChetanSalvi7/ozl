@@ -1228,6 +1228,9 @@ input[type=radio]:checked {
 }
 
 @media screen and (max-width: 991px) {
+  .sticky-contact-bar{
+    display: none;
+  }
   .main-menu .media .avatar-md {
     height: 48px;
     width: 48px;

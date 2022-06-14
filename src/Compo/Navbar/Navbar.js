@@ -52,7 +52,7 @@ const Navbar = () => {
                 </NavLink>
                 <button className="navbar-toggler ms-auto align-self-center" type="button"
                   data-bs-toggle="offcanvas" data-bs-target="#side-menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
+                  <span className="navbar-toggler-icon"></span>
                 </button>
               </div>
               <div className="col-12 col-lg-9">

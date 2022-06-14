@@ -15,56 +15,35 @@ const Services = () => {
     });
   };
 
+  const StoreBox = [{id:'2', link1: '/ourservices#0', classname: 'service service-grid-1', title1: `${SiteDataInfo.our_service[0].our_service_title_single.value}`, desc: `${SiteDataInfo.our_service[0].our_service_short_desc_single.value}` },
+  {id:'3', link1: '/ourservices#1', classname: 'service service-grid-2', title1: `${SiteDataInfo.our_service[1].our_service_title_single.value}`, desc: `${SiteDataInfo.our_service[1].our_service_short_desc_single.value}` },
+  {id:'4', link1: '/ourservices#2', classname: 'service service-grid-3', title1: `${SiteDataInfo.our_service[2].our_service_title_single.value}`, desc: `${SiteDataInfo.our_service[2].our_service_short_desc_single.value}` },
+  {id:'5', link1: '/ourservices#3', classname: 'service service-grid-4', title1: `${SiteDataInfo.our_service[3].our_service_title_single.value}`, desc: `${SiteDataInfo.our_service[3].our_service_short_desc_single.value}` },
+  {id:'6', link1: '/ourservices#4', classname: 'service service-grid-5', title1: `${SiteDataInfo.our_service[4].our_service_title_single.value}`, desc: `${SiteDataInfo.our_service[4].our_service_short_desc_single.value}` },
+  {id:'7', link1: '/ourservices#5', classname: 'service service-grid-6', title1: `${SiteDataInfo.our_service[5].our_service_title_single.value}`, desc: `${SiteDataInfo.our_service[5].our_service_short_desc_single.value}` },
+  {id:'8', link1: '/ourservices#6', classname: 'service service-grid-7', title1: `${SiteDataInfo.our_service[6].our_service_title_single.value}`, desc: `${SiteDataInfo.our_service[6].our_service_short_desc_single.value}` },]
+
   return (
     <>
       <section className="py-3 py-lg-5">
         <div className="container-xxl px-lg-5">
           <h3 className="h2 text-center fw-bold mb-3 mb-lg-5">Our Services</h3>
           <div className="service-grid">
-            <NavLink to='/ourservices' className="service service-grid-1" onClick={ScrollToServiceSection}>
-              <h4 className="h4 fw-bold mb-lg-3">
-                {SiteDataInfo.our_service[0].our_service_title_single.value}
-              </h4>
-              <p>
-                The full regulation guarantees that the assets can be returned
-                to the financial cycle at any time!
-              </p>
-            </NavLink>
-            <NavLink to='/ourservices' className="service service-grid-2" onClick={ScrollToServiceSection}>
-              <h4 className="h4 fw-bold mb-lg-3"> {SiteDataInfo.our_service[1].our_service_title_single.value}</h4>
-              <p>
-                All stored precious metals are fully insured including the risk
-                of embezzlement.
-              </p>
-            </NavLink>
-            <NavLink to='/ourservices' className="service service-grid-3" onClick={ScrollToServiceSection}>
-              <h4 className="h4 fw-bold mb-lg-3">{SiteDataInfo.our_service[2].our_service_title_single.value}</h4>
-              <p>Reports & ratings based on banking standards</p>
-            </NavLink>
-            <NavLink to='/ourservices' className="service service-grid-4">
-              <h4 className="h4 fw-bold mb-lg-3">
-                {SiteDataInfo.our_service[3].our_service_title_single.value}
-              </h4>
-              <p>
-                OZL AG combines security, custody and logistics at the highest
-                level.
-              </p>
-            </NavLink>
-            <NavLink to='/ourservices' className="service service-grid-5" onClick={ScrollToServiceSection}>
-              <h4 className="h4 fw-bold mb-lg-3">{SiteDataInfo.our_service[4].our_service_title_single.value} </h4>
-              <p>
-                Asset protection refers to the ability to protect assets from
-                being accessed by third parties.
-              </p>
-            </NavLink>
-            <NavLink to='/ourservices' className="service service-grid-6" onClick={ScrollToServiceSection}>
-              <h4 className="h4 fw-bold mb-lg-3"> {SiteDataInfo.our_service[5].our_service_title_single.value} </h4>
-              <p>Please find our pricing</p>
-            </NavLink>
-            <NavLink to='/ourservices' className="service service-grid-7" onClick={ScrollToServiceSection}>
-              <h4 className="h4 fw-bold mb-lg-3"> {SiteDataInfo.our_service[6].our_service_title_single.value}</h4>
-              <p>Please find our draft contracts</p>
-            </NavLink>
+            {React.Children.toArray(StoreBox.map((printData) => {
+              return (
+                <>
+                  <NavLink to={printData.link1} className={printData.classname} onClick={ScrollToServiceSection} key={printData.id}  >
+                    <h4 className="h4 fw-bold mb-lg-3">
+                      {printData.title1}
+                    </h4>
+                    <p>{printData.desc}  </p>
+                  </NavLink>
+                </>
+              )
+            })
+
+            )}
+
           </div>
 
           <div className="row mt-lg-5 mt-5 justify-content-center">

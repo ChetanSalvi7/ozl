@@ -21,7 +21,7 @@ const ManufacturersMatels = () => {
                 <div className="container-xxl px-lg-5 text-center">
                     <div className="row">
                         <div className="col-mdd-12">
-                            <a className="bg-primary btn btn-primary fs-5 p-lg-4 text-start text-white w-100 metal-btn" type="button">
+                            <a className="bg-primary btn btn-primary fs-5 p-lg-4 text-start text-white w-100 metal-btn" href='https://www.rheingold-edelmetall.com/' target='_blank' type="button">
                                 Bars available from the following manufacturers
                             </a>
                         </div>
