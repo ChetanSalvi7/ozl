@@ -13,6 +13,7 @@ import LoginClient from './Compo/Login-client/Login-Client';
 import Logistics from './Compo/Logistics/Logistics';
 import Home from './Compo/main page/Home.jsx';
 import Navbar from './Compo/Navbar/Navbar';
+import Onboarding from './Compo/Onboard/Onboarding';
 import OurServices from './Compo/OurServicesFullPage/OurServices';
 import OurPartners from './Compo/Partner/OurPartners';
 import PreciousMetals from './Compo/Precious metals/PreciousMetals';
@@ -62,6 +63,7 @@ const App = () => {
             <Route path="/preciousmetals" element={<PreciousMetals />} />
             <Route path="/diamonds" element={<Diamonds />} />
             <Route path="/loginclient" element={<LoginClient />} />
+            <Route path="/onboarding" element={<Onboarding />} />
           </Routes>
         </AutoScrollToTop>
         <OurPartners />
