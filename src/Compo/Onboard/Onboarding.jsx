@@ -2,37 +2,50 @@ import React from 'react'
 import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
+import moment from "moment";
+
+const InternetLogo = 'https://ozl.li/public/assets/frontend/img/onboarding/good-signal-150x150.png'
+const PassportLogo = 'https://ozl.li/public/assets/frontend/img/onboarding/passport-4.png'
+const CameraLogo = 'https://ozl.li/public/assets/frontend/img/onboarding/selfie-2.png'
 
 const Onboarding = () => {
     
+    const nextPage = ()=>{
+        var x = document.getElementById('formstep1');
+        var y = document.getElementById('formstep2');
+        if (x.style.display === "none") {
+            x.style.display = "";
+            y.style.display = 'none';
+          } else {
+            x.style.display = "none";
+            y.style.display = "";
+            
+          }
+          window.scrollTo({
+            top: 0, 
+            behavior: 'smooth'
+          });
+      }
 
-    // const registerOptions = {
-    //     firstname: {required : 'Please enter your name.'},
-    //     lastname: {required : 'Please enter your name.'},
-    //     street: {required : 'Please enter your street and number.'},
-    //     zipcode: {required: 'Please enter your postcode.'},
-    //     city: {required: 'Please enter your city.'},
-    //     country: {required: 'Please select your country.'},
-    //     nationality: {required: 'Please select your nationality.'},
-    //     birthday: {required: 'Please enter your date of birth.'},
-    //     email: {required: "Enter your e-mail",
-    //     pattern: {
-    //       value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-    //       message: "Enter a valid e-mail address"}
-    //     },
-        
-    // };
+      
+    
     const passwordvalidation =Yup.object().shape({
         firstname: Yup.string().required('Please enter your name.'),
         lastname: Yup.string().required('Please enter your name.'),
-        zipcode: Yup.string().required('Please enter your street and number.'),
+        street: Yup.string().required('Please enter your street and number.'),
         city: Yup.string().required('Please enter your city.'),
+        zipcode : Yup.string().required('Please enter your postcode'),
         country: Yup.string().required('Please enter your country.'),
         nationality: Yup.string().required('Please enter your nationality.'),
-        birthday: Yup.string().required('Please enter your date of birth.'),
-        email: Yup.string().required('Enter your e-mail'),
+        birthday: Yup.string().required('Please enter your date of birth.').test(
+            "DOB",
+            "You must be at least 18 years old.",
+            (date) => moment().diff(moment(date), "years") >= 18
+          ),
+        email: Yup.string().required('Enter your e-mail')
+        .matches(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,'Enter a valid e-mail address'),
         mobilephone: Yup.string().required('Please enter a valid mobile phone number that begins with a "+".')
-        .min(8, 'Number must be at least 8 characters'),
+        .matches(/^[+]+[0-9]+$/, 'Please enter a valid mobile phone number that begins with a "+".'),
         cellphone:  Yup.string()
         .required('Please enter your mobile phone number.')
         .oneOf([Yup.ref('mobilephone')], 'Mobile number must match')
@@ -45,7 +58,74 @@ const Onboarding = () => {
         <>
             <form method="post" className='col-xl-4 col-md-8 col-sm-10 m-auto' onSubmit={handleSubmit(handleRegistration)}  encType="multipart/form-data" id="add_form" >
                 <input type="hidden" name="_token" value="cpKb85gUuOjWvAXijdpEwVYftkRkv3knH5Nj0msA" />
-                <div className="step2" >
+
+                {/*----------------- first page----------- */}
+                <div className="boradinginfowrap step1" id='formstep1' style={{display:''}} >
+                     <div className="col text-center">
+                         <h1 className="h3 fw-bold mb-3">Digital Onboarding</h1>
+                     </div>
+                     <div className="p-4 bg-light shadow-sm">
+                         <div className="row justify-content-center">
+                             <div className="text-center">
+                                 <p><strong>To successfully carry out the identification, you need:</strong></p>
+                                 <div className="row my-4">
+                                     <div className="col-12 col-sm-4">
+                                         <div className="card rounded-0">
+                                             <div className="card-body">
+                                                 <img src={InternetLogo} className="onboarding-icon" alt=""/>
+                                                 <div className="h6 fw-bold mt-3 mb-0">Internet</div>
+                                             </div>
+                                         </div>
+                                     </div>
+                                     <div className="col-12 col-sm-4">
+                                         <div className="card rounded-0">
+                                             <div className="card-body">
+                                                 <img src={PassportLogo} className="onboarding-icon" alt=""/>
+                                                 <div className="h6 fw-bold mt-3 mb-0">Passport / ID</div>
+                                             </div>
+                                         </div>
+                                     </div>
+                                     <div className="col-12 col-sm-4">
+                                         <div className="card rounded-0">
+                                             <div className="card-body">
+                                                 <img src={CameraLogo} className="onboarding-icon" alt=""/>
+                                                 <div className="h6 fw-bold mt-3 mb-0">Camera</div>
+                                             </div>
+                                         </div>
+                                     </div>
+                                 </div>
+                                 <p>The identification is carried out by IDnow GmbH on behalf of OZL - Offenes Zolllager in Liechtenstein AG.</p>
+                             </div>
+                         </div>
+                     </div>
+                     <div className=" webmobilebuttons">
+                         <ul className="list-inline list-unstyled text-center d-flex mb-0">
+                             <li className="col-6 my-2">
+                                 <input type="radio" className="radio-btn idbtn" value="web" id="web" name="identification" checked="checked"/>
+                                 <label className="d-flex align-items-center position-relative" for="web">
+                                     {/* <img src={DesktopLogo} alt="logo" className="img-fluid mb-1 me-3"/> */}
+                                     <div className="text-center m-auto">Web</div>
+                                 </label>
+                             </li>
+                             <li className="col-6 my-2 ">
+                                 <input type="radio" className="radio-btn idbtn" value="mobile" id="mobile" name="identification"/>
+                                 <label className="d-flex align-items-center position-relative" for="mobile">
+                                     {/* <img src={MobileLogo} alt="logo" className="img-fluid mb-1 me-3"/> */}
+                                     <div className="text-center m-auto">Mobile</div>
+                                 </label>
+                             </li>
+                         </ul>
+                         
+                     </div>
+                     <div className="d-grid my-4">
+                         <button type="button" className="btn btn-primary py-3 px-2 onboardingBtn" onClick={nextPage}>Start onboarding</button>
+                     </div>
+                 </div>
+
+                 {/*-------- first page end-------- */}
+
+                 {/* --------Second page start----------- */}
+                <div className="step2" id='formstep2' style={{display:'none'}} >
                     <div className="stepformtitle mb-3 text-center">
                         <h3 className="h3 fw-bold mb-0">Personal Data</h3>
                     </div>
@@ -631,7 +711,7 @@ const Onboarding = () => {
                             </div>
                             <div className="mb-3 col-md-12">
                                 <label className="form-label">Mobile phone number</label>
-                                <input type="number" className="form-control" name="mobilephone" id="mobilephone" placeholder="+41791234567" {...register('mobilephone',passwordvalidation.mobilephone)}/>
+                                <input type="text" className="form-control" name="mobilephone" id="mobilephone" placeholder="+41791234567" {...register('mobilephone',passwordvalidation.mobilephone)}/>
                                 <p className="mb-0">Your mobile phone number will be required again later, provided that a contract is concluded with <span data-gppa-live-merge-tag="@{:327}">OZL - Offenes Zolllager in Liechtenstein AG</span> is to be digitally signed.</p>
                                 <small className="text-danger">
                                     {errors?.mobilephone && errors.mobilephone.message}
@@ -639,15 +719,18 @@ const Onboarding = () => {
                             </div>
                             <div className="mb-3 col-md-12">
                                 <label className="form-label"><span className="gftt-label">Cell phone number confirmation</span></label>
-                                <input type="number" className="form-control" name="cellphone" placeholder="+41791234567" {...register('cellphone',passwordvalidation.cellphone)} />
+                                <input type="text" className="form-control" name="cellphone" placeholder="+41791234567" {...register('cellphone',passwordvalidation.cellphone)} />
                                 <p className="mb-0">Please confirm your mobile phone number.</p>
                                 <small className="text-danger">
                                     {errors?.cellphone && errors.cellphone.message}
                                 </small>
                             </div>
                         </div>
-                        <div className="row justify-content-center">
+                        <div className="row justify-content-between">
                             
+                            <div className="col-auto">
+                                <button type="button" className="btn btn-primary"onClick={nextPage}><i className="fa-solid fa-check" ></i> Back</button>
+                            </div>
                             <div className="col-auto">
                                 <button type="submit" className="btn btn-primary"><i className="fa-solid fa-check"></i> Continue</button>
                             </div>
