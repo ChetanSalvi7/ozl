@@ -15,10 +15,10 @@ const SliderImage = () => {
 
 
   //SiteDataInfo.bannner[0].image =   ''+SiteDataInfo.bannner[0].image;
-  const homeImage = [{id:`${SiteDataInfo.bannner[0].id}`, text1: 'OZL -',text2:'Custody at the highest level' , image: `${ImageUrl+SiteDataInfo.bannner[0].image}`},
-  {id:`${SiteDataInfo.bannner[1].id}`, text1: 'Trisuna Lagerhaus AG  and the Principality of Liechtenstein -',text2:'independent, secure and stable.' , image: `${ImageUrl+SiteDataInfo.bannner[1].image}` },
-  {id:`${SiteDataInfo.bannner[2].id}`, text1: 'We can transport your valuables -',text2:' securely, reliably and inexpensively.' , image: `${ImageUrl+SiteDataInfo.bannner[2].image}` },
-  {id:`${SiteDataInfo.bannner[3].id}`, text1: 'Precious Metals | Art | Diamonds -',text2:'we take care of your assets.' , image: `${ImageUrl+SiteDataInfo.bannner[3].image}` }];
+  const homeImage = [{id:`${SiteDataInfo.bannner[0].id}`, text1: `${SiteDataInfo.bannner[0].banner_title_single.value}` , image: `${ImageUrl+SiteDataInfo.bannner[0].image}`},
+  {id:`${SiteDataInfo.bannner[1].id}`, text1:`${SiteDataInfo.bannner[1].banner_title_single.value}`  , image: `${ImageUrl+SiteDataInfo.bannner[1].image}` },
+  {id:`${SiteDataInfo.bannner[2].id}`, text1: `${SiteDataInfo.bannner[2].banner_title_single.value}` , image: `${ImageUrl+SiteDataInfo.bannner[2].image}` },
+  {id:`${SiteDataInfo.bannner[3].id}`, text1: `${SiteDataInfo.bannner[3].banner_title_single.value}`  , image: `${ImageUrl+SiteDataInfo.bannner[3].image}` }];
 
   return (
     <>
@@ -46,8 +46,7 @@ const SliderImage = () => {
                           <div className="banner-details">
                             <div>
                               <h2 className="h2 fw-bold text-shadow" >
-                               {showImage.text1} <br className="d-none d-md-block" />
-                                {showImage.text2}
+                              <div dangerouslySetInnerHTML={ { __html:showImage.text1}}></div>
                               </h2>
                             </div>
                           </div>
