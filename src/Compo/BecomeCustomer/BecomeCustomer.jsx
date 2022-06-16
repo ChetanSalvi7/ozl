@@ -16,15 +16,14 @@ const BecomeCustomer = () => {
         >
           <div className="row align-items-center">
             <div className="col-lg-4">
-              <h2 className="h2 fw-bold">{SiteDataInfo.outPutArray.landing_become_customer}</h2>
+              <h2 className="h2 fw-bold"  dangerouslySetInnerHTML={ { __html:SiteDataInfo.outPutArray.landing_become_customer}}></h2>
             </div>
             <div className="col-lg-4">
               <p>
               {SiteDataInfo.outPutArray.landing_become_customer_desc}
               </p>
               <NavLink to="/onboarding"  className="btn btn-secondary">
-                <div className="small">Electronic Verification</div>
-                <div className="text-uppercase fw-bold">as a customer</div>
+                <div dangerouslySetInnerHTML={ { __html:SiteDataInfo.outPutArray.landing_become_customer_btn_1}}></div>
               </NavLink>
             </div>
             <div className="col-lg-4">
@@ -32,8 +31,7 @@ const BecomeCustomer = () => {
               {SiteDataInfo.outPutArray.landing_become_customer_desc_2}
               </p>
               <NavLink to="/onboarding" className="btn btn-secondary">
-                <div className="small">Electronic Verification</div>
-                <div className="text-uppercase fw-bold">as a signatory</div>
+                <div   dangerouslySetInnerHTML={ { __html:SiteDataInfo.outPutArray.landing_become_customer_btn_2}}></div>
               </NavLink>
             </div>
           </div>

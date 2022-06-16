@@ -32,7 +32,7 @@ const Footer = () => {
                             <NavLink to="/">
                                 <img src={Logo} alt="logo" className="img-fluid mb-2" style={{ maxHeight: "76px" }} />
                             </NavLink>
-                            <p>{SiteDataInfo.outPutArray.footer_text}</p>
+                            <p dangerouslySetInnerHTML={ { __html:SiteDataInfo.outPutArray.footer_text}}></p>
                         </div>
                         <div className="col-lg-5 col-6">
                             <div className=" row row-cols-1 row-cols-md-2 fw-bold">
