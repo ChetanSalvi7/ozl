@@ -15,13 +15,13 @@ const Services = () => {
     });
   };
 
-  const StoreBox = [{id:'2', link1: '/ourservices#0', classname: 'service service-grid-1', title1: `${SiteDataInfo.our_service[0].our_service_title_single.value}`, desc: `${SiteDataInfo.our_service[0].our_service_short_desc_single.value}` },
-  {id:'3', link1: '/ourservices#1', classname: 'service service-grid-2', title1: `${SiteDataInfo.our_service[1].our_service_title_single.value}`, desc: `${SiteDataInfo.our_service[1].our_service_short_desc_single.value}` },
-  {id:'4', link1: '/ourservices#2', classname: 'service service-grid-3', title1: `${SiteDataInfo.our_service[2].our_service_title_single.value}`, desc: `${SiteDataInfo.our_service[2].our_service_short_desc_single.value}` },
-  {id:'5', link1: '/ourservices#3', classname: 'service service-grid-4', title1: `${SiteDataInfo.our_service[3].our_service_title_single.value}`, desc: `${SiteDataInfo.our_service[3].our_service_short_desc_single.value}` },
-  {id:'6', link1: '/ourservices#4', classname: 'service service-grid-5', title1: `${SiteDataInfo.our_service[4].our_service_title_single.value}`, desc: `${SiteDataInfo.our_service[4].our_service_short_desc_single.value}` },
-  {id:'7', link1: '/ourservices#5', classname: 'service service-grid-6', title1: `${SiteDataInfo.our_service[5].our_service_title_single.value}`, desc: `${SiteDataInfo.our_service[5].our_service_short_desc_single.value}` },
-  {id:'8', link1: '/ourservices#6', classname: 'service service-grid-7', title1: `${SiteDataInfo.our_service[6].our_service_title_single.value}`, desc: `${SiteDataInfo.our_service[6].our_service_short_desc_single.value}` },]
+  const StoreBox = [{id:'2', link1: '/ourservices#custody', classname: 'service service-grid-1', title1: `${SiteDataInfo.our_service[0].our_service_title_single.value}`, desc: `${SiteDataInfo.our_service[0].our_service_short_desc_single.value}` },
+  {id:'3', link1: '/ourservices#allrisk', classname: 'service service-grid-2', title1: `${SiteDataInfo.our_service[1].our_service_title_single.value}`, desc: `${SiteDataInfo.our_service[1].our_service_short_desc_single.value}` },
+  {id:'4', link1: '/ourservices#bankable', classname: 'service service-grid-3', title1: `${SiteDataInfo.our_service[2].our_service_title_single.value}`, desc: `${SiteDataInfo.our_service[2].our_service_short_desc_single.value}` },
+  {id:'5', link1: '/ourservices#segregated', classname: 'service service-grid-4', title1: `${SiteDataInfo.our_service[3].our_service_title_single.value}`, desc: `${SiteDataInfo.our_service[3].our_service_short_desc_single.value}` },
+  {id:'6', link1: '/ourservices#assetprotection', classname: 'service service-grid-5', title1: `${SiteDataInfo.our_service[4].our_service_title_single.value}`, desc: `${SiteDataInfo.our_service[4].our_service_short_desc_single.value}` },
+  {id:'7', link1: '/ourservices#fees', classname: 'service service-grid-6', title1: `${SiteDataInfo.our_service[5].our_service_title_single.value}`, desc: `${SiteDataInfo.our_service[5].our_service_short_desc_single.value}` },
+  {id:'8', link1: '/ourservices#conratats', classname: 'service service-grid-7', title1: `${SiteDataInfo.our_service[6].our_service_title_single.value}`, desc: `${SiteDataInfo.our_service[6].our_service_short_desc_single.value}` },]
 
   return (
     <>

@@ -106,7 +106,7 @@ const OurPartners = () => {
                                                                     if (index.id == showInfo.PartnerName_id) {
                                                                         return (
                                                                             <>
-                                                                                <div className="col-6 col-sm-3 mb-3 mb-sm-0" key={showInfo.name1.toString()}>
+                                                                                <div className="col-6 col-sm-3 mb-3 mb-sm-0" key={showInfo.id}>
                                                                                     <div className="partner-box">
                                                                                         <div className="partner-box-item">
                                                                                             <img src={showInfo.image1} alt=""

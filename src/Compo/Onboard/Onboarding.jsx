@@ -1,24 +1,46 @@
 import React from 'react'
 import { useForm } from "react-hook-form";
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as Yup from 'yup';
 
 const Onboarding = () => {
-    const { register, handleSubmit, formState: { errors } } = useForm();
+    
 
-    const registerOptions = {
-        firstname: {required : 'Please enter your name.'},
-        lastname: {required : 'Please enter your name.'},
-        street: {required : 'Please enter your street and number.'},
-        zipcode: {required: 'Please enter your postcode.'},
-        city: {required: 'Please enter your city.'},
-        country: {required: 'Please select your country.'},
-        nationality: {required: 'Please select your nationality.'},
-        birthday: {required: 'Please enter your date of birth.'},
-        email: {required: 'Please enter your email.'},
-        mobilephone: {required: 'Please enter a valid mobile phone number that begins with a "+".'},
-        cellphone: {required: 'Please enter your mobile phone number.',
-        }
-    };
+    // const registerOptions = {
+    //     firstname: {required : 'Please enter your name.'},
+    //     lastname: {required : 'Please enter your name.'},
+    //     street: {required : 'Please enter your street and number.'},
+    //     zipcode: {required: 'Please enter your postcode.'},
+    //     city: {required: 'Please enter your city.'},
+    //     country: {required: 'Please select your country.'},
+    //     nationality: {required: 'Please select your nationality.'},
+    //     birthday: {required: 'Please enter your date of birth.'},
+    //     email: {required: "Enter your e-mail",
+    //     pattern: {
+    //       value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+    //       message: "Enter a valid e-mail address"}
+    //     },
+        
+    // };
+    const passwordvalidation =Yup.object().shape({
+        firstname: Yup.string().required('Please enter your name.'),
+        lastname: Yup.string().required('Please enter your name.'),
+        zipcode: Yup.string().required('Please enter your street and number.'),
+        city: Yup.string().required('Please enter your city.'),
+        country: Yup.string().required('Please enter your country.'),
+        nationality: Yup.string().required('Please enter your nationality.'),
+        birthday: Yup.string().required('Please enter your date of birth.'),
+        email: Yup.string().required('Enter your e-mail'),
+        mobilephone: Yup.string().required('Please enter a valid mobile phone number that begins with a "+".')
+        .min(8, 'Number must be at least 8 characters'),
+        cellphone:  Yup.string()
+        .required('Please enter your mobile phone number.')
+        .oneOf([Yup.ref('mobilephone')], 'Mobile number must match')
+    });
+    const formOptions = { resolver: yupResolver(passwordvalidation) };
     const handleRegistration = (data) => { console.log(data); }
+
+    const { register, handleSubmit, formState: { errors } } = useForm(formOptions);
     return (
         <>
             <form method="post" className='col-xl-4 col-md-8 col-sm-10 m-auto' onSubmit={handleSubmit(handleRegistration)}  encType="multipart/form-data" id="add_form" >
@@ -31,21 +53,21 @@ const Onboarding = () => {
                         <div className="row mb-3">
                             <div className="mb-3 col-md-6">
                                 <label className="form-label">First Name</label>
-                                <input type="text" className="form-control" name="firstname" placeholder="Your first name" {...register('firstname',registerOptions.firstname)} />
+                                <input type="text" className="form-control" name="firstname" placeholder="Your first name" {...register('firstname')} />
                                 <small className="text-danger">
                                     {errors?.firstname && errors.firstname.message}
                                 </small>
                             </div>
                             <div className="mb-3 col-md-6">
                                 <label className="form-label">Last Name</label>
-                                <input type="text" className="form-control" name="lastname" placeholder="Your last name" {...register('lastname',registerOptions.lastname)}  />
+                                <input type="text" className="form-control" name="lastname" placeholder="Your last name" {...register('lastname')}  />
                                 <small className="text-danger">
                                     {errors?.lastname && errors.lastname.message}
                                 </small>
                             </div>
                             <div className="mb-3 col-md-12">
                                 <label className="form-label">Street and number</label>
-                                <input type="text" className="form-control" name="street" placeholder="Your street and number" {...register('street',registerOptions.street)}  />
+                                <input type="text" className="form-control" name="street" placeholder="Your street and number" {...register('street')}  />
                                 <small className="text-danger">
                                     {errors?.street && errors.street.message}
                                 </small>
@@ -57,14 +79,14 @@ const Onboarding = () => {
                             </div>
                             <div className="mb-3 col-md-6">
                                 <label className="form-label">Postcode</label>
-                                <input type="text" className="form-control" name="zipcode" placeholder="Your postal code"{...register('zipcode',registerOptions.zipcode)} />
+                                <input type="number" className="form-control" name="zipcode" placeholder="Your postal code"{...register('zipcode')} />
                                 <small className="text-danger">
                                     {errors?.zipcode && errors.zipcode.message}
                                 </small>
                             </div>
                             <div className="mb-3 col-md-6">
                                 <label className="form-label">City</label>
-                                <input type="text" className="form-control" name="city" placeholder="Your place" {...register('city',registerOptions.city)} />
+                                <input type="text" className="form-control" name="city" placeholder="Your place" {...register('city')} />
                                 <small className="text-danger">
                                     {errors?.city && errors.city.message}
                                 </small>
@@ -76,7 +98,7 @@ const Onboarding = () => {
                             <div className="mb-3 col-md-6">
                                 <label className="form-label">Country</label>
 
-                                <select className="form-control" name="country" {...register('country',registerOptions.country)}>
+                                <select className="form-control" name="country" {...register('country',)}>
                                     <option value="">select your country</option>
                                     <option value="AF">Afghanistan</option>
                                     <option value="AX">Aland Islands</option>
@@ -336,7 +358,7 @@ const Onboarding = () => {
                             <div className="mb-3 col-md-6">
                                 <label className="form-label">Nationality</label>
 
-                                <select className="form-control" name="nationality" {...register('nationality',registerOptions.nationality)}>
+                                <select className="form-control" name="nationality" {...register('nationality')}>
                                     <option value="">Choose your nationality</option>
                                     <option value="AF">Afghanistan</option>
                                     <option value="AX">Aland Islands</option>
@@ -595,21 +617,21 @@ const Onboarding = () => {
                             </div>
                             <div className="mb-3 col-md-6">
                                 <label className="form-label">Date of birth</label>
-                                <input type="type" className="form-control" name="birthday" id="birthday" placeholder="24/12/2000"  {...register('birthday',registerOptions.birthday)}/>
+                                <input type="date" className="form-control" name="birthday" id="birthday" placeholder="24/12/2000"  {...register('birthday')}/>
                                 <small className="text-danger">
                                     {errors?.birthday && errors.birthday.message}
                                 </small>
                             </div>
                             <div className="mb-3 col-md-12">
                                 <label className="form-label">E-mail</label>
-                                <input type="text" className="form-control" name="email" placeholder="name@email.com" {...register('email',registerOptions.email)} />
+                                <input type="text" className="form-control" name="email" placeholder="name@email.com" {...register('email')} />
                                 <small className="text-danger">
                                     {errors?.email && errors.email.message}
                                 </small>
                             </div>
                             <div className="mb-3 col-md-12">
                                 <label className="form-label">Mobile phone number</label>
-                                <input type="text" className="form-control" name="mobilephone" id="mobilephone" placeholder="+41791234567" {...register('mobilephone',registerOptions.mobilephone)}/>
+                                <input type="number" className="form-control" name="mobilephone" id="mobilephone" placeholder="+41791234567" {...register('mobilephone',passwordvalidation.mobilephone)}/>
                                 <p className="mb-0">Your mobile phone number will be required again later, provided that a contract is concluded with <span data-gppa-live-merge-tag="@{:327}">OZL - Offenes Zolllager in Liechtenstein AG</span> is to be digitally signed.</p>
                                 <small className="text-danger">
                                     {errors?.mobilephone && errors.mobilephone.message}
@@ -617,7 +639,7 @@ const Onboarding = () => {
                             </div>
                             <div className="mb-3 col-md-12">
                                 <label className="form-label"><span className="gftt-label">Cell phone number confirmation</span></label>
-                                <input type="text" className="form-control" name="cellphone" placeholder="+41791234567" {...register('cellphone',registerOptions.cellphone)} />
+                                <input type="number" className="form-control" name="cellphone" placeholder="+41791234567" {...register('cellphone',passwordvalidation.cellphone)} />
                                 <p className="mb-0">Please confirm your mobile phone number.</p>
                                 <small className="text-danger">
                                     {errors?.cellphone && errors.cellphone.message}
