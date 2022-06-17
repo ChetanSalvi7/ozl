@@ -20,9 +20,9 @@ const Footer = () => {
     { id: '10', jumpTo: 'contactus', title1: `${SiteDataInfo.outPutArray.contact_title}` }];
 
     const footerDetails = [{ id: '3', title2: `${SiteDataInfo.outPutArray.contact_address}`, desc2: `${SiteDataInfo.outPutArray.footer_address}` },
-    { id: '4', title2: `${SiteDataInfo.outPutArray.contact_phone}`, desc2: `${SiteDataInfo.outPutArray.footer_tel}`, link: "tel:+4233926101" },
-    { id: '5', title2: `${SiteDataInfo.outPutArray.contact_fax}`, desc2: `${SiteDataInfo.outPutArray.footer_fax}`, link: "fax:+4233926101" },
-    { id: '6', title2: `${SiteDataInfo.outPutArray.contact_email}`, desc2: `${SiteDataInfo.outPutArray.footer_mail}`, link: "mailto:info@ozl.li" }];
+    { id: '4', title2: `${SiteDataInfo.outPutArray.contact_phone}`, desc2: `${SiteDataInfo.outPutArray.footer_tel}`, link: `tel:${SiteDataInfo.outPutArray.footer_tel}` },
+    { id: '5', title2: `${SiteDataInfo.outPutArray.contact_fax}`, desc2: `${SiteDataInfo.outPutArray.footer_fax}`, link: `fax :${SiteDataInfo.outPutArray.footer_fax}` },
+    { id: '6', title2: `${SiteDataInfo.outPutArray.contact_email}`, desc2: `${SiteDataInfo.outPutArray.footer_mail}`, link: `mailto:${SiteDataInfo.outPutArray.footer_mail}`}];
     return (
         <>
             <footer className="border-top pt-4">

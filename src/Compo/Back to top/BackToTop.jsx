@@ -1,4 +1,5 @@
 import React,{useState} from 'react'
+import ReactTooltip from "react-tooltip";
 
 const BackToTop = () => {
     const [visible, setVisible] = useState(false)
@@ -24,9 +25,10 @@ const BackToTop = () => {
       
   return (
     <>
-     <button id="back-to-top" type="button" onClick={scrollToTop}  className="btn btn-primary text-light rounded-circle btn-lg back-to-top" style={{display: visible ? 'inline' : 'none'}} title="Back on top">
-        <i className="fas fa-angle-up"></i>
+     <button id="back-to-top" data-tip data-for="BTT" type="button" onClick={scrollToTop}  className="btn btn-primary text-light rounded-circle btn-lg back-to-top" style={{display: visible ? 'inline' : 'none'}} >
+        <i  className="fas fa-angle-up"></i>
     </button>
+    <ReactTooltip id="BTT" place="left" effect="solid">Back To Top</ReactTooltip>
     </>
   )
 }

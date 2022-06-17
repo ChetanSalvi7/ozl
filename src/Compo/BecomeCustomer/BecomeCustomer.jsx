@@ -23,7 +23,7 @@ const BecomeCustomer = () => {
               {SiteDataInfo.outPutArray.landing_become_customer_desc}
               </p>
               <NavLink to="/onboarding"  className="btn btn-secondary">
-                <div dangerouslySetInnerHTML={ { __html:SiteDataInfo.outPutArray.landing_become_customer_btn_1}}></div>
+                <div dangerouslySetInnerHTML={ { __html:SiteDataInfo.outPutArray.landing_become_customer_btn_1}}/>
               </NavLink>
             </div>
             <div className="col-lg-4">
@@ -31,7 +31,7 @@ const BecomeCustomer = () => {
               {SiteDataInfo.outPutArray.landing_become_customer_desc_2}
               </p>
               <NavLink to="/onboarding" className="btn btn-secondary">
-                <div   dangerouslySetInnerHTML={ { __html:SiteDataInfo.outPutArray.landing_become_customer_btn_2}}></div>
+                <div   dangerouslySetInnerHTML={ { __html:SiteDataInfo.outPutArray.landing_become_customer_btn_2}}/>
               </NavLink>
             </div>
           </div>

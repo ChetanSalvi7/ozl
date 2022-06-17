@@ -15,6 +15,8 @@ const SliderImage = () => {
 
 
   //SiteDataInfo.bannner[0].image =   ''+SiteDataInfo.bannner[0].image;
+  //get data from site data and store in SiteDataInfo .
+  //create array object and store data in array and use map function .
   const homeImage = [{id:`${SiteDataInfo.bannner[0].id}`, text1: `${SiteDataInfo.bannner[0].banner_title_single.value}` , image: `${ImageUrl+SiteDataInfo.bannner[0].image}`},
   {id:`${SiteDataInfo.bannner[1].id}`, text1:`${SiteDataInfo.bannner[1].banner_title_single.value}`  , image: `${ImageUrl+SiteDataInfo.bannner[1].image}` },
   {id:`${SiteDataInfo.bannner[2].id}`, text1: `${SiteDataInfo.bannner[2].banner_title_single.value}` , image: `${ImageUrl+SiteDataInfo.bannner[2].image}` },
@@ -25,6 +27,7 @@ const SliderImage = () => {
       <section className="hero-section container-fluid px-lg-5">
         <div className="swiper heroSwiper">
           <div className="swiper-wrapper">
+            {/* use react swiper  */}
             <Swiper
               spaceBetween={20}
               slidesPerView={1}
@@ -36,6 +39,7 @@ const SliderImage = () => {
               
             >
               { React.Children.toArray(homeImage.map((showImage)=>{
+                // react.children.toarray ka use index value ko match krne k liye or 
                 return(
                   <>
                         <SwiperSlide key={showImage.id}>

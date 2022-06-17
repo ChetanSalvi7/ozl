@@ -1,11 +1,15 @@
-import React from 'react'
-import MapLogo from '../../backend/img/contact/map.svg';
-import EuropeLogo from '../../backend/img/contact/map-europe.svg';
+import React,{ useContext } from 'react'
 import ContactForm from './ContactForm';
-import OurPartners from '../Partner/OurPartners';
 import SliderImage from '../main page/SliderImage';
 
+import { SiteData } from '../../App';
+
+
+const EuropeLogo = 'https://ozl.li/public/assets/frontend/img/contact/map-europe.svg';
+const MapLogo = 'https://ozl.li/public/assets/frontend/img/contact/map.svg';
+
 const ContactUs = () => {
+    const SiteDataInfo = useContext(SiteData)
     return (
         <>
         <SliderImage/>
@@ -33,32 +37,32 @@ const ContactUs = () => {
                             <div className="row justify-content-center">
                                 <div className="col-md-4">
                                     <div className="contact-box h-100 border p-3 text-center">
-                                        <h6><strong>Address</strong></h6>
-                                        <p className="mb-0">Schliessa 16 9495 Triesen</p>
-                                        <p className="mb-0">Liechtenstein</p>
+                                        <h6><strong>{SiteDataInfo.outPutArray.contact_address}</strong></h6>
+                                        <p className="mb-0">{SiteDataInfo.outPutArray.footer_address}</p>
+                                        
                                     </div>
                                 </div>
                                 <div className="col-md-4  my-sm-0 my-4">
                                     <div className="contact-box h-100 border p-3 text-center">
-                                        <h6><strong>Phone</strong></h6>
-                                        <p className="mb-0"><a href="tel:+4233845120">Tel: +423 384 51 20</a></p>
-                                        <p className="mb-0">Fax: +423 384 51 21</p>
+                                        <h6><strong>{SiteDataInfo.outPutArray.contact_phone}</strong></h6>
+                                        <p className="mb-0"><a href="tel:+4233845120">Tel: {SiteDataInfo.outPutArray.footer_tel}</a></p>
+                                        <p className="mb-0">Fax: {SiteDataInfo.outPutArray.footer_fax}</p>
                                     </div>
                                 </div>
                                 <div className="col-md-4">
                                     <div className="contact-box h-100 border p-3 text-center">
-                                        <h6><strong>Email</strong></h6>
-                                        <p><a href="mailto:info@ozl.li">info@ozl.li</a></p>
+                                        <h6><strong>{SiteDataInfo.outPutArray.contact_email}</strong></h6>
+                                        <p><a href="mailto:info@ozl.li">{SiteDataInfo.outPutArray.footer_mail}</a></p>
                                     </div>
                                 </div>
                                 <p className="py-4 mb-0 text-center"><a href="http://www.trisuna-lagerhaus.li/">www.trisuna-lagerhaus.li</a></p>
                                 <div className="col-md-5">
                                     <div className="contact-box h-100 border p-3 text-center">
-                                        <h6><strong>Our opening hours</strong></h6>
-                                        <p>Monday to Friday 08.30-12.00 and 13.30-17.00</p>
+                                        <h6><strong>{SiteDataInfo.outPutArray.contact_opening_hours}</strong></h6>
+                                        <p>{SiteDataInfo.outPutArray.contact_monday} 08.30-12.00 and 13.30-17.00</p>
                                     </div>
                                 </div>
-                                <p className="py-4 mb-0 text-center">By appointment only</p>
+                                <p className="py-4 mb-0 text-center">{SiteDataInfo.outPutArray.contact_appointment}</p>
                             </div>
                         </div>
                     </div>
