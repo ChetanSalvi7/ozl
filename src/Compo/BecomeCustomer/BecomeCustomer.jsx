@@ -1,8 +1,8 @@
 import React,{useContext} from 'react'
-import CustomerLogo from "../storage/become-customer.png";
+
 import { SiteData } from "../../App";
 import { NavLink } from 'react-router-dom';
-
+const CustomerLogo = "https://ozl.li/public/assets/frontend/img/become-customer.png";
 const BecomeCustomer = () => {
 
   const SiteDataInfo = useContext(SiteData);

@@ -34,7 +34,7 @@ const App = () => {
       const response = await axios.get(UrlFatch);
       var aa1 = JSON.stringify(response.data).replace(/-/gi, '_');
       var aa2 = JSON.parse(aa1);
-      console.log(aa2);
+      // console.log(aa2);
       setData(aa2);
     } catch (error) {
       console.warn(error);
