@@ -161,8 +161,17 @@ const languageApi_ID = `${SiteDataInfo.language_id}`
         </div>
         <div className="offcanvas-body">
           <ul className="nav flex-column">
+            <li className="nav-item ">
+              <NavLink className="nav-link mobile-navbar-link " aria-current="page" to="ourservices" data-bs-dismiss="offcanvas" aria-label="Close">{SiteDataInfo.outPutArray.header_menu_1}</NavLink>
+            </li>
+            <li className="nav-item ">
+              <NavLink className="nav-link mobile-navbar-link"  to="preciousmetals" data-bs-dismiss="offcanvas" aria-label="Close">{SiteDataInfo.outPutArray.header_menu_2}</NavLink>
+            </li>
+            <li className="nav-item ">
+              <NavLink className="nav-link mobile-navbar-link"  to="safedepositbox" data-bs-dismiss="offcanvas" aria-label="Close">{SiteDataInfo.outPutArray.header_menu_3}</NavLink>
+            </li>
             <li className="nav-item">
-              <NavLink className="nav-link " aria-current="page" to="logistics" data-bs-dismiss="offcanvas" aria-label="Close">{SiteDataInfo.outPutArray.header_menu_4}</NavLink>
+              <NavLink className="nav-link "  to="logistics" data-bs-dismiss="offcanvas" aria-label="Close">{SiteDataInfo.outPutArray.header_menu_4}</NavLink>
             </li>
             <li className="nav-item">
               <NavLink className="nav-link " to="diamonds" data-bs-dismiss="offcanvas" aria-label="Close">{SiteDataInfo.outPutArray.header_menu_5}</NavLink>
@@ -181,6 +190,15 @@ const languageApi_ID = `${SiteDataInfo.language_id}`
             </li>
             <li className="nav-item">
               <NavLink className="nav-link " to="/gtc" data-bs-dismiss="offcanvas" aria-label="Close">{SiteDataInfo.outPutArray.header_menu_10}</NavLink>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link text-uppercase mobile-navbar-link " href="https://www.rheingold-edelmetall.com/" data-bs-dismiss="offcanvas" aria-label="Close">{SiteDataInfo.outPutArray.mobile_shop_now}</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link text-uppercase mobile-navbar-link" href="tel:004233926101" data-bs-dismiss="offcanvas" aria-label="Close">{SiteDataInfo.outPutArray.mobile_call_us}</a>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link text-uppercase mobile-navbar-link" to="/contactus" onClick={ScrollToServiceTime} data-bs-dismiss="offcanvas" aria-label="Close">{SiteDataInfo.outPutArray.mobile_visit_us}</NavLink>
             </li>
 
           </ul>

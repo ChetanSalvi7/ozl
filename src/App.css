@@ -359,6 +359,7 @@ a:hover {
   color: #2E2E2E;
   transition: all 0.3s ease-in-out;
   position: relative;
+  
 }
 .navigation .nav-item .nav-link::before {
   content: "";
@@ -1229,6 +1230,9 @@ input[type=radio]:checked {
 .form-label{
   font-weight: bold;
 }
+.mobile-navbar-link{
+  display: none !important;
+}
 @media screen and (max-width: 991px) {
   .sticky-contact-bar{
     display: none;
@@ -1246,6 +1250,10 @@ input[type=radio]:checked {
   .main-menu .media .media-body {
     font-size: 0.8rem;
   }
+  .mobile-navbar-link{
+    display: block !important ;
+  }
+  
 }
 @media screen and (max-width: 767px) {
   .contact-widget {

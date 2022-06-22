@@ -34,7 +34,7 @@ const App = () => {
       const response = await axios.get(UrlFatch);
       var aa1 = JSON.stringify(response.data).replace(/-/gi, '_');
       var aa2 = JSON.parse(aa1);
-      // console.log(aa2);
+      console.log(aa2);
       setData(aa2);
     } catch (error) {
       console.warn(error);
@@ -46,9 +46,27 @@ const App = () => {
     getDataApi();
   }, []);
 
+  document.onreadystatechange = function () {
+    if (data !== "") {
+      document.querySelector("body").style.visibility = "hidden";
+      document.querySelector(".loader").style.visibility = "visible";
+    } else {
+      document.querySelector(".loader").style.display = "none";
+      document.querySelector("body").style.visibility = "visible";
+      
+    }
+  };
+
 
   return (
     <>
+    <div className="loader">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
       {data && <SiteData.Provider value={data}>
         <Navbar />
         <AutoScrollToTop>
