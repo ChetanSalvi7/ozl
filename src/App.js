@@ -44,29 +44,49 @@ const App = () => {
 
   useEffect(() => {
     getDataApi();
+    // lodingshow();
+    // stoploding();
   }, []);
 
-  document.onreadystatechange = function () {
-    if (data !== "") {
-      document.querySelector("body").style.visibility = "hidden";
-      document.querySelector(".loader").style.visibility = "visible";
-    } else {
-      document.querySelector(".loader").style.display = "none";
-      document.querySelector("body").style.visibility = "visible";
-      
-    }
-  };
+  // let timeout;
+
+  
+  // function stoploding() {
+  //   timeout = setTimeout(loadingstopshow, 1500);
+  // }
+  // const lodingshow = () =>{
+  //     document.querySelector("body").style.visibility = "hidden";
+  //     document.querySelector(".loader").style.visibility = "visible";
+  //   }
+  // const loadingstopshow =() =>
+  //   {
+  //     document.querySelector(".loader").style.display = "none";
+  //     document.querySelector("body").style.visibility = "visible";
+  //   }
+
+    document.onreadystatechange = function () {
+      if (data !== "") {
+        document.querySelector("body").style.visibility = "hidden";
+        document.querySelector(".loader").style.visibility = "visible";
+      } else {
+        document.querySelector(".loader").style.display = "none";
+        document.querySelector("body").style.visibility = "visible";
+        
+      }
+    };
+  
+
 
 
   return (
     <>
-    <div className="loader">
+    {/* <div className="loader">
     <span></span>
     <span></span>
     <span></span>
     <span></span>
     <span></span>
-  </div>
+  </div> */}
       {data && <SiteData.Provider value={data}>
         <Navbar />
         <AutoScrollToTop>
