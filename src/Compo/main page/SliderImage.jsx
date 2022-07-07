@@ -32,6 +32,7 @@ const SliderImage = () => {
               spaceBetween={20}
               slidesPerView={1}
               autoplay={true}
+              delay={1000}
               pagination={{ clickable: true }}
               speed={2000}
               grabCursor={true}

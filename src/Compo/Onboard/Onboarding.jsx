@@ -51,12 +51,12 @@ const Onboarding = () => {
         .oneOf([Yup.ref('mobilephone')], 'Mobile number must match')
     });
     const formOptions = { resolver: yupResolver(passwordvalidation) };
-    const handleRegistration = (data) => { console.log(data); }
+    const handleRegistration = (data) => { console.table(data); }
 
     const { register, handleSubmit, formState: { errors } } = useForm(formOptions);
     return (
         <>
-            <form method="post" className='col-xl-4 col-md-8 col-sm-10 m-auto' onSubmit={handleSubmit(handleRegistration)}  encType="multipart/form-data" id="add_form" >
+            <form method="post" className='col-xl-4 col-lg-6 col-md-8 col-sm-10 m-auto' onSubmit={handleSubmit(handleRegistration)}  encType="multipart/form-data" id="add_form" >
                 <input type="hidden" name="_token" value="cpKb85gUuOjWvAXijdpEwVYftkRkv3knH5Nj0msA" />
 
                 {/*----------------- first page----------- */}
@@ -101,15 +101,15 @@ const Onboarding = () => {
                      <div className=" webmobilebuttons">
                          <ul className="list-inline list-unstyled text-center d-flex mb-0">
                              <li className="align-items-center col-6 d-flex justify-content-center my-2">
-                                 <input type="radio" className="radio-btn idbtn" value="web" id="web" name="identification" checked="checked"/>
-                                 <label className="d-flex align-items-center px-2 position-relative" for="web">
+                                 <input type="radio" className="radio-btn idbtn" value="web" id="web" name="identification" defaultChecked="checked"/>
+                                 <label className="d-flex align-items-center px-2 position-relative" htmlFor="web">
                                      {/* <img src={DesktopLogo} alt="logo" className="img-fluid mb-1 me-3"/> */}
                                      <div className="text-center m-auto">Web</div>
                                  </label>
                              </li>
                              <li className="align-items-center col-6 d-flex justify-content-center my-2 ">
                                  <input type="radio" className="radio-btn idbtn" value="mobile" id="mobile" name="identification"/>
-                                 <label className="d-flex align-items-center px-2 position-relative" for="mobile">
+                                 <label className="d-flex align-items-center px-2 position-relative" htmlFor="mobile">
                                      {/* <img src={MobileLogo} alt="logo" className="img-fluid mb-1 me-3"/> */}
                                      <div className="text-center m-auto">Mobile</div>
                                  </label>

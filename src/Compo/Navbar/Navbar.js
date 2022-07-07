@@ -1,13 +1,23 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect, useContext, useMemo } from "react";
 import { NavLink } from "react-router-dom";
 import Logo from "../../backend/img/logo.svg";
 import { SiteData } from "../../App";
-import $ from "jquery";
+
 
 
 const Navbar = () => {
   const SiteDataInfo = useContext(SiteData);
+  //GET LANGUAGE ID
+const languageApi_ID = `${SiteDataInfo.language_id}`
 
+ //get language value
+    const [language, setLanguage] = useState('');
+    
+  const callValue =  (event) =>{
+    setLanguage(event.target.value);
+  }
+
+//on scroll navbar fixed top show
   const [scroll, setScroll] = useState(false);
 
   useEffect(() => {
@@ -42,40 +52,10 @@ const Navbar = () => {
 
   const languageInfo = [{id:`${SiteDataInfo.languages[0].id}`,code:`${SiteDataInfo.languages[0].code}`,name:`${SiteDataInfo.languages[0].name}`,is_active:`${SiteDataInfo.languages[0].is_active}`},
   {id:`${SiteDataInfo.languages[1].id}`,code:`${SiteDataInfo.languages[1].code}`,name:`${SiteDataInfo.languages[1].name}`,is_active:`${SiteDataInfo.languages[1].is_active}`},]
-//GET LANGUAGE ID
-const languageApi_ID = `${SiteDataInfo.language_id}`
 
 
-// $(document).ready(function() {
-            
-//   $('.selectpicker').selectpicker();
-//   var value = $('.selectlanaguePicker').find(":selected").val();
-//   $.cookie("select_language_id", value);
-//   $('body').on('change', '.selectlanaguePicker', function() {
-//       var tempValue = $('.selectlanaguePicker').find(":selected").val();
-//       $.cookie("select_language_id", tempValue);
-//       window.location.reload();
-//   });
 
 
-//   $('[data-bs-toggle="tooltip"]').tooltip()
-// });
-// $(function() {
-//   //Read the cookie, if it has been previously set
-//   var language = $.cookie( 'language' );
-  
-//   //Set language to previously set value
-//   !language || $('#languages').val( language );
-
-//   //Set up an event listener to update the cookie whenever language is changed
-//   $('#languages').on('change', function() {
-//       language = this.value
-//       $.cookie( 'language', language );
-//   })
-//   //Set cookie to default language when page loads;
-  
-//   alert( language );
-// });
   return (
     <>
       <header className={` sticky-top  ${scroll ? 'sticky-top active' : ''}`}>
@@ -118,21 +98,12 @@ const languageApi_ID = `${SiteDataInfo.language_id}`
                           PRIVACY POLICY
                         </a>
                       </li>
-                      <li className="nav-item py-1 py-lg-0 d-flex">
-                        <select className="selectpicker selectlanaguePicker text-uppercase border-0" data-width="fit"  name="language_id">
+                      {/* <li className="nav-item py-1 py-lg-0 d-flex">
+                        <select className="selectpicker selectlanaguePicker text-uppercase border-0" onChange={callValue} value={language} data-width="fit"  name="language_id">
                           {React.Children.toArray(languageInfo.map((showLnData)=>{
-                            if(languageApi_ID == showLnData.id)
                             return(
                               <>
-
-                              <option id={showLnData.id} className='selected' name={showLnData.name} value={showLnData.code}>{showLnData.code}</option>
-                              
-                              </>
-                            )
-                            else
-                            return(
-                              <>
-                                <option id={showLnData.id}  name={showLnData.name} value={showLnData.code}>{showLnData.code}</option>
+                              <option id={showLnData.id} className='selected' name={showLnData.name}  value={showLnData.code}>{showLnData.code}</option>
                               </>
                             )
                           })
@@ -140,7 +111,7 @@ const languageApi_ID = `${SiteDataInfo.language_id}`
                           )}
                           
                         </select>
-                      </li>
+                      </li> */}
                     </ul>
                     <button className="py-xl-2 btn btn-primary border-0 d-block text-center side-burger"
                       type="button" data-bs-toggle="offcanvas" data-bs-target="#side-menu" aria-controls="side-menu"  >
